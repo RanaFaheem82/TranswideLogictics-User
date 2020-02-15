@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Geoma Regular Demo.otf">
+            <string>GeomaRegularDemo</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-8z-vuZ" customClass="CategoryCollectionViewCell" customModule="Hitch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="76" height="110"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="76" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6I-6G-LUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="76" height="110"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-display-icon" translatesAutoresizingMaskIntoConstraints="NO" id="K01-kk-rJ7">
+                                <rect key="frame" x="4" y="6" width="68" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="hP6-22-NKR"/>
+                                    <constraint firstAttribute="width" constant="68" id="u66-pp-EBV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="34"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XI0-1b-CtV">
+                                <rect key="frame" x="8" y="10" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Lbh-O9-lF6"/>
+                                    <constraint firstAttribute="height" constant="60" id="ZVG-Cl-NSF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePH-x5-lh3">
+                                <rect key="frame" x="5" y="79" width="66" height="15.5"/>
+                                <fontDescription key="fontDescription" name="GeomaRegularDemo" family="Geoma Regular Demo" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ePH-x5-lh3" firstAttribute="leading" secondItem="A6I-6G-LUZ" secondAttribute="leading" constant="5" id="D3A-IL-7di"/>
+                            <constraint firstItem="ePH-x5-lh3" firstAttribute="top" secondItem="K01-kk-rJ7" secondAttribute="bottom" constant="5" id="GMo-1k-SfI"/>
+                            <constraint firstItem="K01-kk-rJ7" firstAttribute="centerX" secondItem="A6I-6G-LUZ" secondAttribute="centerX" id="c97-WV-R38"/>
+                            <constraint firstItem="K01-kk-rJ7" firstAttribute="top" secondItem="A6I-6G-LUZ" secondAttribute="top" constant="6" id="eyq-re-gmg"/>
+                            <constraint firstItem="XI0-1b-CtV" firstAttribute="centerX" secondItem="A6I-6G-LUZ" secondAttribute="centerX" id="okA-98-OCR"/>
+                            <constraint firstItem="XI0-1b-CtV" firstAttribute="top" secondItem="A6I-6G-LUZ" secondAttribute="top" constant="10" id="vi5-pj-5FP"/>
+                            <constraint firstAttribute="trailing" secondItem="ePH-x5-lh3" secondAttribute="trailing" constant="5" id="wzZ-wb-1Ls"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="A6I-6G-LUZ" firstAttribute="leading" secondItem="eDa-8z-vuZ" secondAttribute="leading" id="E9X-Nm-19P"/>
+                <constraint firstItem="A6I-6G-LUZ" firstAttribute="top" secondItem="eDa-8z-vuZ" secondAttribute="top" id="bSG-RZ-CsS"/>
+                <constraint firstAttribute="trailing" secondItem="A6I-6G-LUZ" secondAttribute="trailing" id="gIG-n1-b0U"/>
+                <constraint firstAttribute="bottom" secondItem="A6I-6G-LUZ" secondAttribute="bottom" id="vLT-jZ-ErK"/>
+            </constraints>
+            <size key="customSize" width="76" height="110"/>
+            <connections>
+                <outlet property="imgCategory" destination="XI0-1b-CtV" id="qLf-iS-VVW"/>
+                <outlet property="lblCategory" destination="ePH-x5-lh3" id="4ad-jK-N3d"/>
+            </connections>
+            <point key="canvasLocation" x="80" y="219"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="product-display-icon" width="70" height="69.5"/>
+    </resources>
+</document>

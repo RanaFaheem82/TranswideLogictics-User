@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AttachmentCollectionViewCell" id="VsT-04-oTh" customClass="AttachmentCollectionViewCell" customModule="WrestlerBlower" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wc2-NB-XHl">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9U-bl-w10">
+                                <rect key="frame" x="5" y="15" width="85" height="85"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXb-zc-6vb">
+                                <rect key="frame" x="76" y="2" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="IKS-lI-Ld6"/>
+                                    <constraint firstAttribute="height" constant="25" id="Xdl-fi-dvU"/>
+                                </constraints>
+                                <state key="normal" image="IconCross"/>
+                                <connections>
+                                    <action selector="actionDelete:" destination="VsT-04-oTh" eventType="touchUpInside" id="uJ1-wg-OfF"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconAdd" translatesAutoresizingMaskIntoConstraints="NO" id="u20-2V-Kjc">
+                                <rect key="frame" x="22.5" y="32.5" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ctq-2a-q0Q"/>
+                                    <constraint firstAttribute="height" constant="50" id="iLn-XS-eTg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WXb-zc-6vb" firstAttribute="top" secondItem="wc2-NB-XHl" secondAttribute="top" constant="2" id="BkB-di-X0I"/>
+                            <constraint firstItem="a9U-bl-w10" firstAttribute="top" secondItem="wc2-NB-XHl" secondAttribute="top" constant="15" id="Buf-kC-4Sj"/>
+                            <constraint firstItem="u20-2V-Kjc" firstAttribute="centerX" secondItem="a9U-bl-w10" secondAttribute="centerX" id="Kzk-fZ-U2i"/>
+                            <constraint firstAttribute="trailing" secondItem="WXb-zc-6vb" secondAttribute="trailing" constant="-1" id="VgY-Jz-a7B"/>
+                            <constraint firstItem="u20-2V-Kjc" firstAttribute="centerY" secondItem="a9U-bl-w10" secondAttribute="centerY" id="WgC-1Q-V7R"/>
+                            <constraint firstItem="a9U-bl-w10" firstAttribute="leading" secondItem="wc2-NB-XHl" secondAttribute="leading" constant="5" id="lb0-Yz-Y9O"/>
+                            <constraint firstAttribute="trailing" secondItem="a9U-bl-w10" secondAttribute="trailing" constant="10" id="ovi-E4-pda"/>
+                            <constraint firstAttribute="bottom" secondItem="a9U-bl-w10" secondAttribute="bottom" id="vUo-WT-SUw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wc2-NB-XHl" secondAttribute="trailing" id="lze-x2-QdZ"/>
+                <constraint firstItem="wc2-NB-XHl" firstAttribute="leading" secondItem="VsT-04-oTh" secondAttribute="leading" id="pIe-aI-rTi"/>
+                <constraint firstAttribute="bottom" secondItem="wc2-NB-XHl" secondAttribute="bottom" id="pdU-Wx-OMA"/>
+                <constraint firstItem="wc2-NB-XHl" firstAttribute="top" secondItem="VsT-04-oTh" secondAttribute="top" id="w0W-8L-q5K"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="DSG-LA-Log"/>
+            <size key="customSize" width="144" height="136"/>
+            <connections>
+                <outlet property="btnDelete" destination="WXb-zc-6vb" id="ebQ-qP-xKV"/>
+                <outlet property="imgAttachment" destination="a9U-bl-w10" id="Jvm-wQ-SY2"/>
+                <outlet property="imgPlayIcon" destination="u20-2V-Kjc" id="LR2-Vm-zQA"/>
+            </connections>
+            <point key="canvasLocation" x="302.89855072463769" y="104.46428571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="IconAdd" width="35" height="35"/>
+        <image name="IconCross" width="20" height="20"/>
+    </resources>
+</document>

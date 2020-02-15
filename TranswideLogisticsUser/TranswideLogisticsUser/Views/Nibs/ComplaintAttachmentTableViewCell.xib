@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Myriad Pro Light.otf">
+            <string>MyriadPro-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ComplaintAttachmentTableViewCell" rowHeight="155" id="JUa-z1-QVT" customClass="ComplaintAttachmentTableViewCell" customModule="WrestlerBlower" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JUa-z1-QVT" id="ZkJ-gA-vxx">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="154.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPY-Pa-6AK">
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="154.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACHMENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ak-4v-RHk">
+                                <rect key="frame" x="20" y="15" width="96" height="16"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="16"/>
+                                <color key="textColor" red="0.01176470588" green="0.086274509799999996" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeF-3f-Dvq">
+                                <rect key="frame" x="0.0" y="154" width="365" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="gvX-i4-zxT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kDd-C2-naj">
+                                <rect key="frame" x="20" y="41" width="325" height="113"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yUv-Mo-SlC">
+                                    <size key="itemSize" width="97" height="104"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3oL-4R-VFF">
+                                        <rect key="frame" x="0.0" y="4.5" width="97" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="97" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="JUa-z1-QVT" id="ov1-HM-5OP"/>
+                                    <outlet property="delegate" destination="JUa-z1-QVT" id="igJ-gj-LBs"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mg-07-pgc">
+                                <rect key="frame" x="0.0" y="41" width="365" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoW-gQ-kEB">
+                                        <rect key="frame" x="157.5" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="5tB-Kt-M3R"/>
+                                            <constraint firstAttribute="height" constant="50" id="VMM-cK-0NU"/>
+                                        </constraints>
+                                        <state key="normal" image="IconAttachment"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Attachments found" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2e-KO-2tl">
+                                        <rect key="frame" x="20" y="60" width="325" height="16"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="y2e-KO-2tl" secondAttribute="trailing" constant="20" id="7EA-cH-YUE"/>
+                                    <constraint firstItem="xoW-gQ-kEB" firstAttribute="top" secondItem="2Mg-07-pgc" secondAttribute="top" id="7Ol-Y1-PAE"/>
+                                    <constraint firstAttribute="height" constant="90" id="Lv2-1d-WI5"/>
+                                    <constraint firstItem="xoW-gQ-kEB" firstAttribute="centerX" secondItem="2Mg-07-pgc" secondAttribute="centerX" id="S8W-Jk-1l2"/>
+                                    <constraint firstItem="y2e-KO-2tl" firstAttribute="centerX" secondItem="2Mg-07-pgc" secondAttribute="centerX" id="WNw-I6-mIs"/>
+                                    <constraint firstItem="y2e-KO-2tl" firstAttribute="top" secondItem="xoW-gQ-kEB" secondAttribute="bottom" constant="10" id="azL-ck-trp"/>
+                                    <constraint firstItem="y2e-KO-2tl" firstAttribute="leading" secondItem="2Mg-07-pgc" secondAttribute="leading" constant="20" id="mTN-02-4Yx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Ak-4v-RHk" firstAttribute="leading" secondItem="jPY-Pa-6AK" secondAttribute="leading" constant="20" id="2R6-jF-EId"/>
+                            <constraint firstItem="IeF-3f-Dvq" firstAttribute="top" secondItem="kDd-C2-naj" secondAttribute="bottom" id="7U4-1I-Evb"/>
+                            <constraint firstItem="6Ak-4v-RHk" firstAttribute="top" secondItem="jPY-Pa-6AK" secondAttribute="top" constant="15" id="HIC-RS-h6w"/>
+                            <constraint firstAttribute="trailing" secondItem="kDd-C2-naj" secondAttribute="trailing" constant="20" id="J7D-0i-8Sz"/>
+                            <constraint firstAttribute="bottom" secondItem="IeF-3f-Dvq" secondAttribute="bottom" id="Jhi-zv-BBZ"/>
+                            <constraint firstItem="2Mg-07-pgc" firstAttribute="top" secondItem="6Ak-4v-RHk" secondAttribute="bottom" constant="10" id="RGL-pd-dDt"/>
+                            <constraint firstItem="2Mg-07-pgc" firstAttribute="leading" secondItem="jPY-Pa-6AK" secondAttribute="leading" id="ZZF-qd-hES"/>
+                            <constraint firstAttribute="trailing" secondItem="IeF-3f-Dvq" secondAttribute="trailing" id="dSL-mE-Z6d"/>
+                            <constraint firstAttribute="trailing" secondItem="2Mg-07-pgc" secondAttribute="trailing" id="eoJ-sI-ggu"/>
+                            <constraint firstItem="kDd-C2-naj" firstAttribute="leading" secondItem="jPY-Pa-6AK" secondAttribute="leading" constant="20" id="kln-o4-68S"/>
+                            <constraint firstItem="IeF-3f-Dvq" firstAttribute="leading" secondItem="jPY-Pa-6AK" secondAttribute="leading" id="oN9-hF-XrP"/>
+                            <constraint firstItem="kDd-C2-naj" firstAttribute="top" secondItem="6Ak-4v-RHk" secondAttribute="bottom" constant="10" id="qBv-qz-v59"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.93670685279999999" green="0.93670685279999999" blue="0.93670685279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jPY-Pa-6AK" secondAttribute="trailing" id="QWv-fy-dgL"/>
+                    <constraint firstItem="jPY-Pa-6AK" firstAttribute="top" secondItem="ZkJ-gA-vxx" secondAttribute="top" id="T7p-Vi-lxk"/>
+                    <constraint firstAttribute="bottom" secondItem="jPY-Pa-6AK" secondAttribute="bottom" id="Tcr-Xx-7Jv"/>
+                    <constraint firstItem="jPY-Pa-6AK" firstAttribute="leading" secondItem="ZkJ-gA-vxx" secondAttribute="leading" id="fPx-mP-kAI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="collectionView" destination="kDd-C2-naj" id="rkU-1F-auU"/>
+                <outlet property="viewAttachmentMessage" destination="2Mg-07-pgc" id="dca-n6-P6I"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="IconAttachment" width="35" height="35"/>
+    </resources>
+</document>

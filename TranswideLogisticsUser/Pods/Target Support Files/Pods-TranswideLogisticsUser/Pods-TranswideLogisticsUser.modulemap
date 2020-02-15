@@ -1,0 +1,6 @@
+framework module Pods_TranswideLogisticsUser {
+  umbrella header "Pods-TranswideLogisticsUser-umbrella.h"
+
+  export *
+  module * { export * }
+}

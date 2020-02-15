@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TierITextTypeTableViewCell" rowHeight="60" id="6Ns-Ox-xJA" customClass="TierITextTypeTableViewCell" customModule="GirlsChase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Ns-Ox-xJA" id="J01-Uh-nKl">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvW-oj-5m4">
+                        <rect key="frame" x="15" y="0.0" width="384" height="49.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MMe-Z9-alM">
+                                <rect key="frame" x="16" y="10.5" width="29" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="O50-he-qHh"/>
+                                    <constraint firstAttribute="height" constant="29" id="weO-Lk-pXG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texting Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNf-uV-ems">
+                                <rect key="frame" x="61" y="10" width="80" height="16"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The First Texts You Send Her" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-lX-SxT">
+                                <rect key="frame" x="61" y="29.5" width="198" height="13.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="10"/>
+                                <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/52 videos watched" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5k-oy-1CE">
+                                <rect key="frame" x="269" y="28.5" width="100" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="OLA-AX-mil"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="10"/>
+                                <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-A8-evy">
+                                <rect key="frame" x="269" y="13" width="100" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="auX-Dm-W0P"/>
+                                    <constraint firstAttribute="width" constant="100" id="v8s-2e-Fv6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLB-J7-wMA">
+                                <rect key="frame" x="269" y="13" width="20" height="10"/>
+                                <color key="backgroundColor" red="1" green="0.77647058823529413" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="xPT-Xs-9ZS"/>
+                                    <constraint firstAttribute="height" constant="10" id="z20-IK-870"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2eh-lX-SxT" firstAttribute="leading" secondItem="MMe-Z9-alM" secondAttribute="trailing" constant="16" id="5R0-I5-3P5"/>
+                            <constraint firstItem="BNf-uV-ems" firstAttribute="leading" secondItem="MMe-Z9-alM" secondAttribute="trailing" constant="16" id="AwA-Ji-hBo"/>
+                            <constraint firstItem="dLB-J7-wMA" firstAttribute="centerY" secondItem="BNf-uV-ems" secondAttribute="centerY" id="QNe-ej-Ibh"/>
+                            <constraint firstItem="BNf-uV-ems" firstAttribute="centerY" secondItem="MMe-Z9-alM" secondAttribute="centerY" multiplier="0.75" constant="-0.5" id="XyJ-Sb-ZxG"/>
+                            <constraint firstItem="2eh-lX-SxT" firstAttribute="top" secondItem="BNf-uV-ems" secondAttribute="bottom" constant="3.5" id="YDG-bo-xn3"/>
+                            <constraint firstAttribute="trailing" secondItem="VZB-A8-evy" secondAttribute="trailing" constant="15" id="hsZ-CK-k0X"/>
+                            <constraint firstItem="X5k-oy-1CE" firstAttribute="centerY" secondItem="2eh-lX-SxT" secondAttribute="centerY" constant="-1" id="lxS-Nf-kbT"/>
+                            <constraint firstItem="MMe-Z9-alM" firstAttribute="leading" secondItem="TvW-oj-5m4" secondAttribute="leading" constant="16" id="t7b-ny-rm8"/>
+                            <constraint firstItem="MMe-Z9-alM" firstAttribute="centerY" secondItem="TvW-oj-5m4" secondAttribute="centerY" id="tTy-P2-nwS"/>
+                            <constraint firstAttribute="trailing" secondItem="X5k-oy-1CE" secondAttribute="trailing" constant="15" id="uAZ-z6-KGY"/>
+                            <constraint firstItem="X5k-oy-1CE" firstAttribute="leading" secondItem="2eh-lX-SxT" secondAttribute="trailing" constant="10" id="yNc-Fa-5jQ"/>
+                            <constraint firstItem="VZB-A8-evy" firstAttribute="centerY" secondItem="BNf-uV-ems" secondAttribute="centerY" id="yTw-Tj-eNa"/>
+                            <constraint firstItem="dLB-J7-wMA" firstAttribute="leading" secondItem="VZB-A8-evy" secondAttribute="leading" id="zLg-nS-474"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TvW-oj-5m4" firstAttribute="leading" secondItem="J01-Uh-nKl" secondAttribute="leading" constant="15" id="AaO-kX-ubj"/>
+                    <constraint firstAttribute="bottom" secondItem="TvW-oj-5m4" secondAttribute="bottom" constant="10" id="LPV-QU-kai"/>
+                    <constraint firstAttribute="trailing" secondItem="TvW-oj-5m4" secondAttribute="trailing" constant="15" id="cTe-05-0BJ"/>
+                    <constraint firstItem="TvW-oj-5m4" firstAttribute="top" secondItem="J01-Uh-nKl" secondAttribute="top" id="ogc-e7-gdo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgTextType" destination="MMe-Z9-alM" id="v2s-L6-qvh"/>
+                <outlet property="lblSubtitle" destination="2eh-lX-SxT" id="PXa-J2-WpK"/>
+                <outlet property="lblTextUsed" destination="X5k-oy-1CE" id="FOW-WW-fw6"/>
+                <outlet property="lblTitle" destination="BNf-uV-ems" id="fMe-On-AzS"/>
+                <outlet property="viewBackdround" destination="TvW-oj-5m4" id="b3N-KG-3A6"/>
+                <outlet property="viewProgress" destination="dLB-J7-wMA" id="vPO-8f-K16"/>
+                <outlet property="viewProgressBackdround" destination="VZB-A8-evy" id="VYc-te-iJ0"/>
+                <outlet property="viewProgressWidth" destination="xPT-Xs-9ZS" id="zQX-xj-jAv"/>
+            </connections>
+            <point key="canvasLocation" x="555" y="-221"/>
+        </tableViewCell>
+    </objects>
+</document>
