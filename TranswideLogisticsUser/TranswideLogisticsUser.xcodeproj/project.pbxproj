@@ -10,7 +10,6 @@
 		188B915323F6C11900DD9198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915223F6C11900DD9198 /* AppDelegate.swift */; };
 		188B915523F6C11900DD9198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915423F6C11900DD9198 /* SceneDelegate.swift */; };
 		188B915723F6C11900DD9198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915623F6C11900DD9198 /* ViewController.swift */; };
-		188B915A23F6C11900DD9198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B915823F6C11900DD9198 /* Main.storyboard */; };
 		188B915C23F6C11D00DD9198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188B915B23F6C11D00DD9198 /* Assets.xcassets */; };
 		188B915F23F6C11D00DD9198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B915D23F6C11D00DD9198 /* LaunchScreen.storyboard */; };
 		188B916A23F6C11E00DD9198 /* TranswideLogisticsUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B916923F6C11E00DD9198 /* TranswideLogisticsUserTests.swift */; };
@@ -45,7 +44,6 @@
 		188B946323F6CBFE00DD9198 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B93A223F6CBF800DD9198 /* Utilities.swift */; };
 		188B946423F6CBFE00DD9198 /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B93A323F6CBF800DD9198 /* AppEnums.swift */; };
 		188B946523F6CBFE00DD9198 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B93A523F6CBF900DD9198 /* Date+Extension.swift */; };
-		188B946623F6CBFE00DD9198 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B93A623F6CBF900DD9198 /* Profile.storyboard */; };
 		188B946723F6CBFE00DD9198 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B93A723F6CBF900DD9198 /* String+Extension.swift */; };
 		188B946823F6CBFE00DD9198 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B93A823F6CBF900DD9198 /* Extension.swift */; };
 		188B946923F6CBFE00DD9198 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B93A923F6CBF900DD9198 /* Protocols.swift */; };
@@ -155,6 +153,8 @@
 		188B94D423F6CBFF00DD9198 /* KhmerUI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188B943F23F6CBFD00DD9198 /* KhmerUI.ttf */; };
 		188B94D523F6CBFF00DD9198 /* Geoma Regular Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 188B944023F6CBFD00DD9198 /* Geoma Regular Demo.otf */; };
 		188B94D623F6CBFF00DD9198 /* KhmerUIb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188B944123F6CBFD00DD9198 /* KhmerUIb.ttf */; };
+		18BF5F1E23F925F7000D3273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF5F1C23F925F7000D3273 /* Main.storyboard */; };
+		18BF5F1F23F925F7000D3273 /* Registeration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF5F1D23F925F7000D3273 /* Registeration.storyboard */; };
 		2CFEDADE977A5773C0AED81B /* Pods_TranswideLogisticsUserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */; };
 		785018293EE0FE577E772E39 /* Pods_TranswideLogisticsUserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2AA875ED78E37FA5D665FD /* Pods_TranswideLogisticsUserUITests.framework */; };
 		F254A9CA59DC51B570AC0D60 /* Pods_TranswideLogisticsUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFB4288057F45D2557ED3D5 /* Pods_TranswideLogisticsUser.framework */; };
@@ -185,7 +185,6 @@
 		188B915223F6C11900DD9198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188B915423F6C11900DD9198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		188B915623F6C11900DD9198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		188B915923F6C11900DD9198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		188B915B23F6C11D00DD9198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		188B915E23F6C11D00DD9198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		188B916023F6C11D00DD9198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -226,7 +225,6 @@
 		188B93A223F6CBF800DD9198 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		188B93A323F6CBF800DD9198 /* AppEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
 		188B93A523F6CBF900DD9198 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		188B93A623F6CBF900DD9198 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		188B93A723F6CBF900DD9198 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		188B93A823F6CBF900DD9198 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		188B93A923F6CBF900DD9198 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -350,6 +348,8 @@
 		188B943F23F6CBFD00DD9198 /* KhmerUI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KhmerUI.ttf; sourceTree = "<group>"; };
 		188B944023F6CBFD00DD9198 /* Geoma Regular Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geoma Regular Demo.otf"; sourceTree = "<group>"; };
 		188B944123F6CBFD00DD9198 /* KhmerUIb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KhmerUIb.ttf; sourceTree = "<group>"; };
+		18BF5F1C23F925F7000D3273 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		18BF5F1D23F925F7000D3273 /* Registeration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Registeration.storyboard; path = ../Registeration.storyboard; sourceTree = "<group>"; };
 		2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranswideLogisticsUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFB4288057F45D2557ED3D5 /* Pods_TranswideLogisticsUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranswideLogisticsUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		847787E62C7FF2DA50AA460D /* Pods-TranswideLogisticsUserUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserUITests.release.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserUITests/Pods-TranswideLogisticsUserUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -420,8 +420,9 @@
 				188B937A23F6CBF700DD9198 /* Views */,
 				188B915223F6C11900DD9198 /* AppDelegate.swift */,
 				188B915423F6C11900DD9198 /* SceneDelegate.swift */,
+				18BF5F1C23F925F7000D3273 /* Main.storyboard */,
+				18BF5F1D23F925F7000D3273 /* Registeration.storyboard */,
 				188B915623F6C11900DD9198 /* ViewController.swift */,
-				188B915823F6C11900DD9198 /* Main.storyboard */,
 				188B915B23F6C11D00DD9198 /* Assets.xcassets */,
 				188B915D23F6C11D00DD9198 /* LaunchScreen.storyboard */,
 				188B916023F6C11D00DD9198 /* Info.plist */,
@@ -537,7 +538,6 @@
 			isa = PBXGroup;
 			children = (
 				188B93A523F6CBF900DD9198 /* Date+Extension.swift */,
-				188B93A623F6CBF900DD9198 /* Profile.storyboard */,
 				188B93A723F6CBF900DD9198 /* String+Extension.swift */,
 				188B93A823F6CBF900DD9198 /* Extension.swift */,
 			);
@@ -1061,13 +1061,13 @@
 				188B94C023F6CBFE00DD9198 /* Roboto-BoldItalic.ttf in Resources */,
 				188B94BD23F6CBFE00DD9198 /* RobotoCondensed-LightItalic.ttf in Resources */,
 				188B94C423F6CBFE00DD9198 /* Roboto-Bold.ttf in Resources */,
-				188B946623F6CBFE00DD9198 /* Profile.storyboard in Resources */,
 				188B94B823F6CBFE00DD9198 /* Roboto-Regular.ttf in Resources */,
 				188B94D423F6CBFF00DD9198 /* KhmerUI.ttf in Resources */,
 				188B94C123F6CBFE00DD9198 /* Roboto-LightItalic.ttf in Resources */,
 				188B94AD23F6CBFE00DD9198 /* MyriadPro-It.otf in Resources */,
 				188B94AC23F6CBFE00DD9198 /* MyriadPro-Regular.otf in Resources */,
 				188B94BC23F6CBFE00DD9198 /* Apache License.txt in Resources */,
+				18BF5F1E23F925F7000D3273 /* Main.storyboard in Resources */,
 				188B94C323F6CBFE00DD9198 /* Roboto-BlackItalic.ttf in Resources */,
 				188B94D523F6CBFF00DD9198 /* Geoma Regular Demo.otf in Resources */,
 				188B94AB23F6CBFE00DD9198 /* MyriadPro-Semibold.otf in Resources */,
@@ -1076,13 +1076,13 @@
 				188B94D623F6CBFF00DD9198 /* KhmerUIb.ttf in Resources */,
 				188B94C623F6CBFE00DD9198 /* Roboto-Black.ttf in Resources */,
 				188B94B623F6CBFE00DD9198 /* RobotoCondensed-Bold.ttf in Resources */,
+				18BF5F1F23F925F7000D3273 /* Registeration.storyboard in Resources */,
 				188B94BE23F6CBFE00DD9198 /* Roboto-ThinItalic.ttf in Resources */,
 				188B94A023F6CBFE00DD9198 /* README.md in Resources */,
 				188B94BF23F6CBFE00DD9198 /* RobotoCondensed-Regular.ttf in Resources */,
 				188B94C723F6CBFE00DD9198 /* Walkway Black.ttf in Resources */,
 				188B94B723F6CBFE00DD9198 /* RobotoCondensed-Light.ttf in Resources */,
 				188B94A623F6CBFE00DD9198 /* KWTextFieldView.xib in Resources */,
-				188B915A23F6C11900DD9198 /* Main.storyboard in Resources */,
 				188B94C823F6CBFE00DD9198 /* Walkway Bold.ttf in Resources */,
 				188B94BB23F6CBFE00DD9198 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				188B94C223F6CBFE00DD9198 /* Roboto-Italic.ttf in Resources */,
@@ -1355,14 +1355,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		188B915823F6C11900DD9198 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				188B915923F6C11900DD9198 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		188B915D23F6C11D00DD9198 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
