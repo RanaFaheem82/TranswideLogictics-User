@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18528D1023FD3FD20069BB6A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D0F23FD3FD20069BB6A /* LoginViewController.swift */; };
+		18528D1223FD42990069BB6A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1123FD42990069BB6A /* SignUpViewController.swift */; };
+		18528D1423FD44D00069BB6A /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1323FD44D00069BB6A /* OtpViewController.swift */; };
+		18528D1623FD528A0069BB6A /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1523FD528A0069BB6A /* UpdateProfileViewController.swift */; };
+		18528D1823FD575E0069BB6A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1723FD575E0069BB6A /* LocationViewController.swift */; };
+		18528D1A23FD59D20069BB6A /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1923FD59D20069BB6A /* BookingViewController.swift */; };
+		18528D1D23FD89DB0069BB6A /* MyBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1B23FD89DB0069BB6A /* MyBookingTableViewCell.swift */; };
+		18528D1E23FD89DB0069BB6A /* MyBookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18528D1C23FD89DB0069BB6A /* MyBookingTableViewCell.xib */; };
+		18528D2023FDA2450069BB6A /* ConfirmRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */; };
+		18528D2223FDA2E70069BB6A /* showDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D2123FDA2E70069BB6A /* showDriverViewController.swift */; };
 		188B915323F6C11900DD9198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915223F6C11900DD9198 /* AppDelegate.swift */; };
 		188B915523F6C11900DD9198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915423F6C11900DD9198 /* SceneDelegate.swift */; };
 		188B915723F6C11900DD9198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915623F6C11900DD9198 /* ViewController.swift */; };
@@ -181,6 +191,16 @@
 		006D4BE194764FAA1A7596F6 /* Pods-TranswideLogisticsUserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserTests.debug.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserTests/Pods-TranswideLogisticsUserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0B5042AC60B3D47A68218253 /* Pods-TranswideLogisticsUserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserTests.release.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserTests/Pods-TranswideLogisticsUserTests.release.xcconfig"; sourceTree = "<group>"; };
 		138FBFB6D7BA3817D9C5300E /* Pods-TranswideLogisticsUserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserUITests.debug.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserUITests/Pods-TranswideLogisticsUserUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		18528D0F23FD3FD20069BB6A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18528D1123FD42990069BB6A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		18528D1323FD44D00069BB6A /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		18528D1523FD528A0069BB6A /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
+		18528D1723FD575E0069BB6A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		18528D1923FD59D20069BB6A /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		18528D1B23FD89DB0069BB6A /* MyBookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingTableViewCell.swift; sourceTree = "<group>"; };
+		18528D1C23FD89DB0069BB6A /* MyBookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBookingTableViewCell.xib; sourceTree = "<group>"; };
+		18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRideViewController.swift; sourceTree = "<group>"; };
+		18528D2123FDA2E70069BB6A /* showDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showDriverViewController.swift; sourceTree = "<group>"; };
 		188B914F23F6C11900DD9198 /* TranswideLogisticsUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranswideLogisticsUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B915223F6C11900DD9198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188B915423F6C11900DD9198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -386,6 +406,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18528D2323FDA3B20069BB6A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18528D2C23FDA4720069BB6A /* ConfirmRide */,
+				18528D2B23FDA4680069BB6A /* Login */,
+				18528D2A23FDA4540069BB6A /* NewBooking */,
+				18528D2923FDA4240069BB6A /* SignUP */,
+				18528D2823FDA4170069BB6A /* UpdateProfile */,
+				18528D2723FDA40B0069BB6A /* Locationview */,
+				18528D2623FDA4000069BB6A /* Otp */,
+				18528D2523FDA3F60069BB6A /* MyBookings */,
+				18528D2423FDA3E80069BB6A /* showDriver */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		18528D2423FDA3E80069BB6A /* showDriver */ = {
+			isa = PBXGroup;
+			children = (
+				18528D2123FDA2E70069BB6A /* showDriverViewController.swift */,
+			);
+			path = showDriver;
+			sourceTree = "<group>";
+		};
+		18528D2523FDA3F60069BB6A /* MyBookings */ = {
+			isa = PBXGroup;
+			children = (
+				18528D1B23FD89DB0069BB6A /* MyBookingTableViewCell.swift */,
+			);
+			path = MyBookings;
+			sourceTree = "<group>";
+		};
+		18528D2623FDA4000069BB6A /* Otp */ = {
+			isa = PBXGroup;
+			children = (
+				18528D1323FD44D00069BB6A /* OtpViewController.swift */,
+			);
+			path = Otp;
+			sourceTree = "<group>";
+		};
+		18528D2723FDA40B0069BB6A /* Locationview */ = {
+			isa = PBXGroup;
+			children = (
+				18528D1723FD575E0069BB6A /* LocationViewController.swift */,
+			);
+			path = Locationview;
+			sourceTree = "<group>";
+		};
+		18528D2823FDA4170069BB6A /* UpdateProfile */ = {
+			isa = PBXGroup;
+			children = (
+				18528D1523FD528A0069BB6A /* UpdateProfileViewController.swift */,
+			);
+			path = UpdateProfile;
+			sourceTree = "<group>";
+		};
+		18528D2923FDA4240069BB6A /* SignUP */ = {
+			isa = PBXGroup;
+			children = (
+				18528D1123FD42990069BB6A /* SignUpViewController.swift */,
+			);
+			path = SignUP;
+			sourceTree = "<group>";
+		};
+		18528D2A23FDA4540069BB6A /* NewBooking */ = {
+			isa = PBXGroup;
+			children = (
+				18528D1923FD59D20069BB6A /* BookingViewController.swift */,
+			);
+			path = NewBooking;
+			sourceTree = "<group>";
+		};
+		18528D2B23FDA4680069BB6A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				18528D0F23FD3FD20069BB6A /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		18528D2C23FDA4720069BB6A /* ConfirmRide */ = {
+			isa = PBXGroup;
+			children = (
+				18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */,
+			);
+			path = ConfirmRide;
+			sourceTree = "<group>";
+		};
 		188B914623F6C11900DD9198 = {
 			isa = PBXGroup;
 			children = (
@@ -418,9 +526,11 @@
 				188B93E023F6CBFB00DD9198 /* Third Party Vendors */,
 				188B93AC23F6CBF900DD9198 /* View Models */,
 				188B937A23F6CBF700DD9198 /* Views */,
+				18528D2323FDA3B20069BB6A /* ViewControllers */,
 				188B915223F6C11900DD9198 /* AppDelegate.swift */,
 				188B915423F6C11900DD9198 /* SceneDelegate.swift */,
 				18BF5F1C23F925F7000D3273 /* Main.storyboard */,
+				18528D1C23FD89DB0069BB6A /* MyBookingTableViewCell.xib */,
 				18BF5F1D23F925F7000D3273 /* Registeration.storyboard */,
 				188B915623F6C11900DD9198 /* ViewController.swift */,
 				188B915B23F6C11D00DD9198 /* Assets.xcassets */,
@@ -1051,6 +1161,7 @@
 				188B94BA23F6CBFE00DD9198 /* RobotoCondensed-Italic.ttf in Resources */,
 				188B94A823F6CBFE00DD9198 /* KWVerificationCodeView.xib in Resources */,
 				188B94B123F6CBFE00DD9198 /* MyriadPro-BoldIt.otf in Resources */,
+				18528D1E23FD89DB0069BB6A /* MyBookingTableViewCell.xib in Resources */,
 				188B94AF23F6CBFE00DD9198 /* MyriadPro-CondIt.otf in Resources */,
 				188B915F23F6C11D00DD9198 /* LaunchScreen.storyboard in Resources */,
 				188B94B923F6CBFE00DD9198 /* Roboto-MediumItalic.ttf in Resources */,
@@ -1220,6 +1331,7 @@
 				188B945723F6CBFE00DD9198 /* BorderColorUIView.swift in Sources */,
 				188B946E23F6CBFE00DD9198 /* ProductViewModel.swift in Sources */,
 				188B944E23F6CBFE00DD9198 /* SideMenuProfileTableViewCell.swift in Sources */,
+				18528D1423FD44D00069BB6A /* OtpViewController.swift in Sources */,
 				188B949C23F6CBFE00DD9198 /* MKProgressViewController.swift in Sources */,
 				188B948F23F6CBFE00DD9198 /* UIPickerViewController+Utils.swift in Sources */,
 				188B946923F6CBFE00DD9198 /* Protocols.swift in Sources */,
@@ -1233,6 +1345,7 @@
 				188B949123F6CBFE00DD9198 /* String+Utils.swift in Sources */,
 				188B945823F6CBFE00DD9198 /* MainContainerViewController.swift in Sources */,
 				188B94CA23F6CBFE00DD9198 /* RIATextfield.swift in Sources */,
+				18528D1A23FD59D20069BB6A /* BookingViewController.swift in Sources */,
 				188B947223F6CBFE00DD9198 /* IPAddressInfoViewModel.swift in Sources */,
 				188B946723F6CBFE00DD9198 /* String+Extension.swift in Sources */,
 				188B946B23F6CBFE00DD9198 /* CategoryViewModel.swift in Sources */,
@@ -1248,6 +1361,8 @@
 				188B94CF23F6CBFE00DD9198 /* RegexParser.swift in Sources */,
 				188B944F23F6CBFE00DD9198 /* ProductDetailsViewCell.swift in Sources */,
 				188B946A23F6CBFE00DD9198 /* AppConstants.swift in Sources */,
+				18528D1D23FD89DB0069BB6A /* MyBookingTableViewCell.swift in Sources */,
+				18528D1223FD42990069BB6A /* SignUpViewController.swift in Sources */,
 				188B947F23F6CBFE00DD9198 /* NetworkResponseMessage.swift in Sources */,
 				188B947823F6CBFE00DD9198 /* AllProductsListViewModel.swift in Sources */,
 				188B945023F6CBFE00DD9198 /* ProductComparisonViewCell.swift in Sources */,
@@ -1255,6 +1370,7 @@
 				188B946F23F6CBFE00DD9198 /* UserViewModel.swift in Sources */,
 				188B948323F6CBFE00DD9198 /* BaseService.swift in Sources */,
 				188B948223F6CBFE00DD9198 /* RequestMessage.swift in Sources */,
+				18528D2023FDA2450069BB6A /* ConfirmRideViewController.swift in Sources */,
 				188B94CB23F6CBFE00DD9198 /* CustomIOSAlertView.m in Sources */,
 				188B949823F6CBFE00DD9198 /* MKProgress.swift in Sources */,
 				188B948D23F6CBFE00DD9198 /* LoginService.swift in Sources */,
@@ -1271,6 +1387,7 @@
 				188B915723F6C11900DD9198 /* ViewController.swift in Sources */,
 				188B915323F6C11900DD9198 /* AppDelegate.swift in Sources */,
 				188B947723F6CBFE00DD9198 /* AllCategoriesViewModel.swift in Sources */,
+				18528D1623FD528A0069BB6A /* UpdateProfileViewController.swift in Sources */,
 				188B948E23F6CBFE00DD9198 /* TokenRegistrationService.swift in Sources */,
 				188B94A523F6CBFE00DD9198 /* StringExtension.swift in Sources */,
 				188B945C23F6CBFE00DD9198 /* BaseTableViewCell.swift in Sources */,
@@ -1279,6 +1396,7 @@
 				188B949723F6CBFE00DD9198 /* MKActivityIndicatorView.swift in Sources */,
 				188B949B23F6CBFE00DD9198 /* MKProgressBackgroundView.swift in Sources */,
 				188B946D23F6CBFE00DD9198 /* NewArrivalViewModel.swift in Sources */,
+				18528D1023FD3FD20069BB6A /* LoginViewController.swift in Sources */,
 				188B949923F6CBFE00DD9198 /* MKRotationView.swift in Sources */,
 				188B946523F6CBFE00DD9198 /* Date+Extension.swift in Sources */,
 				188B948423F6CBFE00DD9198 /* ParsedResponseMessage.swift in Sources */,
@@ -1302,6 +1420,7 @@
 				188B948523F6CBFE00DD9198 /* ServiceRequestMessage.swift in Sources */,
 				188B946823F6CBFE00DD9198 /* Extension.swift in Sources */,
 				188B947123F6CBFE00DD9198 /* SignupViewModel.swift in Sources */,
+				18528D2223FDA2E70069BB6A /* showDriverViewController.swift in Sources */,
 				188B94A123F6CBFE00DD9198 /* SWRevealViewController.m in Sources */,
 				188B945F23F6CBFE00DD9198 /* BaseNavigationController.swift in Sources */,
 				188B94A223F6CBFE00DD9198 /* BReachability.swift in Sources */,
@@ -1311,6 +1430,7 @@
 				188B949D23F6CBFE00DD9198 /* MKConfig.swift in Sources */,
 				188B948623F6CBFE00DD9198 /* ServiceResponseMessage.swift in Sources */,
 				188B945923F6CBFE00DD9198 /* BaseCollectionViewController.swift in Sources */,
+				18528D1823FD575E0069BB6A /* LocationViewController.swift in Sources */,
 				188B949423F6CBFE00DD9198 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				188B94A323F6CBFE00DD9198 /* KWTextFieldView.swift in Sources */,
 				188B944C23F6CBFE00DD9198 /* HomeSliderTableViewCell.swift in Sources */,
