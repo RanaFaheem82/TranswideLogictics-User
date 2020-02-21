@@ -70,6 +70,16 @@ public class BaseViewController : UIViewController,SWRevealViewControllerDelegat
        
        
     }
+    
+//    func hideKeyboardWhenTappedAround() {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//           tap.cancelsTouchesInView = false
+//           view.addGestureRecognizer(tap)
+//       }
+//
+//       @objc private func dismissKeyboard() {
+//           view.endEditing(true)
+//       }
     func addTapGesture()  {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         tapGesture.delegate = self
@@ -362,6 +372,7 @@ public class BaseViewController : UIViewController,SWRevealViewControllerDelegat
         self.hideKeyboard()
     }
     func hideKeyboard() {
+       // self.dismissKeyboard(self)
         self.view.endEditing(true)
     }
     

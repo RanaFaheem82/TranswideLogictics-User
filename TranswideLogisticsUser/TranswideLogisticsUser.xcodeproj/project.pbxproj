@@ -17,6 +17,7 @@
 		18528D1E23FD89DB0069BB6A /* MyBookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18528D1C23FD89DB0069BB6A /* MyBookingTableViewCell.xib */; };
 		18528D2023FDA2450069BB6A /* ConfirmRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */; };
 		18528D2223FDA2E70069BB6A /* showDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D2123FDA2E70069BB6A /* showDriverViewController.swift */; };
+		1862104A23FF13A30027A220 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862104923FF13A30027A220 /* GoogleService-Info.plist */; };
 		188B915323F6C11900DD9198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915223F6C11900DD9198 /* AppDelegate.swift */; };
 		188B915523F6C11900DD9198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915423F6C11900DD9198 /* SceneDelegate.swift */; };
 		188B915723F6C11900DD9198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915623F6C11900DD9198 /* ViewController.swift */; };
@@ -165,6 +166,7 @@
 		188B94D623F6CBFF00DD9198 /* KhmerUIb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188B944123F6CBFD00DD9198 /* KhmerUIb.ttf */; };
 		18BF5F1E23F925F7000D3273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF5F1C23F925F7000D3273 /* Main.storyboard */; };
 		18BF5F1F23F925F7000D3273 /* Registeration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF5F1D23F925F7000D3273 /* Registeration.storyboard */; };
+		18C1400D23FF9DA600D4E5AA /* OTPtextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1400C23FF9DA600D4E5AA /* OTPtextField.swift */; };
 		2CFEDADE977A5773C0AED81B /* Pods_TranswideLogisticsUserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */; };
 		785018293EE0FE577E772E39 /* Pods_TranswideLogisticsUserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2AA875ED78E37FA5D665FD /* Pods_TranswideLogisticsUserUITests.framework */; };
 		F254A9CA59DC51B570AC0D60 /* Pods_TranswideLogisticsUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFB4288057F45D2557ED3D5 /* Pods_TranswideLogisticsUser.framework */; };
@@ -201,6 +203,7 @@
 		18528D1C23FD89DB0069BB6A /* MyBookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBookingTableViewCell.xib; sourceTree = "<group>"; };
 		18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRideViewController.swift; sourceTree = "<group>"; };
 		18528D2123FDA2E70069BB6A /* showDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showDriverViewController.swift; sourceTree = "<group>"; };
+		1862104923FF13A30027A220 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		188B914F23F6C11900DD9198 /* TranswideLogisticsUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranswideLogisticsUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B915223F6C11900DD9198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188B915423F6C11900DD9198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -370,6 +373,7 @@
 		188B944123F6CBFD00DD9198 /* KhmerUIb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KhmerUIb.ttf; sourceTree = "<group>"; };
 		18BF5F1C23F925F7000D3273 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		18BF5F1D23F925F7000D3273 /* Registeration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Registeration.storyboard; path = ../Registeration.storyboard; sourceTree = "<group>"; };
+		18C1400C23FF9DA600D4E5AA /* OTPtextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPtextField.swift; sourceTree = "<group>"; };
 		2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranswideLogisticsUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFB4288057F45D2557ED3D5 /* Pods_TranswideLogisticsUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranswideLogisticsUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		847787E62C7FF2DA50AA460D /* Pods-TranswideLogisticsUserUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserUITests.release.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserUITests/Pods-TranswideLogisticsUserUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -536,7 +540,9 @@
 				188B915B23F6C11D00DD9198 /* Assets.xcassets */,
 				188B915D23F6C11D00DD9198 /* LaunchScreen.storyboard */,
 				188B916023F6C11D00DD9198 /* Info.plist */,
+				1862104923FF13A30027A220 /* GoogleService-Info.plist */,
 				188B937923F6C55D00DD9198 /* TranswideLogisticsUser-Bridging-Header.h */,
+				18C1400C23FF9DA600D4E5AA /* OTPtextField.swift */,
 			);
 			path = TranswideLogisticsUser;
 			sourceTree = "<group>";
@@ -1198,6 +1204,7 @@
 				188B94BB23F6CBFE00DD9198 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				188B94C223F6CBFE00DD9198 /* Roboto-Italic.ttf in Resources */,
 				188B94C523F6CBFE00DD9198 /* Roboto-Thin.ttf in Resources */,
+				1862104A23FF13A30027A220 /* GoogleService-Info.plist in Resources */,
 				188B94B223F6CBFE00DD9198 /* MyriadPro-BoldCond.otf in Resources */,
 				188B94AA23F6CBFE00DD9198 /* MyriadPro-SemiboldIt.otf in Resources */,
 			);
@@ -1358,6 +1365,7 @@
 				188B949F23F6CBFE00DD9198 /* GCD.swift in Sources */,
 				188B948B23F6CBFE00DD9198 /* ProductService.swift in Sources */,
 				188B947D23F6CBFE00DD9198 /* NotificationViewModel.swift in Sources */,
+				18C1400D23FF9DA600D4E5AA /* OTPtextField.swift in Sources */,
 				188B94CF23F6CBFE00DD9198 /* RegexParser.swift in Sources */,
 				188B944F23F6CBFE00DD9198 /* ProductDetailsViewCell.swift in Sources */,
 				188B946A23F6CBFE00DD9198 /* AppConstants.swift in Sources */,
@@ -1606,7 +1614,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZHNK95FMN;
 				INFOPLIST_FILE = TranswideLogisticsUser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1625,7 +1635,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZHNK95FMN;
 				INFOPLIST_FILE = TranswideLogisticsUser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

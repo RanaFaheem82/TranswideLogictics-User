@@ -7,29 +7,48 @@
 //
 
 import UIKit
-
+import Firebase
 class OtpViewController: UIViewController {
 
     @IBOutlet weak var lblOtp: UILabel!
     @IBOutlet weak var lblEnterOtpCode: UILabel!
+    @IBOutlet weak var tfOtpCode: OTPtextField!
     
-   
-    @IBOutlet weak var lblOtpTimer: UILabel!
-    @IBOutlet weak var lblResend: UILabel!
-    @IBOutlet weak var tfborder4: UITextField!
-    @IBOutlet weak var tfborder3: UITextField!
-    @IBOutlet weak var tfborder2: UITextField!
-    @IBOutlet weak var tfborder1: UITextField!
-    @IBOutlet weak var txtOtpcode4: UITextField!
-    @IBOutlet weak var txtOtpcode3: UITextField!
-    @IBOutlet weak var txtOtpcode2: UITextField!
-    @IBOutlet weak var txtOtpcode1: UITextField!
+   var userdefaults = UserDefaults()
+     var alertView = CustomIOSAlertView()
+    
     
     
     @IBAction func actionSubmit(_ sender: Any) {
+        guard let otpCode = tfOtpCode.text else  { return }
+        guard let verficationId = userdefaults.string(forKey: "VerificationID") else { return }
+        let credetials = PhoneAuthProvider.provider().credential(withVerificationID: verficationId, verificationCode: otpCode)
+        
+        Auth.auth().signInAndRetrieveData(with: credetials) { (success, error) in
+            if(error == nil){
+                print("USER LOGED IN")
+            }else{
+                
+                print("WRONG")
+            }
+            
+        }
+        
+        
        }
     override func viewDidLoad() {
         super.viewDidLoad()
+        tfOtpCode.configure(with: 6)
+        tfOtpCode.didEnterLastdigit = { [weak self] code in
+            
+            print(code)
+            self?.alertView = CustomIOSAlertView()
+            self!.alertView?.buttonTitles = nil
+            self!.alertView?.useMotionEffects = true
+          
+            
+        }
+        
 
         // Do any additional setup after loading the view.
     }
