@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocationViewController: UIViewController {
+class LocationViewController: BaseViewController{
 
     
     @IBOutlet weak var lblpreviousDetails: UILabel!
@@ -36,7 +36,8 @@ class LocationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.mainContainer?.setMenuButton()
+        self.mainContainer?.setTitle(title: "Home")
         // Do any additional setup after loading the view.
     }
     

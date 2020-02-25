@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180E482F24016913004B57BC /* KYEmbedDrawerControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E482C24016913004B57BC /* KYEmbedDrawerControllerSegue.swift */; };
+		180E483024016913004B57BC /* KYDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E482D24016913004B57BC /* KYDrawerController.swift */; };
+		180E483124016913004B57BC /* KYEmbedMainControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E482E24016913004B57BC /* KYEmbedMainControllerSegue.swift */; };
+		180E483424016CDE004B57BC /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E483324016CDE004B57BC /* SideMenuViewController.swift */; };
 		18528D1023FD3FD20069BB6A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D0F23FD3FD20069BB6A /* LoginViewController.swift */; };
 		18528D1223FD42990069BB6A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1123FD42990069BB6A /* SignUpViewController.swift */; };
 		18528D1423FD44D00069BB6A /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1323FD44D00069BB6A /* OtpViewController.swift */; };
@@ -193,6 +197,11 @@
 		006D4BE194764FAA1A7596F6 /* Pods-TranswideLogisticsUserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserTests.debug.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserTests/Pods-TranswideLogisticsUserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0B5042AC60B3D47A68218253 /* Pods-TranswideLogisticsUserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserTests.release.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserTests/Pods-TranswideLogisticsUserTests.release.xcconfig"; sourceTree = "<group>"; };
 		138FBFB6D7BA3817D9C5300E /* Pods-TranswideLogisticsUserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserUITests.debug.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserUITests/Pods-TranswideLogisticsUserUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		180E482A24016913004B57BC /* KYDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYDrawerController.h; sourceTree = "<group>"; };
+		180E482C24016913004B57BC /* KYEmbedDrawerControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEmbedDrawerControllerSegue.swift; sourceTree = "<group>"; };
+		180E482D24016913004B57BC /* KYDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDrawerController.swift; sourceTree = "<group>"; };
+		180E482E24016913004B57BC /* KYEmbedMainControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEmbedMainControllerSegue.swift; sourceTree = "<group>"; };
+		180E483324016CDE004B57BC /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		18528D0F23FD3FD20069BB6A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18528D1123FD42990069BB6A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		18528D1323FD44D00069BB6A /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
@@ -410,9 +419,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180E482924016913004B57BC /* KYDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				180E482A24016913004B57BC /* KYDrawerController.h */,
+				180E482B24016913004B57BC /* Classes */,
+			);
+			path = KYDrawerController;
+			sourceTree = "<group>";
+		};
+		180E482B24016913004B57BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				180E482C24016913004B57BC /* KYEmbedDrawerControllerSegue.swift */,
+				180E482D24016913004B57BC /* KYDrawerController.swift */,
+				180E482E24016913004B57BC /* KYEmbedMainControllerSegue.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		180E483224016CBE004B57BC /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				180E483324016CDE004B57BC /* SideMenuViewController.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 		18528D2323FDA3B20069BB6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				188B939423F6CBF800DD9198 /* Main Container */,
+				180E483224016CBE004B57BC /* SideMenu */,
 				18528D2C23FDA4720069BB6A /* ConfirmRide */,
 				18528D2B23FDA4680069BB6A /* Login */,
 				18528D2A23FDA4540069BB6A /* NewBooking */,
@@ -526,7 +564,6 @@
 				188B939623F6CBF800DD9198 /* Base Classes */,
 				188B939F23F6CBF800DD9198 /* Global */,
 				188B93C323F6CBFA00DD9198 /* Library */,
-				188B939423F6CBF800DD9198 /* Main Container */,
 				188B93E023F6CBFB00DD9198 /* Third Party Vendors */,
 				188B93AC23F6CBF900DD9198 /* View Models */,
 				188B937A23F6CBF700DD9198 /* Views */,
@@ -804,6 +841,7 @@
 		188B93E023F6CBFB00DD9198 /* Third Party Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				180E482924016913004B57BC /* KYDrawerController */,
 				188B93E123F6CBFB00DD9198 /* TPKeyboardAvoiding */,
 				188B93EA23F6CBFB00DD9198 /* IQDropdownTextfield */,
 				188B93ED23F6CBFB00DD9198 /* MKProgress */,
@@ -1339,6 +1377,7 @@
 				188B946E23F6CBFE00DD9198 /* ProductViewModel.swift in Sources */,
 				188B944E23F6CBFE00DD9198 /* SideMenuProfileTableViewCell.swift in Sources */,
 				18528D1423FD44D00069BB6A /* OtpViewController.swift in Sources */,
+				180E482F24016913004B57BC /* KYEmbedDrawerControllerSegue.swift in Sources */,
 				188B949C23F6CBFE00DD9198 /* MKProgressViewController.swift in Sources */,
 				188B948F23F6CBFE00DD9198 /* UIPickerViewController+Utils.swift in Sources */,
 				188B946923F6CBFE00DD9198 /* Protocols.swift in Sources */,
@@ -1371,6 +1410,7 @@
 				188B946A23F6CBFE00DD9198 /* AppConstants.swift in Sources */,
 				18528D1D23FD89DB0069BB6A /* MyBookingTableViewCell.swift in Sources */,
 				18528D1223FD42990069BB6A /* SignUpViewController.swift in Sources */,
+				180E483124016913004B57BC /* KYEmbedMainControllerSegue.swift in Sources */,
 				188B947F23F6CBFE00DD9198 /* NetworkResponseMessage.swift in Sources */,
 				188B947823F6CBFE00DD9198 /* AllProductsListViewModel.swift in Sources */,
 				188B945023F6CBFE00DD9198 /* ProductComparisonViewCell.swift in Sources */,
@@ -1396,6 +1436,7 @@
 				188B915323F6C11900DD9198 /* AppDelegate.swift in Sources */,
 				188B947723F6CBFE00DD9198 /* AllCategoriesViewModel.swift in Sources */,
 				18528D1623FD528A0069BB6A /* UpdateProfileViewController.swift in Sources */,
+				180E483424016CDE004B57BC /* SideMenuViewController.swift in Sources */,
 				188B948E23F6CBFE00DD9198 /* TokenRegistrationService.swift in Sources */,
 				188B94A523F6CBFE00DD9198 /* StringExtension.swift in Sources */,
 				188B945C23F6CBFE00DD9198 /* BaseTableViewCell.swift in Sources */,
@@ -1433,6 +1474,7 @@
 				188B945F23F6CBFE00DD9198 /* BaseNavigationController.swift in Sources */,
 				188B94A223F6CBFE00DD9198 /* BReachability.swift in Sources */,
 				188B948123F6CBFE00DD9198 /* ResponseHandler.swift in Sources */,
+				180E483024016913004B57BC /* KYDrawerController.swift in Sources */,
 				188B948923F6CBFE00DD9198 /* NotificationService.swift in Sources */,
 				188B94C923F6CBFE00DD9198 /* ACFloatingTextfield.swift in Sources */,
 				188B949D23F6CBFE00DD9198 /* MKConfig.swift in Sources */,

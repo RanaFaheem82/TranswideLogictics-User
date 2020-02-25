@@ -31,7 +31,9 @@ struct ComplaintDetail {
 }
 
 
+
 struct ControllerIdentifier {
+    static let KYDrawerController = "KYDrawerController"
     static let CommentsInputViewController = "CommentsInputViewController"
     static let CategoryViewController = "CategoryViewController"
     static let RevealNavigationController = "revealNavigation"

@@ -24,13 +24,7 @@ class MainContainerViewController: BaseViewController {
     var delegate:TopBarDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let revealController = self.revealViewController()
-        revealController?.panGestureRecognizer()
-        revealController?.tapGestureRecognizer()
-   
-      // self.showHomeController()
-       
+         self.showHomeController()
     }
    
     func setTitle(title:String) {
@@ -44,17 +38,24 @@ class MainContainerViewController: BaseViewController {
         btnReward.isHidden = !btnReward.isHidden
     }
     
-    
-    func setMenuButton(isBack:Bool? = false)  {
-        self.btnMenu.removeTarget(nil, action: nil, for: .allEvents)
-        if(isBack!){
-            self.btnMenu.setImage(UIImage(named: "IconBack")!, for: .normal)
-            self.btnMenu.addTarget(self, action: #selector(MainContainerViewController.actionBack(_:)), for: .touchUpInside)
-        }else{
-            self.btnMenu.setImage(UIImage(named: "IconMenu")!, for: .normal)
-            self.addSideMenu(button: self.btnMenu)
-        }
-    }
+    @IBAction func actionSideMenu(_ sender: Any) {
+          
+          if let drawerController = navigationController?.parent as? KYDrawerController {
+              drawerController.setDrawerState(.opened, animated: true)
+          }
+          
+      }
+      
+    func setMenuButton(isBack:Bool = false)  {
+           if(isBack){
+               self.btnMenu.removeTarget(nil, action: nil, for: .allEvents)
+               self.btnMenu.setImage(UIImage(named: "logo")!, for: .normal)
+               self.btnMenu.addTarget(self, action: #selector(MainContainerViewController.actionBack(_:)), for: .touchUpInside)
+           }else{
+              // self.btnMenu.setImage(UIImage(named: "logo")!, for: .normal)
+               self.btnMenu.addTarget(self, action: #selector(actionSideMenu(_:)), for: .touchUpInside)
+           }
+       }
     //MARK:- FUNCTIONS
     func showHomeController()  {
         if  let oldRef = self.basenavController{
