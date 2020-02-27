@@ -10,6 +10,22 @@ import UIKit
 
 class MyBookingTableViewCell: UITableViewCell {
 
+    
+    
+    @IBOutlet weak var lblWeight: UILabel!
+    @IBOutlet weak var valueStatus: UILabel!
+    @IBOutlet weak var lblBookingid: UILabel!
+    @IBOutlet weak var destinationLocation: UILabel!
+    @IBOutlet weak var lblStatus: UILabel!
+    
+    @IBOutlet weak var imgTripVehicle: UIImageView!
+    @IBOutlet weak var valueDate: UILabel!
+    @IBOutlet weak var valuePrice: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var valuetripType: UILabel!
+    @IBOutlet weak var valueWeight: UILabel!
+    @IBOutlet weak var sourceLocation: UILabel!
+    @IBOutlet weak var valueBookingid: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

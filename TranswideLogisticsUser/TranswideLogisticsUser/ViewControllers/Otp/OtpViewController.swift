@@ -8,16 +8,26 @@
 
 import UIKit
 import Firebase
-class OtpViewController: UIViewController {
+class OtpViewController: BaseViewController {
 
     @IBOutlet weak var lblOtp: UILabel!
     @IBOutlet weak var lblEnterOtpCode: UILabel!
     @IBOutlet weak var tfOtpCode: OTPtextField!
-    
+    var phoneNumber:String = ""
+   
    var userdefaults = UserDefaults()
-     var alertView = CustomIOSAlertView()
     
     
+    
+    override func viewDidLoad() {
+          super.viewDidLoad()
+         self.AuthenticatePhone()
+          tfOtpCode.configure(with: 6)
+          tfOtpCode.didEnterLastdigit = { [weak self] code in
+              print(code)
+              
+          }
+      }
     
     @IBAction func actionSubmit(_ sender: Any) {
         guard let otpCode = tfOtpCode.text else  { return }
@@ -27,41 +37,35 @@ class OtpViewController: UIViewController {
         Auth.auth().signInAndRetrieveData(with: credetials) { (success, error) in
             if(error == nil){
                 print("USER LOGED IN")
+                self.showHomeVC()
+                
             }else{
                 
                 print("WRONG")
             }
             
         }
-        
-        
        }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tfOtpCode.configure(with: 6)
-        tfOtpCode.didEnterLastdigit = { [weak self] code in
-            
-            print(code)
-            self?.alertView = CustomIOSAlertView()
-            self!.alertView?.buttonTitles = nil
-            self!.alertView?.useMotionEffects = true
-          
-            
-        }
+  
+    func AuthenticatePhone(){
+      PhoneAuthProvider.provider().verifyPhoneNumber(self.phoneNumber, uiDelegate: nil) { (verificationId, error) in
+                 if error == nil{
+                  guard let verifyId = verificationId  else { return }
+                  self.userdefaults.set(verifyId, forKey: "VerificationID")
+                  self.userdefaults.synchronize()
+                 }else{
+                     print("unable to get secret id from f as Anyirebase",error?.localizedDescription as Any)
+                 }
+             }
+      }
+    func showHomeVC(){
         
-
-        // Do any additional setup after loading the view.
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+               if let vc = storyboard!.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController{
+                                 
+                self.navigationController?.pushViewController(vc, animated: true)
+                                        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }

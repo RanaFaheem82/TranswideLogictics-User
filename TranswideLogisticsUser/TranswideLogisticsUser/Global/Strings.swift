@@ -59,6 +59,7 @@ struct ControllerIdentifier {
    
 }
 struct CellIdentifiers {
+    static let MyBookingTableViewCell = "MyBookingTableViewCell"
     static let CommentsTableViewCell = "CommentsTableViewCell"
     static let CategoryViewCell = "CategoryViewCell"
     static let CategoryTableViewCell = "CategoryTableViewCell"

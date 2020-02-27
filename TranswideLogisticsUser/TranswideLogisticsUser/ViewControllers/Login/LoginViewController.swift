@@ -28,8 +28,9 @@ class LoginViewController: BaseViewController {
     
     @IBAction func actionLogin(_ sender: Any) {
         
-        self.AuthenticatePhone()
-
+        
+        self.showOtpController()
+      
         
     }
 
@@ -58,38 +59,24 @@ extension LoginViewController:UITextFieldDelegate{
     func showOtpController(){
         
         if let vc = storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
-
+            vc.phoneNumber = self.txtphone.text!
+            
                self.navigationController?.pushViewController(vc, animated: true)
                    
                }
         
     }
     func showSignup(){
+     
         if let vc = storyboard!.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController{
                           
          self.navigationController?.pushViewController(vc, animated: true)
                                  
                              }
+        //LocationViewController
      
     }
     
-    func AuthenticatePhone(){
-
-        guard let phoneNumber = self.txtphone.text else{ return }
-           
-           PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationId, error) in
-               if error == nil{
-                  
-                guard let verifyId = verificationId  else { return }
-                self.userdefaults.set(verifyId, forKey: "VerificationID")
-                self.userdefaults.synchronize()
-                self.showOtpController()
-                 
-               }else{
-                   print("unable to get secret id from f as Anyirebase",error?.localizedDescription as Any)
-                   
-               }
-           }
-    }
+  
      
 }

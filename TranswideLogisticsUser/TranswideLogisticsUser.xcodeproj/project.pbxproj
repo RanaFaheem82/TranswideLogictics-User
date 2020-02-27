@@ -11,6 +11,7 @@
 		180E483024016913004B57BC /* KYDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E482D24016913004B57BC /* KYDrawerController.swift */; };
 		180E483124016913004B57BC /* KYEmbedMainControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E482E24016913004B57BC /* KYEmbedMainControllerSegue.swift */; };
 		180E483424016CDE004B57BC /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E483324016CDE004B57BC /* SideMenuViewController.swift */; };
+		18424CCE2406E23A0075FF5A /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424CCD2406E23A0075FF5A /* MyBookingsViewController.swift */; };
 		18528D1023FD3FD20069BB6A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D0F23FD3FD20069BB6A /* LoginViewController.swift */; };
 		18528D1223FD42990069BB6A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1123FD42990069BB6A /* SignUpViewController.swift */; };
 		18528D1423FD44D00069BB6A /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1323FD44D00069BB6A /* OtpViewController.swift */; };
@@ -202,6 +203,7 @@
 		180E482D24016913004B57BC /* KYDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDrawerController.swift; sourceTree = "<group>"; };
 		180E482E24016913004B57BC /* KYEmbedMainControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEmbedMainControllerSegue.swift; sourceTree = "<group>"; };
 		180E483324016CDE004B57BC /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		18424CCD2406E23A0075FF5A /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
 		18528D0F23FD3FD20069BB6A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18528D1123FD42990069BB6A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		18528D1323FD44D00069BB6A /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				18528D1B23FD89DB0069BB6A /* MyBookingTableViewCell.swift */,
+				18424CCD2406E23A0075FF5A /* MyBookingsViewController.swift */,
 			);
 			path = MyBookings;
 			sourceTree = "<group>";
@@ -1426,6 +1429,7 @@
 				188B945E23F6CBFE00DD9198 /* BaseCollectionViewCell.swift in Sources */,
 				188B948A23F6CBFE00DD9198 /* CommentService.swift in Sources */,
 				188B947023F6CBFE00DD9198 /* NotificationListViewModel.swift in Sources */,
+				18424CCE2406E23A0075FF5A /* MyBookingsViewController.swift in Sources */,
 				188B949223F6CBFE00DD9198 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				188B947523F6CBFE00DD9198 /* PriceHistoryViewModel.swift in Sources */,
 				188B945A23F6CBFE00DD9198 /* BaseTabbarController.swift in Sources */,

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ETf-sO-mrK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ACn-PT-VYT">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1283,10 +1283,10 @@
             </objects>
             <point key="canvasLocation" x="2253.5999999999999" y="-151.12443778110946"/>
         </scene>
-        <!--View Controller-->
+        <!--My Bookings View Controller-->
         <scene sceneID="mjc-bn-dHq">
             <objects>
-                <viewController id="ACn-PT-VYT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyBookingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ACn-PT-VYT" customClass="MyBookingsViewController" customModule="TranswideLogisticsUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2lr-fY-RBX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1343,11 +1343,15 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zee-3C-iWs">
-                                        <rect key="frame" x="0.0" y="60" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="60" width="375" height="543"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AYf-5j-LEJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AYf-5j-LEJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="ACn-PT-VYT" id="7yS-WI-plk"/>
+                                                    <outlet property="delegate" destination="ACn-PT-VYT" id="GHu-Xt-mqc"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1367,7 +1371,7 @@
                                     <constraint firstItem="yE7-nO-k23" firstAttribute="top" secondItem="2rJ-NG-guJ" secondAttribute="top" id="Qc6-qi-Kmy"/>
                                     <constraint firstAttribute="trailing" secondItem="yE7-nO-k23" secondAttribute="trailing" id="bxg-vq-buK"/>
                                     <constraint firstItem="yE7-nO-k23" firstAttribute="leading" secondItem="2rJ-NG-guJ" secondAttribute="leading" id="iIH-4Y-X44"/>
-                                    <constraint firstAttribute="bottom" secondItem="zee-3C-iWs" secondAttribute="bottom" constant="-60" id="jLQ-D9-OWO"/>
+                                    <constraint firstAttribute="bottom" secondItem="zee-3C-iWs" secondAttribute="bottom" id="jLQ-D9-OWO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1383,7 +1387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGx-Km-CZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415" y="-141"/>
+            <point key="canvasLocation" x="1413.5999999999999" y="-141.67916041979012"/>
         </scene>
         <!--Confirm Ride View Controller-->
         <scene sceneID="7EH-um-ZT3">
@@ -1663,7 +1667,7 @@
         <!--Base Navigation Controller-->
         <scene sceneID="NdK-jK-quY">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="eOq-d3-nhK" customClass="BaseNavigationController" customModule="TranswideLogisticsUser" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="eOq-d3-nhK" customClass="BaseNavigationController" customModule="TranswideLogisticsUser" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9mU-e6-Yzd">
                         <autoresizingMask key="autoresizingMask"/>

@@ -228,10 +228,10 @@ public class BaseViewController : UIViewController,SWRevealViewControllerDelegat
 //    
     func startActivityWithMessage (msg:String, detailMsg: String = "") {
         self.hud = MBProgressHUD.showAdded(to: self.view, animated:true)
-        hud.color = UIColor.gray
-        hud.activityIndicatorColor = UIColor.white
-        self.hud.labelText = msg
-        self.hud.detailsLabelText = detailMsg
+//        hud.color = UIColor.gray
+//        hud.activityIndicatorColor = UIColor.white
+//        self.hud.labelText = msg
+//        self.hud.detailsLabelText = detailMsg
     }
 //    func startActivityWithMessage (msg:String, detailMsg: String = "") {
 //        MKProgress.show()
