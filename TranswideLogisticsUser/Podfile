@@ -22,6 +22,8 @@ target 'TranswideLogisticsUser' do
    pod 'FBSDKCoreKit'
    pod 'FBSDKLoginKit'
    pod 'GoogleSignIn'
+   pod 'GoogleMaps'
+   pod 'GooglePlaces'
 
   # Pods for TranswideLogisticsUser
 

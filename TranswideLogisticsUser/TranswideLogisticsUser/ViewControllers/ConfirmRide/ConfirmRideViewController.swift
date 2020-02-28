@@ -7,18 +7,28 @@
 //
 
 import UIKit
-
+import GoogleMaps
 class ConfirmRideViewController: UIViewController {
 
-    @IBAction func actionConfirm(_ sender: Any) {
-    }
+    
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblConfirm: UILabel!
-    @IBOutlet weak var mapView: UIView!
+    @IBOutlet weak var mapView: GMSMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func actionConfirm(_ sender: Any) {
+        
+        if let vc = storyboard!.instantiateViewController(withIdentifier: "showDriverViewController") as? showDriverViewController{
+        
+            self.navigationController?.pushViewController(vc, animated: true)
+                
+            }
+        
+        
     }
     
 

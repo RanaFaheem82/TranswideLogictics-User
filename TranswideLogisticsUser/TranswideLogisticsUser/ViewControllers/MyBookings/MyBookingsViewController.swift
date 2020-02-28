@@ -19,15 +19,16 @@ class MyBookingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let db = Firestore.firestore()
-        
+    }
+}
 //
 //    let newDocument =  db.collection("test").document()
 //        newDocument.setData(["id" : newDocument.documentID,"date":"26-feb-2020","testing":true])
 //
-      //  db.collection("test").document("TESTING_ID1").setData(["id" : //newDocument.documentID,"date":"26-feb-2020","testing":true])
+//        db.collection("test").document("TESTING_ID1").setData(["id" : //newDocument.documentID,"date":"26-feb-2020","testing":true])
 //
 //
-        //using complation heandler
+//      //  using complation heandler
 //        db.collection("test").addDocument(data: ["id":1]) { (error) in
 //            if let error = error{
 //                //there is error
@@ -37,10 +38,10 @@ class MyBookingsViewController: UIViewController {
 //
 //            }
 //        }
-        
 //
-  // db.collection("test").document("TESTING_ID1").delete()
-        //getting data
+//
+//   db.collection("test").document("TESTING_ID1").delete()
+//    //    getting data
 //        db.collection("test").document().getDocument { (document, error) in
 //            if error == nil{
 //
@@ -63,9 +64,9 @@ class MyBookingsViewController: UIViewController {
 //                    print(documentdata)
 //
 //                }
-                
-            }
-        }
+//
+//            }
+//        }
         // Do any additional setup after loading the view.
     
     

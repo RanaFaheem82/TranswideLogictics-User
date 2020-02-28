@@ -68,11 +68,20 @@ class BookingViewController: UIViewController {
     
 
     @IBAction func actionSubmitBookLater(_ sender: Any) {
+    
+        if let vc = storyboard!.instantiateViewController(withIdentifier: "ConfirmRideViewController") as? ConfirmRideViewController{
+                         
+                             self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
+    }
     
     @IBAction func actionSubmitBookNow(_ sender: Any) {
+
+            if let vc = storyboard!.instantiateViewController(withIdentifier: "ConfirmRideViewController") as? ConfirmRideViewController{
+                             
+                                 self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     

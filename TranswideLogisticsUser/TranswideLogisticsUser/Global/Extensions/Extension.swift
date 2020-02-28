@@ -13,10 +13,10 @@ extension UIView {
     // OUTPUT 1
     func dropShadow(scale: Bool = true) {
         layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: -1, height: 1)
-        layer.shadowRadius = 1
+        layer.shadowColor = UIColor.white.cgColor
+        layer.shadowOpacity = 0.8
+        layer.shadowOffset = CGSize(width: 10, height: 0.8)
+        layer.shadowRadius = 8
         
         layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         layer.shouldRasterize = true
@@ -58,6 +58,22 @@ extension UIView {
            return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
        }
     
+
+
+    func animateToggleAlpha(duration:Double) {
+            UIView.animate(withDuration: duration) {
+                self.alpha = self.alpha == 1 ? 0 : 1
+            }
+        }
+    func showAnimateView(duration:Double){
+        
+        UIView.animate(withDuration: duration){
+            
+            self.alpha = self.alpha == 0 ? 0:1
+        }
+    }
+    
+    
 }
 
 
@@ -85,6 +101,9 @@ open class CustomLabel : UILabel {
 }
 class UIButtonWithSpacing : UIButton
 {
+    
+    
+   
     override func setTitle(_ title: String?, for state: UIControl.State)
     {
         if let title = title, spacing != 0
@@ -128,4 +147,16 @@ extension String {
         guard let data = self.data(using: .utf8, allowLossyConversion: false) else { return nil }
         return try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
     }
+}
+extension UIButton{
+    func showAnimateButton(duration:Double){
+       
+             UIButton.animate(withDuration: duration){
+                 
+                 self.alpha = self.alpha == 0 ? 0:1
+             }
+         }
+
+    
+    
 }

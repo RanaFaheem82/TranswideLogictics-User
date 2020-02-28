@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class showDriverViewController: UIViewController {
 
@@ -17,12 +18,20 @@ class showDriverViewController: UIViewController {
     @IBOutlet weak var imgDriverProfile: UIImageView!
     @IBOutlet weak var lblETA: UILabel!
     @IBOutlet weak var viewDriverDetails: UIView!
-    @IBOutlet weak var mapView: UIView!
+    @IBOutlet weak var mapView: GMSMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.actionOnLoading()
         // Do any additional setup after loading the view.
     }
+    
+    
+    func actionOnLoading(){
+        mapView.addSubview(viewDriverDetails)
+        
+        
+    }
+    
     @IBAction func actionCancelRide(_ sender: Any) {
     }
     
