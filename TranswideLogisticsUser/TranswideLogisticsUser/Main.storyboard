@@ -541,7 +541,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikZ-3l-TCg">
-                                        <rect key="frame" x="20" y="64" width="335" height="50"/>
+                                        <rect key="frame" x="20" y="80" width="335" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4U-Yy-20X">
                                                 <rect key="frame" x="24" y="0.0" width="286" height="50"/>
@@ -565,7 +565,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-KA-Cwx">
-                                        <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                        <rect key="frame" x="0.0" y="130" width="375" height="537"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlacesTableViewCell" rowHeight="102" id="3yK-Pw-IC7" customClass="PlacesTableViewCell" customModule="TranswideLogisticsUser" customModuleProvider="target">
@@ -620,7 +620,7 @@
                                     <constraint firstAttribute="trailing" secondItem="rzI-KA-Cwx" secondAttribute="trailing" id="deY-3h-Bg7"/>
                                     <constraint firstItem="rzI-KA-Cwx" firstAttribute="leading" secondItem="l8b-dU-VBG" secondAttribute="leading" id="p4I-7p-HzP"/>
                                     <constraint firstItem="rzI-KA-Cwx" firstAttribute="top" secondItem="ikZ-3l-TCg" secondAttribute="bottom" id="sEq-Ml-2kt"/>
-                                    <constraint firstItem="ikZ-3l-TCg" firstAttribute="top" secondItem="l8b-dU-VBG" secondAttribute="top" constant="64" id="yTF-07-cIZ"/>
+                                    <constraint firstItem="ikZ-3l-TCg" firstAttribute="top" secondItem="l8b-dU-VBG" secondAttribute="top" constant="80" id="yTF-07-cIZ"/>
                                 </constraints>
                             </view>
                         </subviews>

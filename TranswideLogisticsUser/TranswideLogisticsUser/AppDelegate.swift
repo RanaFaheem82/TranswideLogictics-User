@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
          FirebaseApp.configure()
         //AIzaSyBF3BJ23HQQtRyDsoALfpsNb5YuZdd7U40
-        GMSServices.provideAPIKey("AIzaSyDqnJ4wFLv1fP2_E3rDkpvFg8G9gVCh9h0")
-     GMSPlacesClient.provideAPIKey("AIzaSyDqnJ4wFLv1fP2_E3rDkpvFg8G9gVCh9h0")
+        GMSServices.provideAPIKey("AIzaSyBJwoYTnaQzoOsSZhTUllX4NMVZRPBALAY")
+     GMSPlacesClient.provideAPIKey("AIzaSyBJwoYTnaQzoOsSZhTUllX4NMVZRPBALAY")
         
         IQKeyboardManager.shared.enable = true
         return true
