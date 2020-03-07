@@ -64,7 +64,7 @@ class MainContainerViewController: BaseViewController {
         }
         let storyBoard = UIStoryboard(name: StoryboardNames.Main, bundle: nil)
         var controller = BaseNavigationController()
-        controller = storyBoard.instantiateViewController(withIdentifier: ControllerIdentifier.HomeNavigationController) as! BaseNavigationController
+        controller = storyBoard.instantiateViewController(withIdentifier: NavigationIdentifier.LocationVC) as! BaseNavigationController
         addChild(controller)
         
         self.basenavController = controller

@@ -69,8 +69,18 @@ public class BaseViewController : UIViewController,SWRevealViewControllerDelegat
         super.viewDidLoad()
        
        
+        
     }
-    
+   
+    func showAlertVIew(message:String, title:String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (result : UIAlertAction) -> Void in
+            self.closeAlertMessage()
+        }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
 //    func hideKeyboardWhenTappedAround() {
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
 //           tap.cancelsTouchesInView = false
@@ -463,3 +473,4 @@ extension BaseViewController: CLLocationManagerDelegate{
         
     }
 }
+

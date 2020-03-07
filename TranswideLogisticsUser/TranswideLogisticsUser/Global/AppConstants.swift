@@ -38,7 +38,24 @@ struct ApplicationColors {
 }
 
 
+let FILL_ALL_FIELDS_MESSAGE = "Please fill all fields"
+let PLEASE_SELECT_FILTER_MESSAGE = "Please select filters"
+let PLEASE_SELECT_RECIPIENT = "Please select recipient"
 
+let LOGOUT_TITLE = "Logout Successful"
+let LOGOUT_MESSAGE = "You have signed out Successfully from the My LUMS App."
+let LOGIN_TITLE = "Login Successful"
+let LOGIN_MESSAGE = "You have signed in Successfully to the My LUMS App."
+
+
+let ENTER_EMAIL_MESSAGE = "Please enter email"
+let ENTER_MESSAGE = "Please enter message"
+let MEMBER_REGISTERED_MESSAGE = "Member Registerd Successfully"
+let VALID_PHONE_MESSAGE = "Please enter valid phone number"
+let VALID_EMAIL_MESSAGE = "Please enter valid email"
+let VALID_EMAIL_AND_ROLL_NO_MESSAGE = "Please verify email and roll no"
+let VALID_CNIC_MESSAGE = "Please enter valid CNIC"
+let VALID_PASSWORD_MESSAGE = "Password and confirm password must be same"
 
 let PRINT_API_RESPONSE = false
 

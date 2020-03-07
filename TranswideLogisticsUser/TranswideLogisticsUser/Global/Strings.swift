@@ -30,9 +30,12 @@ struct ComplaintDetail {
     
 }
 
-
+struct NavigationIdentifier{
+    static let LocationVC = "LocationVC"
+}
 
 struct ControllerIdentifier {
+    
     static let KYDrawerController = "KYDrawerController"
     static let CommentsInputViewController = "CommentsInputViewController"
     static let CategoryViewController = "CategoryViewController"

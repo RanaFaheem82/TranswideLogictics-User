@@ -14,7 +14,7 @@ class OtpViewController: BaseViewController {
     @IBOutlet weak var lblEnterOtpCode: UILabel!
     @IBOutlet weak var tfOtpCode: OTPtextField!
     var phoneNumber:String = ""
-   
+    var signUpcheck = 0
    var userdefaults = UserDefaults()
     
     
@@ -29,16 +29,22 @@ class OtpViewController: BaseViewController {
           }
       }
     
+    
     @IBAction func actionSubmit(_ sender: Any) {
         guard let otpCode = tfOtpCode.text else  { return }
         guard let verficationId = userdefaults.string(forKey: "VerificationID") else { return }
+     
         let credetials = PhoneAuthProvider.provider().credential(withVerificationID: verficationId, verificationCode: otpCode)
         
         Auth.auth().signInAndRetrieveData(with: credetials) { (success, error) in
             if(error == nil){
                 print("USER LOGED IN")
+                if(self.signUpcheck == 1){
+                    
+                    self.showLogin()
+                }else{
                 self.showHomeVC()
-                
+                }
             }else{
                 
                 print("WRONG")
@@ -61,11 +67,21 @@ class OtpViewController: BaseViewController {
     func showHomeVC(){
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-               if let vc = storyboard!.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController{
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "KYDrawerController") as? KYDrawerController{
                                  
                 self.navigationController?.pushViewController(vc, animated: true)
                                         
     }
+    }
+    func showLogin(){
+        
+
+                   if let vc = storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController{
+                                     
+                    self.navigationController?.pushViewController(vc, animated: true)
+                                            
+        }
+        
     }
 
 }

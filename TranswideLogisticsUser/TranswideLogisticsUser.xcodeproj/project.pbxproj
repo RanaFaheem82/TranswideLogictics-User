@@ -172,6 +172,8 @@
 		18BF5F1E23F925F7000D3273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF5F1C23F925F7000D3273 /* Main.storyboard */; };
 		18BF5F1F23F925F7000D3273 /* Registeration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF5F1D23F925F7000D3273 /* Registeration.storyboard */; };
 		18C1400D23FF9DA600D4E5AA /* OTPtextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1400C23FF9DA600D4E5AA /* OTPtextField.swift */; };
+		18C44439240A4BCD00412001 /* BookNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C44438240A4BCD00412001 /* BookNowViewController.swift */; };
+		18C4443B240A4BDC00412001 /* BookLaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4443A240A4BDC00412001 /* BookLaterViewController.swift */; };
 		2CFEDADE977A5773C0AED81B /* Pods_TranswideLogisticsUserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */; };
 		785018293EE0FE577E772E39 /* Pods_TranswideLogisticsUserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2AA875ED78E37FA5D665FD /* Pods_TranswideLogisticsUserUITests.framework */; };
 		F254A9CA59DC51B570AC0D60 /* Pods_TranswideLogisticsUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFB4288057F45D2557ED3D5 /* Pods_TranswideLogisticsUser.framework */; };
@@ -385,6 +387,8 @@
 		18BF5F1C23F925F7000D3273 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		18BF5F1D23F925F7000D3273 /* Registeration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Registeration.storyboard; path = ../Registeration.storyboard; sourceTree = "<group>"; };
 		18C1400C23FF9DA600D4E5AA /* OTPtextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPtextField.swift; sourceTree = "<group>"; };
+		18C44438240A4BCD00412001 /* BookNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNowViewController.swift; sourceTree = "<group>"; };
+		18C4443A240A4BDC00412001 /* BookLaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookLaterViewController.swift; sourceTree = "<group>"; };
 		2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranswideLogisticsUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFB4288057F45D2557ED3D5 /* Pods_TranswideLogisticsUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranswideLogisticsUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		847787E62C7FF2DA50AA460D /* Pods-TranswideLogisticsUserUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserUITests.release.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserUITests/Pods-TranswideLogisticsUserUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -451,6 +455,8 @@
 		18528D2323FDA3B20069BB6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18C4443D240A4BEF00412001 /* BookLater */,
+				18C4443C240A4BE700412001 /* BookNow */,
 				188B939423F6CBF800DD9198 /* Main Container */,
 				180E483224016CBE004B57BC /* SideMenu */,
 				18528D2C23FDA4720069BB6A /* ConfirmRide */,
@@ -1072,6 +1078,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		18C4443C240A4BE700412001 /* BookNow */ = {
+			isa = PBXGroup;
+			children = (
+				18C44438240A4BCD00412001 /* BookNowViewController.swift */,
+			);
+			path = BookNow;
+			sourceTree = "<group>";
+		};
+		18C4443D240A4BEF00412001 /* BookLater */ = {
+			isa = PBXGroup;
+			children = (
+				18C4443A240A4BDC00412001 /* BookLaterViewController.swift */,
+			);
+			path = BookLater;
+			sourceTree = "<group>";
+		};
 		216160F7DFA562AFDABBDAD0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1427,6 +1449,8 @@
 				188B948D23F6CBFE00DD9198 /* LoginService.swift in Sources */,
 				188B947A23F6CBFE00DD9198 /* AllProductsViewModel.swift in Sources */,
 				188B945E23F6CBFE00DD9198 /* BaseCollectionViewCell.swift in Sources */,
+				18C44439240A4BCD00412001 /* BookNowViewController.swift in Sources */,
+				18C4443B240A4BDC00412001 /* BookLaterViewController.swift in Sources */,
 				188B948A23F6CBFE00DD9198 /* CommentService.swift in Sources */,
 				188B947023F6CBFE00DD9198 /* NotificationListViewModel.swift in Sources */,
 				18424CCE2406E23A0075FF5A /* MyBookingsViewController.swift in Sources */,

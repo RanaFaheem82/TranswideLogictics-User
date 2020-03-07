@@ -7,22 +7,17 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseCore
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: BaseViewController {
 
     @IBOutlet weak var lblSignUp: UILabel!
-    @IBOutlet weak var imgProfile: UIButton!
     @IBOutlet weak var imgMobile: UIImageView!
     @IBOutlet weak var txtPhone: UITextField!
     @IBOutlet weak var txtAddress: UITextField!
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblMobileno: UILabel!
-    @IBOutlet weak var txtConfirmPassword: UITextField!
-    @IBOutlet weak var imgPassword: UIImageView!
-    @IBOutlet weak var lblConfirmPassword: UILabel!
-    @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var imgConfirmPassword: UIImageView!
-    @IBOutlet weak var lblPassword: UILabel!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var imgEmail: UIImageView!
     @IBOutlet weak var lblEmail: UILabel!
@@ -37,12 +32,34 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var btnSignIn: UIButton!
     
     @IBAction func actionSignUp(_ sender: Any) {
+        
+       if(checkValidation()){
+              if(self.checkInternetConnection()){
+                            self.showOtpController()
+                        }
+             
+              
+          }
     }
     @IBAction func actionGetLocattion(_ sender: Any) {
+        
+        
+        
     }
     
     @IBAction func actionShowSignIn(_ sender: Any) {
+        self.showSignin()
+   
     }
+    override func checkInternetConnection() -> Bool {
+        if(BReachability.isConnectedToNetwork()){
+            return true
+        }else{
+            self.showAlertView(message:ERROR_NO_NETWORK, title: "Alert")
+            return false
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +68,51 @@ class SignUpViewController: UIViewController {
     }
     
 
+        
+        func showOtpController(){
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                   if let vc = storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
+                    vc.phoneNumber
+                        = self.txtPhone.text!
+                    vc.signUpcheck = 1
+                    
+                    self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+    }
+       func checkValidation() -> Bool {
+            var message = ""
+            var isValid = true
+            if(self.txtPhone!.text!.isEmpty || self.txtEmail!.text!.isEmpty || self.txtAddress!.text!.isEmpty || self.txtfirstname!.text!.isEmpty || self.txtlastname!.text!.isEmpty){
+                message = FILL_ALL_FIELDS_MESSAGE
+                isValid = false
+            }else if(!self.isValidEmail(testStr: self.txtEmail!.text!)){
+                message = VALID_EMAIL_MESSAGE
+                isValid = false
+            }
+            if(!isValid){
+                self.showAlertVIew(message: message, title: "Alert")
+    //            self.createAlertViewMessagePopup(message: message)
+    //            self.alertView?.show()
+            }
+            return isValid
+        }
+    
+    func showSignin(){
+        
+        
+                  let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                         if let vc = storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController{
+                        
+                          
+                          self.navigationController?.pushViewController(vc, animated: true)
+                  
+              }
+        
+        
+        
+    }
     /*
     // MARK: - Navigation
 
