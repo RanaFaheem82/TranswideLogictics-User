@@ -8,7 +8,7 @@
 
 import Foundation
 
-var QueueBundleID = "com.Rapidzz.gcd"
+var QueueBundleID = "apple.TranswideLogisticsUser.gcd"
 
 public enum GCGThreadType {
     case Main

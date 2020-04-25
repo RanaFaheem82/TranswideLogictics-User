@@ -2,6 +2,8 @@
 import Foundation
 import UIKit
 
+typealias ParamsAny = [String:Any]
+typealias ParamsString = [String:String]
 let TERMS_AND_CONDITION = "I agree to the Temrs & Conditions of User Agreement & Privacy Policy"
 
 let FAILED_MESSAGE = "Failed Please Try Again!"

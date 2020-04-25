@@ -1,135 +1,59 @@
+//
+//  ResponseHandler.swift
+//  OrderAteDelivery
+//
+//  Created by Gulfam Khan on 12/09/2019.
+//  Copyright © 2019 Rapidzz. All rights reserved.
+//
+
 import Foundation
 import SwiftyJSON
 
-let KEY_RESULT_TYPE = "status"
-let KEY_RESULT_TYPE1 = "success"
-let KEY_EXCEPTION = "Exception"
-let KEY_MESSAGE = "message"
-let KEY_VALIDATION_ERROR = "ValidationErrors"
-let KEY_DATA = "Data"
-
-let ERROR_SERVER_NO_DATA = "Server didn't give response"
-let ERROR_SERVER_WRONG_DATA = "Server didn't give proper response"
+let KEY_RESULT_CODE = "status"
+let KEY_RESPONSE_MESSAGE = "message"
+let KEY_RESPONSE_DATA = "data"
 
 
 class ResponseHandler {
     
-    class func handleResponseStructure(networkResponseMessage: NetworkResponseMessage) ->(ParsedResponseMessage) {
-      
+    class func handleResponse(_ response:JSON) -> ParsedResponseMessage {
+        let parsedResponseMessage = ParsedResponseMessage()
+        let resultCode = response[KEY_RESULT_CODE].stringValue
+        let resultMessage = response[KEY_RESPONSE_MESSAGE].stringValue
+        let switchValue = ServiceResponseType(rawValue: resultCode)!
+        print("Response: \(response)")
+        parsedResponseMessage.message = resultMessage
         
-        let parsedResponse = ParsedResponseMessage()
-        
-        if let data = networkResponseMessage.data as? Data {
-            
-            do {
-                let dic = JSON(data)
-                print(dic)
-                let jsonDict = try JSON(data: data)
-                if let resultType = jsonDict[KEY_RESULT_TYPE].int{
-                    if let msg = jsonDict[KEY_MESSAGE].string{
-                        parsedResponse.message = msg
-                    }
-                    switch resultType{
-                        
-                    case ServiceResponseType.Success.rawValue:
-                        
-                        parsedResponse.serviceResponseType = .Success
-                        parsedResponse.swiftyJsonData = jsonDict
-                        
-                    case ServiceResponseType.Failure.rawValue:
-                        parsedResponse.serviceResponseType = .Failure
-                        parsedResponse.swiftyJsonData = jsonDict
-                        
-                    case ServiceResponseType.DeActivated.rawValue:
-                        parsedResponse.serviceResponseType = .DeActivated
-                        
-                    case ServiceResponseType.Warning.rawValue:
-                        parsedResponse.serviceResponseType = .Warning
-                        
-                    case ServiceResponseType.Exception.rawValue:
-                        parsedResponse.serviceResponseType = .Exception
-                        if let exp = jsonDict[KEY_EXCEPTION].dictionary {
-                            parsedResponse.exception = exp.description
-                        }
-                        
-                    default:
-                        parsedResponse.message = ERROR_SERVER_WRONG_DATA
-                    }
-                }else{
-                    parsedResponse.message = ERROR_SERVER_WRONG_DATA
-                }
-                
-            } catch let error {
-                print(error.localizedDescription)
-                parsedResponse.message = ERROR_SERVER_WRONG_DATA
-            }
-        }
-        else{
-            parsedResponse.message = ERROR_SERVER_NO_DATA
+        switch switchValue {
+        case .Success:
+            parsedResponseMessage.serviceResponseType = .Success
+            parsedResponseMessage.swiftyJsonData = response
+        default:
+            parsedResponseMessage.data = nil
+            parsedResponseMessage.swiftyJsonData = nil
+            parsedResponseMessage.serviceResponseType = switchValue
         }
         
-        return parsedResponse
+        return parsedResponseMessage
     }
-    
-   
-    class func handleDefaultResponse(networkResponseMessage: NetworkResponseMessage) ->(ParsedResponseMessage) {
-        
-        let parsedResponse = ResponseHandler.handleResponseStructure(networkResponseMessage: networkResponseMessage)
-        
-//        if parsedResponse.serviceResponseType == .Success{
-//            if let jsonDict = parsedResponse.data as? [String: AnyObject]{
-//                //if  let jsonDate = jsonDict["data"] as? [String:AnyObject]{
-//                    var error2 : NSError? = nil
-//
-//                    let response : DefaultResponse!
-//                    do {
-//                        response = try DefaultResponse(dictionary: jsonDict)
-//                    } catch let error as NSError {
-//                        error2 = error
-//                        response = nil
-//                    }
-//
-//                    if let err = error2 {
-//                        print(err)
-//                        parsedResponse.serviceResponseType = .Failure
-//                        parsedResponse.message = ERROR_SERVER_WRONG_DATA
-//                        parsedResponse.data = nil
-//                    }
-//                    else{
-//                        parsedResponse.data = response
-//                    }
-//                }
-//
-//           // }
-//
-//        }
-        return parsedResponse
-    }
-    
-   
-    
-   
-   
-    
-   
-    class func handlePostResponse(networkResponseMessage: NetworkResponseMessage) ->(ParsedResponseMessage) {
-        
-        let parsedResponse = ResponseHandler.handleResponseStructure(networkResponseMessage: networkResponseMessage)
-        
-        if parsedResponse.serviceResponseType == .Success{
-            if let jsonDict = parsedResponse.data as? [String:AnyObject]{
-                print(jsonDict)
-            }
-        }else{
-            parsedResponse.serviceResponseType = .Failure
-            // parsedResponse.message = ERROR_SERVER_WRONG_DATA
-            
-        }
-        
-        return parsedResponse
-    }
-    
-    
-
+    class func handleBookingResponse(_ response:JSON) -> ParsedResponseMessage {
+           let parsedResponseMessage = ParsedResponseMessage()
+           let resultCode = response[KEY_RESULT_CODE].stringValue
+           let resultMessage = response[KEY_RESPONSE_MESSAGE].stringValue
+           let switchValue = ServiceResponseType(rawValue: resultCode)!
+           print("Response: \(response)")
+           parsedResponseMessage.message = resultMessage
+           
+           switch switchValue {
+           case .Success:
+               parsedResponseMessage.serviceResponseType = .Success
+               parsedResponseMessage.swiftyJsonData = response
+           default:
+               parsedResponseMessage.data = nil
+               parsedResponseMessage.swiftyJsonData = nil
+               parsedResponseMessage.serviceResponseType = switchValue
+           }
+           
+           return parsedResponseMessage
+       }
 }
-

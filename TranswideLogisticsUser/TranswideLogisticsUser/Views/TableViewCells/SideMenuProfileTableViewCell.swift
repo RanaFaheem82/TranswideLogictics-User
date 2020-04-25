@@ -24,7 +24,7 @@ class SideMenuProfileTableViewCell: BaseTableViewCell {
     func configure(isLoggedin:Bool)  {
         if(isLoggedin){
             let user = Global.shared.user ?? UserViewModel()
-            self.setImageWithUrl(imageView: self.imgProfile, url: user.image, placeholder: PlaceHolders.appLogo)
+            self.setImageWithUrl(imageView: self.imgProfile, url: user.profileImage, placeholder: PlaceHolders.appLogo)
             self.lblName.text = user.name
             self.viewUserInfo.isHidden = false
         }else{

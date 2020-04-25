@@ -27,15 +27,15 @@ let VERIFICATION_TIME = 60
 
 
 
-struct ApplicationColors {
-    static let LightGrayColorWithAlpha = UIColor.hexStr("0x707070", alpha: 0.21)
-    static let PinkColor = UIColor.hexStr("0xFF5D5D")
-    static let DarkPinkColor = UIColor.hexStr("0xFF5F55")
-    static let LightGrayColor = UIColor.hexStr("0xF9F9F9")
-    static let YellowColor = UIColor.hexStr("0xFFC66C")
-    static let BlackColor = UIColor.black
-    
-}
+//struct ApplicationColors {
+//    static let LightGrayColorWithAlpha = UIColor.hexStr("0x707070", alpha: 0.21)
+//    static let PinkColor = UIColor.hexStr("0xFF5D5D")
+//    static let DarkPinkColor = UIColor.hexStr("0xFF5F55")
+//    static let LightGrayColor = UIColor.hexStr("0xF9F9F9")
+//    static let YellowColor = UIColor.hexStr("0xFFC66C")
+//    static let BlackColor = UIColor.black
+//    
+//}
 
 
 let FILL_ALL_FIELDS_MESSAGE = "Please fill all fields"
@@ -66,14 +66,14 @@ let USER = "user"
 
 
 
-let BASE_URL = "http://mashghol.com/hitch/public/api/"
+let BASE_URL = "http://5d716cb7.ngrok.io/"
 let BASE_URL_LIVE = "http://144.91.68.79:9779/api/"
 
 let BASE_URL_2 = "http://144.91.68.79:9779/api/"
 
 
 let URL_REGISTER_USER              = "register"
-let URL_LOGIN                      = "login"
+let URL_LOGIN                      = "user/login"
 let URL_FORGET_PASSWORD            = "user/password/forgot"
 let URL_FCM_TOEKN_REGISTRATION     = "update_fcm_token"
 let URL_GET_HOME_PRODUCTS          = "Home/GetHomeProducts"

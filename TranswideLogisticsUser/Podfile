@@ -24,6 +24,7 @@ target 'TranswideLogisticsUser' do
    pod 'GoogleSignIn'
    pod 'GoogleMaps'
    pod 'GooglePlaces'
+   pod 'Alamofire'
 
   # Pods for TranswideLogisticsUser
 

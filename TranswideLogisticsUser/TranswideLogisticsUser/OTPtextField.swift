@@ -37,11 +37,6 @@ class OTPtextField: UITextField {
             labelStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             labelStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             labelStackView.trailingAnchor.constraint(equalTo: trailingAnchor)
-            
-            
-         
-            
-            
          ])
         
         

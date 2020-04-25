@@ -24,7 +24,7 @@ class SideMenuTableViewCell: BaseTableViewCell {
         self.lblMenu.text = menu["title"]
         
         self.imgMenu.image = self.imgMenu.image?.withRenderingMode(.alwaysTemplate)
-        self.imgMenu.tintColor = ApplicationColors.BlackColor
+        self.imgMenu.tintColor = UIColor.black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -1,6 +1,12 @@
+//
+//  ParsedResponseMessage.swift
+//  OrderAteDelivery
+//
+//  Created by Gulfam Khan on 12/09/2019.
+//  Copyright © 2019 Rapidzz. All rights reserved.
+//
 
 import SwiftyJSON
-
 
 public class ParsedResponseMessage{
     var serviceResponseType: ServiceResponseType = .Failure
