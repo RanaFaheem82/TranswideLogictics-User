@@ -22,6 +22,8 @@
 		18528D1E23FD89DB0069BB6A /* MyBookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18528D1C23FD89DB0069BB6A /* MyBookingTableViewCell.xib */; };
 		18528D2023FDA2450069BB6A /* ConfirmRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */; };
 		18528D2223FDA2E70069BB6A /* showDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D2123FDA2E70069BB6A /* showDriverViewController.swift */; };
+		1857D480245723510046854F /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857D47F245723510046854F /* JobsViewController.swift */; };
+		1857D482245723C40046854F /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857D481245723C40046854F /* JobsTableViewCell.swift */; };
 		1862104A23FF13A30027A220 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862104923FF13A30027A220 /* GoogleService-Info.plist */; };
 		186B83E72413E71E00E63847 /* SearchPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B83E62413E71D00E63847 /* SearchPlacesViewController.swift */; };
 		186B83E92413E7EA00E63847 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B83E82413E7EA00E63847 /* PlacesTableViewCell.swift */; };
@@ -206,6 +208,8 @@
 		18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRideViewController.swift; sourceTree = "<group>"; };
 		18528D2123FDA2E70069BB6A /* showDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showDriverViewController.swift; sourceTree = "<group>"; };
 		1857D2CD24548AFF0046854F /* TranswideLogisticsUser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranswideLogisticsUser.entitlements; sourceTree = "<group>"; };
+		1857D47F245723510046854F /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		1857D481245723C40046854F /* JobsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
 		1862104923FF13A30027A220 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		186B83E62413E71D00E63847 /* SearchPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlacesViewController.swift; sourceTree = "<group>"; };
 		186B83E82413E7EA00E63847 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
@@ -434,6 +438,7 @@
 		18528D2323FDA3B20069BB6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1857D47E2457233F0046854F /* Jobs */,
 				186B83E52413E5DF00E63847 /* SearchPlace */,
 				18C4443D240A4BEF00412001 /* BookLater */,
 				18C4443C240A4BE700412001 /* BookNow */,
@@ -523,6 +528,14 @@
 				18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */,
 			);
 			path = ConfirmRide;
+			sourceTree = "<group>";
+		};
+		1857D47E2457233F0046854F /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				1857D47F245723510046854F /* JobsViewController.swift */,
+			);
+			path = Jobs;
 			sourceTree = "<group>";
 		};
 		186B83E52413E5DF00E63847 /* SearchPlace */ = {
@@ -644,6 +657,7 @@
 				188B939023F6CBF700DD9198 /* ProductimageViewCell.swift */,
 				188B939123F6CBF700DD9198 /* NewArrivalsTableViewCell.swift */,
 				188B939223F6CBF700DD9198 /* PriceHistoryTableViewCell.swift */,
+				1857D481245723C40046854F /* JobsTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -1377,6 +1391,7 @@
 				18528D1A23FD59D20069BB6A /* BookingViewController.swift in Sources */,
 				18E04248244228F700C79410 /* LoginService.swift in Sources */,
 				188B947223F6CBFE00DD9198 /* IPAddressInfoViewModel.swift in Sources */,
+				1857D482245723C40046854F /* JobsTableViewCell.swift in Sources */,
 				188B946723F6CBFE00DD9198 /* String+Extension.swift in Sources */,
 				188B946B23F6CBFE00DD9198 /* CategoryViewModel.swift in Sources */,
 				188B945423F6CBFE00DD9198 /* ProductimageViewCell.swift in Sources */,
@@ -1417,6 +1432,7 @@
 				188B946423F6CBFE00DD9198 /* AppEnums.swift in Sources */,
 				188B915723F6C11900DD9198 /* ViewController.swift in Sources */,
 				188B915323F6C11900DD9198 /* AppDelegate.swift in Sources */,
+				1857D480245723510046854F /* JobsViewController.swift in Sources */,
 				188B947723F6CBFE00DD9198 /* AllCategoriesViewModel.swift in Sources */,
 				18528D1623FD528A0069BB6A /* UpdateProfileViewController.swift in Sources */,
 				180E483424016CDE004B57BC /* SideMenuViewController.swift in Sources */,
@@ -1635,7 +1651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TranswideLogisticsUser/TranswideLogisticsUser.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = J437C5ZM97;
 				INFOPLIST_FILE = TranswideLogisticsUser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1657,7 +1673,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TranswideLogisticsUser/TranswideLogisticsUser.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = J437C5ZM97;
 				INFOPLIST_FILE = TranswideLogisticsUser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
