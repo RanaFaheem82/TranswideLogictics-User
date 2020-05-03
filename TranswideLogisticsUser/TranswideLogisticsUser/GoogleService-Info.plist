@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>898622743198-bnmpc97k6g02qt6isf8qjiaicg63eroi.apps.googleusercontent.com</string>
+	<string>898622743198-t9eqr01rh3f45t22l3ndkggjeijb40mh.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.898622743198-bnmpc97k6g02qt6isf8qjiaicg63eroi</string>
+	<string>com.googleusercontent.apps.898622743198-t9eqr01rh3f45t22l3ndkggjeijb40mh</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCyAf3fyX2P7kM8UVWAADPts_A7Kdb1J0g</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>apple.TranswideLogisticsUser</string>
+	<string>com.Rapidzz.Tawrid-Restaurant</string>
 	<key>PROJECT_ID</key>
 	<string>transwidelogistics-b59c3</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:898622743198:ios:08afe7d674203374aa518f</string>
+	<string>1:898622743198:ios:e6ea625ae0c9bb1faa518f</string>
 	<key>DATABASE_URL</key>
 	<string>https://transwidelogistics-b59c3.firebaseio.com</string>
 </dict>

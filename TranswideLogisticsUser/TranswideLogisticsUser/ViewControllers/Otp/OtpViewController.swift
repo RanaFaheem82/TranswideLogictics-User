@@ -46,18 +46,18 @@ class OtpViewController: BaseViewController {
     //                               }
     //      }
     @IBAction func actionSubmit(_ sender: Any) {
-//        guard let otpCode = tfOtpCode.text else  { return }
-//        guard let verficationId = userdefaults.string(forKey: "VerificationID") else { return }
-//        let credetials = PhoneAuthProvider.provider().credential(withVerificationID: verficationId, verificationCode: otpCode)
-//        Auth.auth().signIn(with: credetials) { (authResult, error) in
-//            if error != nil {
-//                self.showAlertView(message: "WrongPin", title: "")
-//            }
-//            else{
-//                self.doLogin()
-//            }
-//        }
-        self.login(params: ["phoneNumber" : self.phoneNumber])
+        guard let otpCode = tfOtpCode.text else  { return }
+        guard let verficationId = userdefaults.string(forKey: "VerificationID") else { return }
+        let credetials = PhoneAuthProvider.provider().credential(withVerificationID: verficationId, verificationCode: otpCode)
+        Auth.auth().signIn(with: credetials) { (authResult, error) in
+            if error != nil {
+                self.showAlertView(message: "WrongPin", title: "")
+            }
+            else{
+                self.showHomeVC()
+            }
+        }
+       // self.login(params: ["phoneNumber" : self.phoneNumber])
     }
     
     

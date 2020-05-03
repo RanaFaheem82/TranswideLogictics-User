@@ -17,16 +17,16 @@
 		18528D1423FD44D00069BB6A /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1323FD44D00069BB6A /* OtpViewController.swift */; };
 		18528D1623FD528A0069BB6A /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1523FD528A0069BB6A /* UpdateProfileViewController.swift */; };
 		18528D1823FD575E0069BB6A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1723FD575E0069BB6A /* LocationViewController.swift */; };
-		18528D1A23FD59D20069BB6A /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1923FD59D20069BB6A /* BookingViewController.swift */; };
 		18528D1D23FD89DB0069BB6A /* MyBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1B23FD89DB0069BB6A /* MyBookingTableViewCell.swift */; };
 		18528D1E23FD89DB0069BB6A /* MyBookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18528D1C23FD89DB0069BB6A /* MyBookingTableViewCell.xib */; };
 		18528D2023FDA2450069BB6A /* ConfirmRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */; };
 		18528D2223FDA2E70069BB6A /* showDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D2123FDA2E70069BB6A /* showDriverViewController.swift */; };
 		1857D480245723510046854F /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857D47F245723510046854F /* JobsViewController.swift */; };
 		1857D482245723C40046854F /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857D481245723C40046854F /* JobsTableViewCell.swift */; };
-		1862104A23FF13A30027A220 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1862104923FF13A30027A220 /* GoogleService-Info.plist */; };
 		186B83E72413E71E00E63847 /* SearchPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B83E62413E71D00E63847 /* SearchPlacesViewController.swift */; };
 		186B83E92413E7EA00E63847 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B83E82413E7EA00E63847 /* PlacesTableViewCell.swift */; };
+		1884122F245D4E0700D59477 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1884122E245D4E0700D59477 /* GoogleService-Info.plist */; };
+		18841231245D71EC00D59477 /* sideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18841230245D71EC00D59477 /* sideMenuTableViewCell.swift */; };
 		188B915323F6C11900DD9198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915223F6C11900DD9198 /* AppDelegate.swift */; };
 		188B915523F6C11900DD9198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915423F6C11900DD9198 /* SceneDelegate.swift */; };
 		188B915723F6C11900DD9198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915623F6C11900DD9198 /* ViewController.swift */; };
@@ -202,7 +202,6 @@
 		18528D1323FD44D00069BB6A /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
 		18528D1523FD528A0069BB6A /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		18528D1723FD575E0069BB6A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		18528D1923FD59D20069BB6A /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		18528D1B23FD89DB0069BB6A /* MyBookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingTableViewCell.swift; sourceTree = "<group>"; };
 		18528D1C23FD89DB0069BB6A /* MyBookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBookingTableViewCell.xib; sourceTree = "<group>"; };
 		18528D1F23FDA2450069BB6A /* ConfirmRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRideViewController.swift; sourceTree = "<group>"; };
@@ -210,9 +209,10 @@
 		1857D2CD24548AFF0046854F /* TranswideLogisticsUser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranswideLogisticsUser.entitlements; sourceTree = "<group>"; };
 		1857D47F245723510046854F /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		1857D481245723C40046854F /* JobsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
-		1862104923FF13A30027A220 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		186B83E62413E71D00E63847 /* SearchPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlacesViewController.swift; sourceTree = "<group>"; };
 		186B83E82413E7EA00E63847 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		1884122E245D4E0700D59477 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18841230245D71EC00D59477 /* sideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		188B914F23F6C11900DD9198 /* TranswideLogisticsUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranswideLogisticsUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B915223F6C11900DD9198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188B915423F6C11900DD9198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -431,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				180E483324016CDE004B57BC /* SideMenuViewController.swift */,
+				18841230245D71EC00D59477 /* sideMenuTableViewCell.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -446,7 +447,6 @@
 				180E483224016CBE004B57BC /* SideMenu */,
 				18528D2C23FDA4720069BB6A /* ConfirmRide */,
 				18528D2B23FDA4680069BB6A /* Login */,
-				18528D2A23FDA4540069BB6A /* NewBooking */,
 				18528D2923FDA4240069BB6A /* SignUP */,
 				18528D2823FDA4170069BB6A /* UpdateProfile */,
 				18528D2723FDA40B0069BB6A /* Locationview */,
@@ -506,14 +506,6 @@
 			path = SignUP;
 			sourceTree = "<group>";
 		};
-		18528D2A23FDA4540069BB6A /* NewBooking */ = {
-			isa = PBXGroup;
-			children = (
-				18528D1923FD59D20069BB6A /* BookingViewController.swift */,
-			);
-			path = NewBooking;
-			sourceTree = "<group>";
-		};
 		18528D2B23FDA4680069BB6A /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +563,7 @@
 		188B915123F6C11900DD9198 /* TranswideLogisticsUser */ = {
 			isa = PBXGroup;
 			children = (
+				1884122E245D4E0700D59477 /* GoogleService-Info.plist */,
 				1857D2CD24548AFF0046854F /* TranswideLogisticsUser.entitlements */,
 				18E042202442250300C79410 /* Library */,
 				188B939623F6CBF800DD9198 /* Base Classes */,
@@ -588,7 +581,6 @@
 				188B915B23F6C11D00DD9198 /* Assets.xcassets */,
 				188B915D23F6C11D00DD9198 /* LaunchScreen.storyboard */,
 				188B916023F6C11D00DD9198 /* Info.plist */,
-				1862104923FF13A30027A220 /* GoogleService-Info.plist */,
 				188B937923F6C55D00DD9198 /* TranswideLogisticsUser-Bridging-Header.h */,
 				18C1400C23FF9DA600D4E5AA /* OTPtextField.swift */,
 			);
@@ -1232,6 +1224,7 @@
 				188B94C623F6CBFE00DD9198 /* Roboto-Black.ttf in Resources */,
 				188B94B623F6CBFE00DD9198 /* RobotoCondensed-Bold.ttf in Resources */,
 				18BF5F1F23F925F7000D3273 /* Registeration.storyboard in Resources */,
+				1884122F245D4E0700D59477 /* GoogleService-Info.plist in Resources */,
 				188B94BE23F6CBFE00DD9198 /* Roboto-ThinItalic.ttf in Resources */,
 				188B94A023F6CBFE00DD9198 /* README.md in Resources */,
 				188B94BF23F6CBFE00DD9198 /* RobotoCondensed-Regular.ttf in Resources */,
@@ -1242,7 +1235,6 @@
 				188B94BB23F6CBFE00DD9198 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				188B94C223F6CBFE00DD9198 /* Roboto-Italic.ttf in Resources */,
 				188B94C523F6CBFE00DD9198 /* Roboto-Thin.ttf in Resources */,
-				1862104A23FF13A30027A220 /* GoogleService-Info.plist in Resources */,
 				188B94B223F6CBFE00DD9198 /* MyriadPro-BoldCond.otf in Resources */,
 				188B94AA23F6CBFE00DD9198 /* MyriadPro-SemiboldIt.otf in Resources */,
 			);
@@ -1388,7 +1380,6 @@
 				188B944423F6CBFD00DD9198 /* NewArrivalsCollectionViewCell.swift in Sources */,
 				188B945823F6CBFE00DD9198 /* MainContainerViewController.swift in Sources */,
 				188B94CA23F6CBFE00DD9198 /* RIATextfield.swift in Sources */,
-				18528D1A23FD59D20069BB6A /* BookingViewController.swift in Sources */,
 				18E04248244228F700C79410 /* LoginService.swift in Sources */,
 				188B947223F6CBFE00DD9198 /* IPAddressInfoViewModel.swift in Sources */,
 				1857D482245723C40046854F /* JobsTableViewCell.swift in Sources */,
@@ -1477,6 +1468,7 @@
 				18528D1823FD575E0069BB6A /* LocationViewController.swift in Sources */,
 				188B949423F6CBFE00DD9198 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				188B94A323F6CBFE00DD9198 /* KWTextFieldView.swift in Sources */,
+				18841231245D71EC00D59477 /* sideMenuTableViewCell.swift in Sources */,
 				188B944C23F6CBFE00DD9198 /* HomeSliderTableViewCell.swift in Sources */,
 				18E0423B2442250400C79410 /* ServiceResponseType.swift in Sources */,
 				188B94D123F6CBFE00DD9198 /* ActiveBuilder.swift in Sources */,
@@ -1651,14 +1643,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TranswideLogisticsUser/TranswideLogisticsUser.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J437C5ZM97;
+				DEVELOPMENT_TEAM = 5MVY25HYQD;
 				INFOPLIST_FILE = TranswideLogisticsUser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = apple.TranswideLogisticsUser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TraswideLogisticsUser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranswideLogisticsUser/TranswideLogisticsUser-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1673,14 +1665,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TranswideLogisticsUser/TranswideLogisticsUser.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J437C5ZM97;
+				DEVELOPMENT_TEAM = 5MVY25HYQD;
 				INFOPLIST_FILE = TranswideLogisticsUser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = apple.TranswideLogisticsUser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TraswideLogisticsUser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranswideLogisticsUser/TranswideLogisticsUser-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
