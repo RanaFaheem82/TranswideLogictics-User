@@ -8,7 +8,11 @@
 
 import UIKit
 
-class BookLaterViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
+class BookLaterViewController: BaseViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate,TopBarDelegate{
+    func actionCallBackMoveBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
    
     @IBOutlet weak var lblSelectVehicle: UILabel!
     @IBOutlet weak var btnSubmit: UIButton!
@@ -50,6 +54,15 @@ class BookLaterViewController: UIViewController,UIPickerViewDelegate,UIPickerVie
        createDatePicker()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           if let container = self.mainContainer {
+               container.delegate = self
+               container.setTitle(title: "Book Later")
+               container.setMenuButton(isBack: true)
+           }
+       }
     
     
     func createPickerView()
@@ -217,8 +230,7 @@ class BookLaterViewController: UIViewController,UIPickerViewDelegate,UIPickerVie
                 picker1.reloadAllComponents()
             default:
                 activeTextField = 0
-            }
-            
+          }
         }
     
     func createDatePicker(){
@@ -243,13 +255,6 @@ class BookLaterViewController: UIViewController,UIPickerViewDelegate,UIPickerVie
 
     @IBAction func actionSubmit(_ sender: Any) {
         
-        if let vc = storyboard!.instantiateViewController(withIdentifier: "ConfirmRideViewController") as? ConfirmRideViewController{
-                   
-                       self.navigationController?.pushViewController(vc, animated: true)
-                           
-                       }
+       self.showAlertVIew(message: "Your Booking Schedule Successfully", title: "Booking")
     }
-   
-   
-
 }

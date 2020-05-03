@@ -7,7 +7,11 @@ protocol SearchPlacesViewControllerDelegate : class{
     func getAddress(Address : NSAttributedString , LocationID : String)
 }
 
-class SearchPlacesViewController: BaseViewController {
+class SearchPlacesViewController: BaseViewController,TopBarDelegate {
+    func actionCallBackMoveBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     @IBOutlet weak var resultText: UITextView!
     @IBOutlet weak var textField: UITextField!
@@ -22,6 +26,14 @@ class SearchPlacesViewController: BaseViewController {
         view.backgroundColor = .white
         self.autoCompleteFilter()
     }
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           if let container = self.mainContainer {
+               container.delegate = self
+               container.setTitle(title: "Search Location")
+               container.setMenuButton(isBack: true)
+           }
+       }
     @objc func textFieldDidChange(textField: UITextField) {
         fetcher?.sourceTextHasChanged(textField.text!)
     }

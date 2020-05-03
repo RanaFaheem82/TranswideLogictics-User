@@ -33,6 +33,7 @@ struct ComplaintDetail {
 }
 
 struct NavigationIdentifier{
+    static let MyShipmentVC = "MyShipmentVC"
     static let LocationVC = "LocationVC"
 }
 

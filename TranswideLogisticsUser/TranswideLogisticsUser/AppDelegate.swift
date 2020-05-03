@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate {
         // Override point for customization after application launch.
          FirebaseApp.configure()
         //AIzaSyBF3BJ23HQQtRyDsoALfpsNb5YuZdd7U40
-        GMSServices.provideAPIKey("AIzaSyBJwoYTnaQzoOsSZhTUllX4NMVZRPBALAY")
-     GMSPlacesClient.provideAPIKey("AIzaSyBJwoYTnaQzoOsSZhTUllX4NMVZRPBALAY")
+        GMSServices.provideAPIKey("AIzaSyBTfypSbx_zNMhWSBXMTA2BJBMQO7_9_T8")
+     GMSPlacesClient.provideAPIKey("AIzaSyBTfypSbx_zNMhWSBXMTA2BJBMQO7_9_T8")
         application.registerForRemoteNotifications()
         Messaging.messaging().delegate = self
          self.getToken()

@@ -75,7 +75,7 @@ public class BaseViewController : UIViewController,SWRevealViewControllerDelegat
     func showAlertVIew(message:String, title:String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (result : UIAlertAction) -> Void in
-            self.closeAlertMessage()
+            //self.closeAlertMessage()
         }
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
@@ -105,6 +105,10 @@ public class BaseViewController : UIViewController,SWRevealViewControllerDelegat
     public func revealControllerPanGestureShouldBegin(_ revealController: SWRevealViewController!) -> Bool {
         return false
     }
+    func getUrl(lat: Double, lng : Double) -> String{
+           let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(lat),\(lng)&key=\("AIzaSyBTfypSbx_zNMhWSBXMTA2BJBMQO7_9_T8")"
+           return url
+       }
     func addSideMenu(button:UIButton)  {
         if revealViewController() != nil {
             revealViewController().panGestureRecognizer()
@@ -129,35 +133,8 @@ public class BaseViewController : UIViewController,SWRevealViewControllerDelegat
         UserDefaults.standard.set(isloggedIn!, forKey: KEEP_LOGIN)
         UserDefaults.standard.synchronize()
     }
-    func getCurrentLocation() {
-        self.locationManager = CLLocationManager()
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestAlwaysAuthorization()
-        
-//        if CLLocationManager.locationServicesEnabled(){
-//            self.locationManager.startUpdatingLocation()
-//        }
-        self.checkLocationStatus()
-    }
-    func checkLocationStatus() {
-        self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            if(CLLocationManager.authorizationStatus() == .denied || CLLocationManager.authorizationStatus() == .notDetermined || CLLocationManager.authorizationStatus() == .restricted){
-                self.showLocationPermissionPopup()
-            }else{
-                self.locationManager.delegate = self
-                //self.isCurrentLocation = true
-                self.locationManager.delegate = self
-                self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-                self.locationManager.startUpdatingLocation()
-            }
-        }else{
-            
-        }
-        
-    }
+  
+  
     
     func showLocationPermissionPopup() {
         let alert = UIAlertController(title: LocationService.ServiceOff, message: LocationService.AllowLocationMessage, preferredStyle: .alert)
@@ -431,51 +408,4 @@ public class BaseViewController : UIViewController,SWRevealViewControllerDelegat
     }
     // Get Profile Data and navigate to Profile Detail Screen
   }
-
-//MARK:- CLLocationDelegate
-extension BaseViewController: CLLocationManagerDelegate{
-    @objc func closeAlertMessage() {
-        
-    }
-    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if(status == .authorizedAlways || status == .authorizedWhenInUse){
-//            self.isCurrentLocation = true
-            self.locationManager.startUpdatingLocation()
-        }else if(status == .denied || status == .notDetermined || status == .restricted){
-//            self.isCurrentLocation = false
-            self.showLocationPermissionPopup()
-        }
-        
-    }
-    
-    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let userLocation :CLLocation = locations[0] as CLLocation
-        print("user latitude = \(userLocation.coordinate.latitude)")
-        print("user longitude = \(userLocation.coordinate.longitude)")
-       
-        let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(userLocation) { (placemarks, error) in
-            if (error != nil){
-                print("error in reverseGeocode")
-            }
-            if let _ = placemarks{
-                let placemark = placemarks! as [CLPlacemark]
-                if placemark.count>0{
-                    let placemark = placemarks![0]
-                    print(placemark.locality!)
-                    print(placemark.administrativeArea!)
-                    print(placemark.country!)
-                    
-                    let address = "\(placemark.locality!), \(placemark.administrativeArea!), \(placemark.country!)"
-                    self.showUserLocation(address: address, coordinate: userLocation.coordinate)
-                }
-            }
-        }
-        self.locationManager.stopUpdatingLocation()
-    }
-    
-   @objc func showUserLocation(address:String, coordinate: CLLocationCoordinate2D) {
-        
-    }
-}
 

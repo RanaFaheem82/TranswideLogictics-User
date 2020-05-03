@@ -8,7 +8,11 @@
 
 import UIKit
 
-class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
+class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate,TopBarDelegate {
+    func actionCallBackMoveBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     @IBOutlet weak var imgDriverNotes: UIImageView!
     @IBOutlet weak var lblSelectVehicle: UILabel!
@@ -25,7 +29,7 @@ class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
      @IBOutlet weak var imgSelectVehicle: UIImageView!
      @IBOutlet weak var tfweightType: UITextField!
     
-    
+    var picklocation : String!
     let picker1 = UIPickerView()
     
     let vehicles = ["Tractor-trailer","Box-Truck","Tow-Truck","16-Wheeler","Home-DeilveryTruck"]
@@ -46,6 +50,14 @@ class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           if let container = self.mainContainer {
+               container.delegate = self
+               container.setTitle(title: "Book Now")
+               container.setMenuButton(isBack: true)
+           }
+       }
      func createPickerView()
      {
          picker1.delegate = self
@@ -218,7 +230,7 @@ class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     
     @IBAction func actionSubmit(_ sender: Any) {
         if let vc = storyboard!.instantiateViewController(withIdentifier: "ConfirmRideViewController") as? ConfirmRideViewController{
-            
+            vc.pickupAddress = self.picklocation
                 self.navigationController?.pushViewController(vc, animated: true)
                     
                 }

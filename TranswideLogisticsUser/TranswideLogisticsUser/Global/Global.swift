@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import GoogleMaps
 
 class Global {
     class var shared : Global {
@@ -20,6 +21,8 @@ class Global {
     var fcmNotification:FCMNotificationViewModel?
     var isFromNotification:Bool = false
     var isFbLogin = false
+    var pickupLocation : CLLocationCoordinate2D?
+    var destinationLocation : CLLocationCoordinate2D?
     
     
   }
