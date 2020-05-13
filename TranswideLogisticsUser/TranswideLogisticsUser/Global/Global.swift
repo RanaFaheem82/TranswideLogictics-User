@@ -18,7 +18,7 @@ class Global {
     var isLogedIn:Bool = false
     var FCMToken:String? = ""
     
-    var fcmNotification:FCMNotificationViewModel?
+   // var fcmNotification:FCMNotificationViewModel?
     var isFromNotification:Bool = false
     var isFbLogin = false
     var pickupLocation : CLLocationCoordinate2D?

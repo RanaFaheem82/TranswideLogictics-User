@@ -66,12 +66,12 @@ let USER = "user"
 
 
 
-let BASE_URL = "http://5d716cb7.ngrok.io/"
+let BASE_URL = "https://32a9b9a5.ngrok.io/"
 let BASE_URL_LIVE = "http://144.91.68.79:9779/api/"
 
 let BASE_URL_2 = "http://144.91.68.79:9779/api/"
 
-
+let Trips = "userTrips/getTrips"
 let URL_REGISTER_USER              = "register"
 let URL_LOGIN                      = "user/login"
 let URL_FORGET_PASSWORD            = "user/password/forgot"

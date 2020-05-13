@@ -662,23 +662,35 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjB-RK-QRi">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="60"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <state key="normal" title="Current">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="actionCurrent:" destination="ACn-PT-VYT" eventType="touchUpInside" id="9ja-b4-sAc"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qh8-WR-LCm">
                                                         <rect key="frame" x="125" y="0.0" width="125" height="60"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <state key="normal" title="History">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="actionHistory:" destination="ACn-PT-VYT" eventType="touchUpInside" id="TDa-o2-7Ru"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se9-Kk-HPL">
                                                         <rect key="frame" x="250" y="0.0" width="125" height="60"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <state key="normal" title="Scheduled">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="actionScheduled:" destination="ACn-PT-VYT" eventType="touchUpInside" id="fjl-8Z-HUH"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -735,6 +747,12 @@
                         <viewLayoutGuide key="safeArea" id="y1x-FE-j0a"/>
                     </view>
                     <navigationItem key="navigationItem" id="EMc-qn-3tT"/>
+                    <connections>
+                        <outlet property="btnCurrent" destination="RjB-RK-QRi" id="Kb5-Rh-oU0"/>
+                        <outlet property="btnHistory" destination="Qh8-WR-LCm" id="vC4-ZC-fjo"/>
+                        <outlet property="btnScheduled" destination="Se9-Kk-HPL" id="ObV-Li-F6K"/>
+                        <outlet property="tableView" destination="AYf-5j-LEJ" id="016-4n-lgE"/>
+                    </connections>
                 </viewController>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWD-F5-rmb">
                     <rect key="frame" x="0.0" y="0.0" width="125" height="60"/>

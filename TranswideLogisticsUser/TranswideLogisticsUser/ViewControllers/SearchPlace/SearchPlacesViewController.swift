@@ -86,6 +86,4 @@ extension SearchPlacesViewController : UITableViewDataSource,UITableViewDelegate
         }
         self.navigationController?.popViewController(animated: true)
     }
-    
-    
 }

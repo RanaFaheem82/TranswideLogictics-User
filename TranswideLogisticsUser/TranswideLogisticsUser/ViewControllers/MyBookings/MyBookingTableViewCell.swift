@@ -36,5 +36,13 @@ class MyBookingTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func configureView(ride : MyRidesViewModel){
+        self.sourceLocation.text = ride.sourceAddress
+        self.destinationLocation.text = ride.destinationAddress
+      //  self.valueDate = ride
+        self.valuePrice.text = ride.fare
+        self.valueWeight.text = ride.weight
+        self.valueStatus.text = ride.status
+    }
     
 }
