@@ -254,7 +254,11 @@ class BookNowViewController: BaseViewController,UIPickerViewDelegate,UIPickerVie
 
 extension BookNowViewController{
     func postRequest(params : ParamsAny){
+        self.startActivityWithMessage(msg: "")
+        GCD.async(.Background){
         PostRequestService.shared().postRequest(params: params) { (message, success) in
+            GCD.async(.Main){
+            self.stopActivity()
             if(success){
                 if let vc = self.storyboard!.instantiateViewController(withIdentifier: "ConfirmRideViewController") as? ConfirmRideViewController{
                 vc.pickupAddress = self.picklocation
@@ -283,4 +287,6 @@ extension BookNowViewController{
             }
         }
     }
+}
+}
 }

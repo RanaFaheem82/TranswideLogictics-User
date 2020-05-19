@@ -55,7 +55,11 @@ extension LoginViewController:UITextFieldDelegate{
 
 extension LoginViewController{
     func getUserLogin(params : ParamsAny){
+        self.startActivityWithMessage(msg: "")
+             GCD.async(.Background){
         LoginService.shared().getUserLogin(params: params) { (message, success, data) in
+            GCD.async(.Main){
+            self.stopActivity()
             if(success){
                 if(self.txtphone.text != nil){
                            PhoneAuthProvider.provider().verifyPhoneNumber(self.txtphone.text!, uiDelegate: nil) { (verificationID, error) in
@@ -82,4 +86,5 @@ extension LoginViewController{
         }
     }
 }
-
+}
+}

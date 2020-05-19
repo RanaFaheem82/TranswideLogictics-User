@@ -156,7 +156,11 @@ class SignUpViewController: BaseViewController ,VerfiyNumberViewControllerDelega
 
 extension SignUpViewController{
     func getUserRegister(params : ParamsAny){
+        self.startActivityWithMessage(msg: "")
+                    GCD.async(.Background){
         LoginService.shared().getUserRegister(params: params) { (message, success, user) in
+            GCD.async(.Main){
+            self.stopActivity()
             if(success){
               let storyBoard = UIStoryboard(name: "Main", bundle: nil)
               if let vc = storyBoard.instantiateViewController(withIdentifier: "KYDrawerController") as? KYDrawerController{
@@ -171,4 +175,5 @@ extension SignUpViewController{
         }
     }
 }
-
+}
+}

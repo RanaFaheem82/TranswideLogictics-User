@@ -36,7 +36,11 @@ class FindingDriverViewController: BaseViewController ,GMSMapViewDelegate{
 }
 extension FindingDriverViewController{
     func nearbyDrivers(params : ParamsAny){
+        self.startActivityWithMessage(msg: "")
+        GCD.async(.Background){
         PostRequestService.shared().nearby(params: params) { (message, success, list) in
+            GCD.async(.Main){
+                               self.stopActivity()
             if(success){
                 for data in list!.driverList{
                     let location = CLLocationCoordinate2D(latitude: Double(data.latitude)!, longitude: Double(data.longitude)!)
@@ -66,5 +70,6 @@ extension FindingDriverViewController{
                 self.showAlertVIew(message: message, title: "Traswide User")
             }
         }
+     }}
     }
 }
