@@ -67,12 +67,12 @@ class LoginService : BaseService{
     }
     //MARK:- Register User API.
     
-    func getUserRegister(params:Parameters?,dict:[String:Data]?,completion: @escaping (_ error: String, _ success: Bool, _ userInfo: UserViewModel?)->Void){
+    func getUserRegister(params:Parameters?,completion: @escaping (_ error: String, _ success: Bool, _ userInfo: UserViewModel?)->Void){
             
-    //    let completeURL = EndPoints.BASE_URL + EndPoints.Register
-//            print("Params \(params!)")
-//            print("URL \(completeURL)")
-//            dataRequest = sessionManager.request(completeURL, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil)
+        let completeURL = BASE_URL + Register
+            print("Params \(params!)")
+            print("URL \(completeURL)")
+            dataRequest = sessionManager.request(completeURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
             
             dataRequest?
                 .validate(statusCode: 200...500)

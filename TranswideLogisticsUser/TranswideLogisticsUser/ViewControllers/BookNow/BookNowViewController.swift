@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate,TopBarDelegate {
+class BookNowViewController: BaseViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate,TopBarDelegate {
     func actionCallBackMoveBack() {
         self.navigationController?.popViewController(animated: true)
     }
@@ -30,9 +30,10 @@ class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
      @IBOutlet weak var tfweightType: UITextField!
     
     var picklocation : String!
+    var destinationLocation : String!
     let picker1 = UIPickerView()
     
-    let vehicles = ["Tractor-trailer","Box-Truck","Tow-Truck","16-Wheeler","Home-DeilveryTruck"]
+    let vehicles = ["2AX-single","3AX-single","3AX-tendem","4AX-single","4AX-single-tendem"]
     let goods = ["Home Materials","Office Materials","University Materials"]
     let weightType = ["KG","TON"]
     let images:[String] = ["large","small","tow","16wheeler","home"]
@@ -40,6 +41,7 @@ class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tfSelectVehicle.delegate = self
                tfMaterialPicker.delegate = self
                tfweightType.delegate = self
@@ -226,14 +228,14 @@ class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
              }
              
          }
+   
      
     
     @IBAction func actionSubmit(_ sender: Any) {
-        if let vc = storyboard!.instantiateViewController(withIdentifier: "ConfirmRideViewController") as? ConfirmRideViewController{
-            vc.pickupAddress = self.picklocation
-                self.navigationController?.pushViewController(vc, animated: true)
-                    
-                }
+       
+        
+        let params : ParamsAny = ["userId": "5eb6a9447a7c2d186c8d217c","sourceAddress": self.picklocation!,"destinationAddress": self.destinationLocation!,"requestType":"Current","vehicleName": self.tfSelectVehicle!.text,"goodsType": self.tfMaterialPicker!.text,"weightType": self.tfweightType!.text,"weight": self.tfEnterWeight!.text,"driverNotes": self.tfDriverNotes.text!]
+        self.postRequest(params: params)
     }
     
     
@@ -248,4 +250,37 @@ class BookNowViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     }
     */
 
+}
+
+extension BookNowViewController{
+    func postRequest(params : ParamsAny){
+        PostRequestService.shared().postRequest(params: params) { (message, success) in
+            if(success){
+                if let vc = self.storyboard!.instantiateViewController(withIdentifier: "ConfirmRideViewController") as? ConfirmRideViewController{
+                vc.pickupAddress = self.picklocation
+                   
+                    if(self.lblSelectVehicle.text == "2AX-single"){
+                        vc.baseFare = 300
+                    }
+                    else if(self.lblSelectVehicle.text == "3AX-single"){
+                         vc.baseFare = 500
+                    }
+                    else if(self.lblSelectVehicle.text == "3AX-tendem"){
+                         vc.baseFare = 700
+                    }
+                    else if(self.lblSelectVehicle.text == "4AX-single"){
+                         vc.baseFare = 900
+                    }
+                    else if(self.lblSelectVehicle.text == "4AX-single-tendem"){
+                         vc.baseFare = 1200
+                    }
+                    self.navigationController?.pushViewController(vc, animated: true)
+                        
+                    }
+            }
+            else{
+                self.showAlertVIew(message: message, title: "Transwide User")
+            }
+        }
+    }
 }

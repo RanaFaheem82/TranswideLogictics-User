@@ -13,9 +13,6 @@ import Alamofire
 
 class LocationViewController: BaseViewController,GMSMapViewDelegate,CLLocationManagerDelegate{
 
-    
-   
-    
     @IBOutlet weak var btnCurrentLocation: UIButton!
     @IBOutlet weak var pickupline: UILabel!
     @IBOutlet weak var viewMap: GMSMapView!
@@ -65,11 +62,10 @@ class LocationViewController: BaseViewController,GMSMapViewDelegate,CLLocationMa
     @IBAction func actionBookNow(_ sender: Any) {
         if let vc = storyboard!.instantiateViewController(withIdentifier: "BookNowViewController") as? BookNowViewController{
             vc.picklocation = self.tfPickupPoint.text
+            vc.destinationLocation = self.tfDestination.text
                        self.navigationController?.pushViewController(vc, animated: true)
                            
-                       }
-
-       
+        }
     }
     
     

@@ -128,6 +128,10 @@
 		188B94D423F6CBFF00DD9198 /* KhmerUI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188B943F23F6CBFD00DD9198 /* KhmerUI.ttf */; };
 		188B94D523F6CBFF00DD9198 /* Geoma Regular Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 188B944023F6CBFD00DD9198 /* Geoma Regular Demo.otf */; };
 		188B94D623F6CBFF00DD9198 /* KhmerUIb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188B944123F6CBFD00DD9198 /* KhmerUIb.ttf */; };
+		18B7F20224711ABB007AA309 /* PostRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F20124711ABB007AA309 /* PostRequestService.swift */; };
+		18B7F2082471398E007AA309 /* FindingDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F2072471398E007AA309 /* FindingDriverViewController.swift */; };
+		18B7F20A24713BDC007AA309 /* NearbyDriversModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F20924713BDC007AA309 /* NearbyDriversModelView.swift */; };
+		18B7F20C24713D2E007AA309 /* NearbyDriversListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F20B24713D2E007AA309 /* NearbyDriversListViewModel.swift */; };
 		18BF5F1E23F925F7000D3273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF5F1C23F925F7000D3273 /* Main.storyboard */; };
 		18BF5F1F23F925F7000D3273 /* Registeration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF5F1D23F925F7000D3273 /* Registeration.storyboard */; };
 		18C1400D23FF9DA600D4E5AA /* OTPtextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1400C23FF9DA600D4E5AA /* OTPtextField.swift */; };
@@ -310,6 +314,10 @@
 		188B943F23F6CBFD00DD9198 /* KhmerUI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KhmerUI.ttf; sourceTree = "<group>"; };
 		188B944023F6CBFD00DD9198 /* Geoma Regular Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geoma Regular Demo.otf"; sourceTree = "<group>"; };
 		188B944123F6CBFD00DD9198 /* KhmerUIb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KhmerUIb.ttf; sourceTree = "<group>"; };
+		18B7F20124711ABB007AA309 /* PostRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestService.swift; sourceTree = "<group>"; };
+		18B7F2072471398E007AA309 /* FindingDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindingDriverViewController.swift; sourceTree = "<group>"; };
+		18B7F20924713BDC007AA309 /* NearbyDriversModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDriversModelView.swift; sourceTree = "<group>"; };
+		18B7F20B24713D2E007AA309 /* NearbyDriversListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDriversListViewModel.swift; sourceTree = "<group>"; };
 		18BF5F1C23F925F7000D3273 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		18BF5F1D23F925F7000D3273 /* Registeration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Registeration.storyboard; path = ../Registeration.storyboard; sourceTree = "<group>"; };
 		18C1400C23FF9DA600D4E5AA /* OTPtextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPtextField.swift; sourceTree = "<group>"; };
@@ -656,6 +664,8 @@
 			children = (
 				188B93B523F6CBF900DD9198 /* SignupViewModel.swift */,
 				188B93B623F6CBF900DD9198 /* IPAddressInfoViewModel.swift */,
+				18B7F20924713BDC007AA309 /* NearbyDriversModelView.swift */,
+				18B7F20B24713D2E007AA309 /* NearbyDriversListViewModel.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -894,6 +904,7 @@
 		18C4443C240A4BE700412001 /* BookNow */ = {
 			isa = PBXGroup;
 			children = (
+				18B7F2072471398E007AA309 /* FindingDriverViewController.swift */,
 				18C44438240A4BCD00412001 /* BookNowViewController.swift */,
 			);
 			path = BookNow;
@@ -966,6 +977,7 @@
 			children = (
 				18E04247244228F700C79410 /* LoginService.swift */,
 				185146432467EB0500A3C49C /* GetAllRidesService.swift */,
+				18B7F20124711ABB007AA309 /* PostRequestService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1319,11 +1331,13 @@
 				188B915723F6C11900DD9198 /* ViewController.swift in Sources */,
 				185146402467E68B00A3C49C /* AllRidesViewModel.swift in Sources */,
 				188B915323F6C11900DD9198 /* AppDelegate.swift in Sources */,
+				18B7F2082471398E007AA309 /* FindingDriverViewController.swift in Sources */,
 				1857D480245723510046854F /* JobsViewController.swift in Sources */,
 				18528D1623FD528A0069BB6A /* UpdateProfileViewController.swift in Sources */,
 				180E483424016CDE004B57BC /* SideMenuViewController.swift in Sources */,
 				188B94A523F6CBFE00DD9198 /* StringExtension.swift in Sources */,
 				186B83E72413E71E00E63847 /* SearchPlacesViewController.swift in Sources */,
+				18B7F20224711ABB007AA309 /* PostRequestService.swift in Sources */,
 				188B945C23F6CBFE00DD9198 /* BaseTableViewCell.swift in Sources */,
 				188B945D23F6CBFE00DD9198 /* BaseTableViewController.swift in Sources */,
 				188B949523F6CBFE00DD9198 /* TPKeyboardAvoidingCollectionView.m in Sources */,
@@ -1354,11 +1368,13 @@
 				188B949D23F6CBFE00DD9198 /* MKConfig.swift in Sources */,
 				188B945923F6CBFE00DD9198 /* BaseCollectionViewController.swift in Sources */,
 				18528D1823FD575E0069BB6A /* LocationViewController.swift in Sources */,
+				18B7F20A24713BDC007AA309 /* NearbyDriversModelView.swift in Sources */,
 				188B949423F6CBFE00DD9198 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				188B94A323F6CBFE00DD9198 /* KWTextFieldView.swift in Sources */,
 				18841231245D71EC00D59477 /* sideMenuTableViewCell.swift in Sources */,
 				18E0423B2442250400C79410 /* ServiceResponseType.swift in Sources */,
 				188B94D123F6CBFE00DD9198 /* ActiveBuilder.swift in Sources */,
+				18B7F20C24713D2E007AA309 /* NearbyDriversListViewModel.swift in Sources */,
 				188B94CE23F6CBFE00DD9198 /* ActiveLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1534,7 +1550,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rapidzz.TraswideLogisticsUser;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rapidzz.Tawrid-Restaurant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranswideLogisticsUser/TranswideLogisticsUser-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1556,7 +1572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rapidzz.TraswideLogisticsUser;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rapidzz.Tawrid-Restaurant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranswideLogisticsUser/TranswideLogisticsUser-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

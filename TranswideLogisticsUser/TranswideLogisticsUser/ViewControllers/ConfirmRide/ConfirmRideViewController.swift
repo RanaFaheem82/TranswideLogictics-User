@@ -8,14 +8,21 @@
 
 import UIKit
 import GoogleMaps
+import SwiftyJSON
 
 class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDelegate {
     func actionCallBackMoveBack() {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    @IBOutlet weak var lblFare: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var lblDistance: UILabel!
     
+    var baseFare : Int = 0
+    var estimattedDistance = 0
+    var estimattedTime = 0
+     var estimattedFare = 0
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblConfirm: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
@@ -31,6 +38,9 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
         self.showDesMarker(position: Global.shared.destinationLocation!)
         
         self.lblAddress.text = self.pickupAddress
+        self.calulateDistance()
+        self.getDistance()
+     
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -42,14 +52,25 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
            }
        }
     
+    func calulateDistance(){
+        let coordinate0 = CLLocation(latitude: Global.shared.pickupLocation!.latitude, longitude: Global.shared.pickupLocation!.longitude)
+        let coordinate1 = CLLocation(latitude: Global.shared.destinationLocation!.latitude, longitude: Global.shared.destinationLocation!.longitude)
+        let distanceInMeters = coordinate0.distance(from: coordinate1)
+        print(distanceInMeters)
+    }
+    
     @IBAction func actionConfirm(_ sender: Any) {
         
-        if let vc = storyboard!.instantiateViewController(withIdentifier: "showDriverViewController") as? showDriverViewController{
-        
-            self.navigationController?.pushViewController(vc, animated: true)
-                
-            }
-       
+//        if let vc = storyboard!.instantiateViewController(withIdentifier: "showDriverViewController") as? showDriverViewController{
+//
+//            self.navigationController?.pushViewController(vc, animated: true)
+//
+//            }
+       if let vc = storyboard!.instantiateViewController(withIdentifier: "FindingDriverViewController") as? FindingDriverViewController{
+              
+                  self.navigationController?.pushViewController(vc, animated: true)
+                      
+                  }
         
         
     }
@@ -144,6 +165,74 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
            let currentZoom = mapView.camera.zoom
            mapView.animate(toZoom: currentZoom - 1.4)
        }
+    func getDistance() {
+
+              let session = URLSession.shared
+
+              let url = URL(string: "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=\(Global.shared.pickupLocation!.latitude),\(Global.shared.pickupLocation!.longitude)&destinations=\(Global.shared.destinationLocation!.latitude),\(Global.shared.destinationLocation!.longitude)&key=AIzaSyBTfypSbx_zNMhWSBXMTA2BJBMQO7_9_T8")!
+
+              let task = session.dataTask(with: url, completionHandler: {
+                  (data, response, error) in
+
+                  guard error == nil else {
+                      print(error!.localizedDescription)
+                      return
+                  }
+
+                  guard let jsonResult = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any] else {
+
+                      print("error in JSONSerialization")
+                      return
+
+                  }
+               
+                
+
+                guard let routes = jsonResult["rows"] as? [Any] else {
+                    return
+                }
+
+                guard let route = routes[0] as? [String: Any] else {
+                    return
+                }
+
+                guard let legs = route["elements"] as? [Any] else {
+                    return
+                }
+
+                guard let leg = legs[0] as? [String: Any] else {
+                    return
+                }
+
+                guard let steps = leg["distance"] as? [String: Any] else {
+                    return
+                }
+                
+                guard let steps1 = leg["duration"] as? [String: Any] else {
+                    return
+                }
+                
+                guard let distance = steps["value"] as? Int else {
+                                  return
+                              }
+                guard let time = steps1["value"] as? Int else {
+                                  return
+                              }
+                
+                self.estimattedDistance = (distance) / 1000
+                self.estimattedTime = (time) / 60
+                self.estimattedFare = (self.estimattedDistance * 100) + (self.estimattedTime * 50) + self.baseFare
+                
+        DispatchQueue.main.async {
+            self.lblDistance.text = "\(self.estimattedDistance) KM"
+            self.lblTime.text = "\(self.estimattedTime) Minutes"
+            self.lblFare.text = "\(self.estimattedFare) Rs"
+        }
+
+              })
+              
+              task.resume()
+          }
        
     
 
@@ -158,3 +247,4 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
     */
 
 }
+

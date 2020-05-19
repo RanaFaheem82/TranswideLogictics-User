@@ -9,9 +9,12 @@
 import UIKit
 import FirebaseAuth
 import FirebaseCore
+import Firebase
 
-class SignUpViewController: BaseViewController {
-
+class SignUpViewController: BaseViewController ,VerfiyNumberViewControllerDelegate{
+   
+    @IBOutlet weak var btnVerify: UIButton!
+    
     @IBOutlet weak var lblSignUp: UILabel!
     @IBOutlet weak var imgMobile: UIImageView!
     @IBOutlet weak var txtPhone: UITextField!
@@ -30,12 +33,13 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var lblAlreadyMember: UILabel!
     @IBOutlet weak var btnSignIn: UIButton!
-    
+     let userdefaults = UserDefaults.standard
+    var isVerified : Bool = false
     @IBAction func actionSignUp(_ sender: Any) {
         
        if(checkValidation()){
               if(self.checkInternetConnection()){
-                            self.showOtpController()
+                           self.getUserRegister(params: ["name" : self.txtfirstname.text,"email" : self.txtEmail.text,"profileImage" : "abcdefg","phoneNumber" : self.txtPhone.text,"address" : self.txtAddress.text,"fcmToken" : "5353535"])
                         }
              
               
@@ -66,20 +70,39 @@ class SignUpViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
     }
+    func IsVerified(isVerified: Bool) {
+        self.isVerified = true
+        self.btnVerify.setTitle("Verfied", for: .normal)
+       }
+       
     
 
-        
+    @IBAction func actionVerify(_ sender: Any) {
+        self.showOtpController()
+    }
+    
         func showOtpController(){
             
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                   if let vc = storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
-                    vc.phoneNumber
-                        = self.txtPhone.text!
-                    vc.signUpcheck = 1
-                    
-                    self.navigationController?.pushViewController(vc, animated: true)
-            
-        }
+          if(self.txtPhone.text != nil){
+                    PhoneAuthProvider.provider().verifyPhoneNumber(self.txtPhone.text!, uiDelegate: nil) { (verificationID, error) in
+                                          if(error == nil){
+                                              self.userdefaults.set(verificationID, forKey: "VerificationID")
+                                              self.userdefaults.synchronize()
+                                              if let vc = self.storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
+                                                  vc.phoneNumber = self.txtPhone.text!
+                                                vc.isFromSignUp = true
+                                                vc.delegate = self
+                        self.navigationController?.pushViewController(vc, animated: true)
+                                              }
+                                          }
+                                          else{
+                                              self.showAlertVIew(message: "Enable to send otp", title: "Tranwide User")
+                                          }
+                                      }
+                                  }
+                                  else{
+                                      self.showAlertVIew(message: "Phone Numeber is Empty", title: "Transwide")
+                                  }
     }
        func checkValidation() -> Bool {
             var message = ""
@@ -91,6 +114,10 @@ class SignUpViewController: BaseViewController {
                 message = VALID_EMAIL_MESSAGE
                 isValid = false
             }
+            else if(!isVerified){
+                message = "Please Verify Your Number First"
+                isValid = false
+        }
             if(!isValid){
                 self.showAlertVIew(message: message, title: "Alert")
     //            self.createAlertViewMessagePopup(message: message)
@@ -100,13 +127,14 @@ class SignUpViewController: BaseViewController {
         }
     
     func showSignin(){
+       
         
+                       if let vc = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController{
+                                              
+                                                self.navigationController?.pushViewController(vc, animated: true)
+        }
         
-                  let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                         if let vc = storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController{
-                        
-                          
-                          self.navigationController?.pushViewController(vc, animated: true)
+                 
                   
               }
         
@@ -123,4 +151,24 @@ class SignUpViewController: BaseViewController {
     }
     */
 
+
+//MARK:- SIGN UP API
+
+extension SignUpViewController{
+    func getUserRegister(params : ParamsAny){
+        LoginService.shared().getUserRegister(params: params) { (message, success, user) in
+            if(success){
+              let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+              if let vc = storyBoard.instantiateViewController(withIdentifier: "KYDrawerController") as? KYDrawerController{
+                  self.navigationController?.pushViewController(vc, animated: true)
+              }
+            }
+            else{
+                self.isVerified = false
+                self.btnVerify.setTitle("verify", for: .normal)
+                self.showAlertVIew(message: message, title: "Transwide User")
+            }
+        }
+    }
 }
+

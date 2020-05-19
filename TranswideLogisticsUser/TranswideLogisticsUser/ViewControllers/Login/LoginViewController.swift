@@ -25,24 +25,7 @@ class LoginViewController: BaseViewController {
         self.showSignup()
     }
     @IBAction func actionLogin(_ sender: Any) {
-        if(self.txtphone.text != nil){
-            PhoneAuthProvider.provider().verifyPhoneNumber(self.txtphone.text!, uiDelegate: nil) { (verificationID, error) in
-                if(error == nil){
-                    self.userdefaults.set(verificationID, forKey: "VerificationID")
-                    self.userdefaults.synchronize()
-                    if let vc = self.storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
-                        vc.phoneNumber = self.txtphone.text!
-                        self.navigationController?.pushViewController(vc, animated: true)
-                    }
-                }
-                else{
-                    self.showAlertVIew(message: "Enable to send otp", title: "Tranwide User")
-                }
-            }
-        }
-        else{
-            self.showAlertVIew(message: "Phone Numeber is Empty", title: "Transwide")
-        }
+        self.getUserLogin(params: ["phoneNumber" : self.txtphone.text])
 //        if let vc = self.storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
 //            vc.phoneNumber = self.txtphone.text!
 //            self.navigationController?.pushViewController(vc, animated: true)
@@ -67,3 +50,36 @@ extension LoginViewController:UITextFieldDelegate{
         }
     }
 }
+
+//MARK:-
+
+extension LoginViewController{
+    func getUserLogin(params : ParamsAny){
+        LoginService.shared().getUserLogin(params: params) { (message, success, data) in
+            if(success){
+                if(self.txtphone.text != nil){
+                           PhoneAuthProvider.provider().verifyPhoneNumber(self.txtphone.text!, uiDelegate: nil) { (verificationID, error) in
+                               if(error == nil){
+                                   self.userdefaults.set(verificationID, forKey: "VerificationID")
+                                   self.userdefaults.synchronize()
+                                   if let vc = self.storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
+                                       vc.phoneNumber = self.txtphone.text!
+                                       self.navigationController?.pushViewController(vc, animated: true)
+                                   }
+                               }
+                               else{
+                                   self.showAlertVIew(message: "Enable to send otp", title: "Tranwide User")
+                               }
+                           }
+                       }
+                       else{
+                           self.showAlertVIew(message: "Phone Numeber is Empty", title: "Transwide")
+                       }
+            }
+            else{
+                self.showAlertVIew(message: "Invalid Phone Number Please Register First", title: "Transwide")
+            }
+        }
+    }
+}
+

@@ -8,6 +8,10 @@
 
 import UIKit
 import Firebase
+protocol VerfiyNumberViewControllerDelegate : class {
+    func IsVerified(isVerified : Bool)
+}
+
 class OtpViewController: BaseViewController {
     
     @IBOutlet weak var btnback: UIButton!
@@ -16,7 +20,9 @@ class OtpViewController: BaseViewController {
     @IBOutlet weak var tfOtpCode: OTPtextField!
     var phoneNumber:String = ""
     var signUpcheck = 0
+    var isFromSignUp : Bool = false
     var userdefaults = UserDefaults()
+     weak var delegate : VerfiyNumberViewControllerDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
         //   self.AuthenticatePhone()
@@ -52,6 +58,12 @@ class OtpViewController: BaseViewController {
         Auth.auth().signIn(with: credetials) { (authResult, error) in
             if error != nil {
                 self.showAlertView(message: "WrongPin", title: "")
+            }
+            else if(self.isFromSignUp){
+                if let del = self.delegate{
+                                       del.IsVerified(isVerified: true)
+                                   }
+                                   self.navigationController?.popViewController(animated: true)
             }
             else{
                 self.showHomeVC()

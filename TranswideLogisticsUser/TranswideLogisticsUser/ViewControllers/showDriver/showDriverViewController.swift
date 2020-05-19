@@ -61,8 +61,6 @@ class showDriverViewController: BaseViewController,TopBarDelegate ,GMSMapViewDel
         marker.position = position
         marker.iconView = markerView
         marker.map = mapView
-       
-        
     }
 
 
