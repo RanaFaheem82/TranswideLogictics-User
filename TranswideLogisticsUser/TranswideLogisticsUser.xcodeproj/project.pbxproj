@@ -11,6 +11,8 @@
 		180E483024016913004B57BC /* KYDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E482D24016913004B57BC /* KYDrawerController.swift */; };
 		180E483124016913004B57BC /* KYEmbedMainControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E482E24016913004B57BC /* KYEmbedMainControllerSegue.swift */; };
 		180E483424016CDE004B57BC /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E483324016CDE004B57BC /* SideMenuViewController.swift */; };
+		1816445624A097CC0084557A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816445524A097CC0084557A /* ChatViewController.swift */; };
+		1816445824A098320084557A /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816445724A098320084557A /* ChatTableViewCell.swift */; };
 		18424CCE2406E23A0075FF5A /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424CCD2406E23A0075FF5A /* MyBookingsViewController.swift */; };
 		185146362467D58300A3C49C /* MyRidesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185146352467D58300A3C49C /* MyRidesViewModel.swift */; };
 		1851463A2467D91900A3C49C /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185146372467D91900A3C49C /* PlacesTableViewCell.swift */; };
@@ -31,7 +33,6 @@
 		18528D2223FDA2E70069BB6A /* showDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18528D2123FDA2E70069BB6A /* showDriverViewController.swift */; };
 		1857D480245723510046854F /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857D47F245723510046854F /* JobsViewController.swift */; };
 		186B83E72413E71E00E63847 /* SearchPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B83E62413E71D00E63847 /* SearchPlacesViewController.swift */; };
-		1884122F245D4E0700D59477 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1884122E245D4E0700D59477 /* GoogleService-Info.plist */; };
 		18841231245D71EC00D59477 /* sideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18841230245D71EC00D59477 /* sideMenuTableViewCell.swift */; };
 		188B915323F6C11900DD9198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915223F6C11900DD9198 /* AppDelegate.swift */; };
 		188B915523F6C11900DD9198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B915423F6C11900DD9198 /* SceneDelegate.swift */; };
@@ -144,6 +145,8 @@
 		18E0423B2442250400C79410 /* ServiceResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E042292442250300C79410 /* ServiceResponseType.swift */; };
 		18E0423C2442250400C79410 /* RequestMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E0422B2442250300C79410 /* RequestMessages.swift */; };
 		18E04248244228F700C79410 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E04247244228F700C79410 /* LoginService.swift */; };
+		18E82C0224829E3300B9E63F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18E82C0124829E3300B9E63F /* GoogleService-Info.plist */; };
+		18E82C062482BB9200B9E63F /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E82C052482BB9200B9E63F /* CheckViewController.swift */; };
 		2CFEDADE977A5773C0AED81B /* Pods_TranswideLogisticsUserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */; };
 		785018293EE0FE577E772E39 /* Pods_TranswideLogisticsUserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2AA875ED78E37FA5D665FD /* Pods_TranswideLogisticsUserUITests.framework */; };
 		F254A9CA59DC51B570AC0D60 /* Pods_TranswideLogisticsUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFB4288057F45D2557ED3D5 /* Pods_TranswideLogisticsUser.framework */; };
@@ -175,6 +178,8 @@
 		180E482D24016913004B57BC /* KYDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDrawerController.swift; sourceTree = "<group>"; };
 		180E482E24016913004B57BC /* KYEmbedMainControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEmbedMainControllerSegue.swift; sourceTree = "<group>"; };
 		180E483324016CDE004B57BC /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		1816445524A097CC0084557A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1816445724A098320084557A /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		18424CCD2406E23A0075FF5A /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
 		185146352467D58300A3C49C /* MyRidesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesViewModel.swift; sourceTree = "<group>"; };
 		185146372467D91900A3C49C /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
@@ -196,7 +201,6 @@
 		1857D2CD24548AFF0046854F /* TranswideLogisticsUser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranswideLogisticsUser.entitlements; sourceTree = "<group>"; };
 		1857D47F245723510046854F /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		186B83E62413E71D00E63847 /* SearchPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlacesViewController.swift; sourceTree = "<group>"; };
-		1884122E245D4E0700D59477 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18841230245D71EC00D59477 /* sideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		188B914F23F6C11900DD9198 /* TranswideLogisticsUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranswideLogisticsUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B915223F6C11900DD9198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 		18E042292442250300C79410 /* ServiceResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResponseType.swift; sourceTree = "<group>"; };
 		18E0422B2442250300C79410 /* RequestMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMessages.swift; sourceTree = "<group>"; };
 		18E04247244228F700C79410 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		18E82C0124829E3300B9E63F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18E82C052482BB9200B9E63F /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranswideLogisticsUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFB4288057F45D2557ED3D5 /* Pods_TranswideLogisticsUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranswideLogisticsUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		847787E62C7FF2DA50AA460D /* Pods-TranswideLogisticsUserUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranswideLogisticsUserUITests.release.xcconfig"; path = "Target Support Files/Pods-TranswideLogisticsUserUITests/Pods-TranswideLogisticsUserUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -394,9 +400,18 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		1816445424A097870084557A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				1816445524A097CC0084557A /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		18528D2323FDA3B20069BB6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1816445424A097870084557A /* Chat */,
 				1857D47E2457233F0046854F /* Jobs */,
 				186B83E52413E5DF00E63847 /* SearchPlace */,
 				18C4443D240A4BEF00412001 /* BookLater */,
@@ -521,7 +536,7 @@
 		188B915123F6C11900DD9198 /* TranswideLogisticsUser */ = {
 			isa = PBXGroup;
 			children = (
-				1884122E245D4E0700D59477 /* GoogleService-Info.plist */,
+				18E82C0124829E3300B9E63F /* GoogleService-Info.plist */,
 				1857D2CD24548AFF0046854F /* TranswideLogisticsUser.entitlements */,
 				18E042202442250300C79410 /* Library */,
 				188B939623F6CBF800DD9198 /* Base Classes */,
@@ -541,6 +556,7 @@
 				188B916023F6C11D00DD9198 /* Info.plist */,
 				188B937923F6C55D00DD9198 /* TranswideLogisticsUser-Bridging-Header.h */,
 				18C1400C23FF9DA600D4E5AA /* OTPtextField.swift */,
+				18E82C052482BB9200B9E63F /* CheckViewController.swift */,
 			);
 			path = TranswideLogisticsUser;
 			sourceTree = "<group>";
@@ -570,6 +586,7 @@
 				188B938023F6CBF700DD9198 /* Nibs */,
 				188B938723F6CBF700DD9198 /* TableViewCells */,
 				188B939323F6CBF700DD9198 /* BorderColorUIView.swift */,
+				1816445724A098320084557A /* ChatTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1145,7 +1162,6 @@
 				188B94C623F6CBFE00DD9198 /* Roboto-Black.ttf in Resources */,
 				188B94B623F6CBFE00DD9198 /* RobotoCondensed-Bold.ttf in Resources */,
 				18BF5F1F23F925F7000D3273 /* Registeration.storyboard in Resources */,
-				1884122F245D4E0700D59477 /* GoogleService-Info.plist in Resources */,
 				188B94BE23F6CBFE00DD9198 /* Roboto-ThinItalic.ttf in Resources */,
 				188B94A023F6CBFE00DD9198 /* README.md in Resources */,
 				188B94BF23F6CBFE00DD9198 /* RobotoCondensed-Regular.ttf in Resources */,
@@ -1156,6 +1172,7 @@
 				188B94BB23F6CBFE00DD9198 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				188B94C223F6CBFE00DD9198 /* Roboto-Italic.ttf in Resources */,
 				188B94C523F6CBFE00DD9198 /* Roboto-Thin.ttf in Resources */,
+				18E82C0224829E3300B9E63F /* GoogleService-Info.plist in Resources */,
 				188B94B223F6CBFE00DD9198 /* MyriadPro-BoldCond.otf in Resources */,
 				188B94AA23F6CBFE00DD9198 /* MyriadPro-SemiboldIt.otf in Resources */,
 			);
@@ -1346,6 +1363,7 @@
 				18528D1023FD3FD20069BB6A /* LoginViewController.swift in Sources */,
 				188B949923F6CBFE00DD9198 /* MKRotationView.swift in Sources */,
 				188B946523F6CBFE00DD9198 /* Date+Extension.swift in Sources */,
+				1816445624A097CC0084557A /* ChatViewController.swift in Sources */,
 				188B949A23F6CBFE00DD9198 /* MKProgressBaseView.swift in Sources */,
 				18E0423A2442250400C79410 /* ServiceRequestMessage.swift in Sources */,
 				188B949323F6CBFE00DD9198 /* TPKeyboardAvoidingTableView.m in Sources */,
@@ -1354,6 +1372,7 @@
 				188B949623F6CBFE00DD9198 /* IQDropDownTextField.m in Sources */,
 				188B915523F6C11900DD9198 /* SceneDelegate.swift in Sources */,
 				188B94D023F6CBFE00DD9198 /* StringTrimExtension.swift in Sources */,
+				18E82C062482BB9200B9E63F /* CheckViewController.swift in Sources */,
 				188B94CC23F6CBFE00DD9198 /* KMPlaceholderTextView.swift in Sources */,
 				188B946823F6CBFE00DD9198 /* Extension.swift in Sources */,
 				18E042392442250400C79410 /* ParsedResponseMessage.swift in Sources */,
@@ -1374,6 +1393,7 @@
 				18841231245D71EC00D59477 /* sideMenuTableViewCell.swift in Sources */,
 				18E0423B2442250400C79410 /* ServiceResponseType.swift in Sources */,
 				188B94D123F6CBFE00DD9198 /* ActiveBuilder.swift in Sources */,
+				1816445824A098320084557A /* ChatTableViewCell.swift in Sources */,
 				18B7F20C24713D2E007AA309 /* NearbyDriversListViewModel.swift in Sources */,
 				188B94CE23F6CBFE00DD9198 /* ActiveLabel.swift in Sources */,
 			);
@@ -1550,7 +1570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Rapidzz.Tawrid-Restaurant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rapidzz.TranswideUser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranswideLogisticsUser/TranswideLogisticsUser-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1572,7 +1592,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Rapidzz.Tawrid-Restaurant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rapidzz.TranswideUser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranswideLogisticsUser/TranswideLogisticsUser-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

@@ -25,6 +25,7 @@ target 'TranswideLogisticsUser' do
    pod 'GoogleMaps'
    pod 'GooglePlaces'
    pod 'Alamofire'
+   pod 'Firebase/Database'
 
   # Pods for TranswideLogisticsUser
 

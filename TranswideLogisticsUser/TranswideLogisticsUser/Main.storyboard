@@ -1732,6 +1732,108 @@
             </objects>
             <point key="canvasLocation" x="4362" y="572"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="b0E-op-Bvb">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="8iX-ID-RFq" customClass="ChatViewController" customModule="TranswideLogisticsUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l4Y-NC-CtW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Message Here......" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vk0-sg-b2l">
+                                <rect key="frame" x="0.0" y="617" width="329" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SyU-at-dmQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxi-Jf-U5Q">
+                                <rect key="frame" x="329" y="617" width="46" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VhQ-dB-BTP"/>
+                                    <constraint firstAttribute="width" constant="46" id="c9N-9b-lm6"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Fc-1J-fTe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverChatTableViewCell" rowHeight="89" id="c1v-Z8-d7N" customClass="ChatTableViewCell" customModule="TranswideLogisticsUser" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c1v-Z8-d7N" id="JeK-Bt-khD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utg-s6-nKH">
+                                                    <rect key="frame" x="30" y="34.5" width="315" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Utg-s6-nKH" firstAttribute="leading" secondItem="JeK-Bt-khD" secondAttribute="leadingMargin" constant="15" id="2io-H1-wlY"/>
+                                                <constraint firstItem="Utg-s6-nKH" firstAttribute="centerY" secondItem="JeK-Bt-khD" secondAttribute="centerY" id="5PD-fi-0oS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Utg-s6-nKH" secondAttribute="trailing" constant="15" id="JkI-Ph-ior"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblMessage" destination="Utg-s6-nKH" id="1p2-Gq-ONc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserChatTableViewCell" rowHeight="89" id="bjP-h1-Na4" customClass="ChatTableViewCell" customModule="TranswideLogisticsUser" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="117" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bjP-h1-Na4" id="cuo-uh-RH2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJ4-L0-Rlo">
+                                                    <rect key="frame" x="30" y="34.5" width="315" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YJ4-L0-Rlo" firstAttribute="leading" secondItem="cuo-uh-RH2" secondAttribute="leadingMargin" constant="15" id="Tar-Yv-2qu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YJ4-L0-Rlo" secondAttribute="trailing" constant="15" id="j2G-z7-pDa"/>
+                                                <constraint firstItem="YJ4-L0-Rlo" firstAttribute="centerY" secondItem="cuo-uh-RH2" secondAttribute="centerY" id="wtc-70-GUG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8iX-ID-RFq" id="I9p-fk-W9P"/>
+                                    <outlet property="delegate" destination="8iX-ID-RFq" id="SeL-WS-47e"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vk0-sg-b2l" firstAttribute="leading" secondItem="FSx-yt-Tgw" secondAttribute="leading" id="6Lr-rk-Fsq"/>
+                            <constraint firstItem="9Fc-1J-fTe" firstAttribute="leading" secondItem="FSx-yt-Tgw" secondAttribute="leading" id="9Yv-rs-93d"/>
+                            <constraint firstItem="Kxi-Jf-U5Q" firstAttribute="trailing" secondItem="FSx-yt-Tgw" secondAttribute="trailing" id="Acx-Su-bP2"/>
+                            <constraint firstItem="Kxi-Jf-U5Q" firstAttribute="leading" secondItem="vk0-sg-b2l" secondAttribute="trailing" id="Gvg-s1-XMm"/>
+                            <constraint firstItem="FSx-yt-Tgw" firstAttribute="trailing" secondItem="9Fc-1J-fTe" secondAttribute="trailing" id="IbM-0U-uRe"/>
+                            <constraint firstItem="9Fc-1J-fTe" firstAttribute="top" secondItem="FSx-yt-Tgw" secondAttribute="top" constant="64" id="Klj-Wj-Tp0"/>
+                            <constraint firstItem="vk0-sg-b2l" firstAttribute="bottom" secondItem="FSx-yt-Tgw" secondAttribute="bottom" id="cXF-f4-EOZ"/>
+                            <constraint firstItem="FSx-yt-Tgw" firstAttribute="bottom" secondItem="Kxi-Jf-U5Q" secondAttribute="bottom" id="f4I-zq-gcs"/>
+                            <constraint firstItem="vk0-sg-b2l" firstAttribute="top" secondItem="9Fc-1J-fTe" secondAttribute="bottom" id="iHL-XY-7mk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FSx-yt-Tgw"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="9Fc-1J-fTe" id="iq9-R6-Dxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0g-ca-UaJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5581.6000000000004" y="672.41379310344837"/>
+        </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="NdK-jK-quY">
             <objects>
