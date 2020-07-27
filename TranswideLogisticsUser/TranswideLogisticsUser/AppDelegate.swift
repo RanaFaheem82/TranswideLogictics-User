@@ -139,6 +139,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
   func userNotificationCenter(_ center: UNUserNotificationCenter,
                               willPresent notification: UNNotification,
     withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    //open app
     let userInfo = notification.request.content.userInfo
 
     // With swizzling disabled you must let Messaging know about the message, for Analytics
@@ -159,6 +160,15 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
   func userNotificationCenter(_ center: UNUserNotificationCenter,
                               didReceive response: UNNotificationResponse,
                               withCompletionHandler completionHandler: @escaping () -> Void) {
+            let notificationData = response.notification.request.content.userInfo
+            let mainController = self.getMainContainer()
+            if let controller = mainController as? MainContainerViewController {
+                controller.showMyShipmentVCController()
+            }else {
+               
+            }
+   
+    //background app open
     let userInfo = response.notification.request.content.userInfo
     // Print message ID.
     if let messageID = userInfo[gcmMessageIDKey] {
@@ -170,5 +180,25 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
 
     completionHandler()
   }
+    
+    
+    func getMainContainer() -> UIViewController? {
+        var top = UIApplication.shared.keyWindow!.rootViewController
+        while true {
+            if let presented = top?.presentedViewController {
+                top = presented
+            }else if let ky = top as? KYDrawerController {
+                top = (ky.mainViewController as! UINavigationController).topViewController as! MainContainerViewController
+                break
+            } else if let nav = top as? UINavigationController {
+                top = nav.visibleViewController
+            } else if let tab = top as? UITabBarController {
+                top = tab.selectedViewController
+            }else {
+                break
+            }
+        }
+        return top
+    }
 }
 

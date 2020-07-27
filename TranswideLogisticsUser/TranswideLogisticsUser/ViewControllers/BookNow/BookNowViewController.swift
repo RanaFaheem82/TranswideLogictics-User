@@ -234,7 +234,7 @@ class BookNowViewController: BaseViewController,UIPickerViewDelegate,UIPickerVie
     @IBAction func actionSubmit(_ sender: Any) {
        
         
-        let params : ParamsAny = ["userId": "5eb6a9447a7c2d186c8d217c","sourceAddress": self.picklocation!,"destinationAddress": self.destinationLocation!,"requestType":"Current","vehicleName": self.tfSelectVehicle!.text,"goodsType": self.tfMaterialPicker!.text,"weightType": self.tfweightType!.text,"weight": self.tfEnterWeight!.text,"driverNotes": self.tfDriverNotes.text!]
+        let params : ParamsAny = ["userId": "5ec361363258de198dfbce0a","sourceAddress": self.picklocation!,"destinationAddress": self.destinationLocation!,"requestType":"Current","vehicleName": self.tfSelectVehicle!.text,"goodsType": self.tfMaterialPicker!.text,"weightType": self.tfweightType!.text,"weight": self.tfEnterWeight!.text,"driverNotes": self.tfDriverNotes.text!]
         self.postRequest(params: params)
     }
     
@@ -262,7 +262,10 @@ extension BookNowViewController{
             if(success){
                 if let vc = self.storyboard!.instantiateViewController(withIdentifier: "ConfirmRideViewController") as? ConfirmRideViewController{
                 vc.pickupAddress = self.picklocation
-                   
+                    vc.destinationAddress = self.destinationLocation
+                    vc.notes = self.tfDriverNotes.text ?? ""
+                    vc.weight = self.tfEnterWeight.text ?? ""
+                    vc.goodsDetails = self.tfMaterialPicker.text ?? ""
                     if(self.lblSelectVehicle.text == "2AX-single"){
                         vc.baseFare = 300
                     }

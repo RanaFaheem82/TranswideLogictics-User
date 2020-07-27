@@ -15,6 +15,7 @@ class showDriverViewController: BaseViewController,TopBarDelegate ,GMSMapViewDel
     }
     
 
+    @IBOutlet weak var viewDriver: UIView!
     @IBOutlet weak var lblDriverName: UILabel!
     @IBOutlet weak var lblDriverRating: UILabel!
     @IBOutlet weak var lblTypeVehicle: UILabel!

@@ -1725,6 +1725,7 @@
                         <outlet property="lblTypeVehicle" destination="Z0D-E8-8bJ" id="svz-Hy-6fK"/>
                         <outlet property="lblVehicleno" destination="T2o-Dd-83g" id="ERw-A3-gW1"/>
                         <outlet property="mapView" destination="19r-KU-ImI" id="yKe-BB-7fv"/>
+                        <outlet property="viewDriver" destination="pfK-kJ-eia" id="Nqz-y7-hEC"/>
                         <outlet property="viewDriverDetails" destination="pfK-kJ-eia" id="hdp-Mc-qqF"/>
                     </connections>
                 </viewController>

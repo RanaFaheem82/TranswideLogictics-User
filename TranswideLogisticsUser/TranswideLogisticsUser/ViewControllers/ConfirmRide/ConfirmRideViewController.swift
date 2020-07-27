@@ -27,16 +27,18 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
     @IBOutlet weak var lblConfirm: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
     var pickupAddress : String!
+    var destinationAddress : String!
+    var weight : String = ""
+    var notes : String = ""
+    var goodsDetails : String = ""
       var marker = GMSMarker()
        var desmarker = GMSMarker()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
         self.getRouteSteps(from: Global.shared.pickupLocation!, to: Global.shared.destinationLocation!)
-
-       self.showMarker(position: Global.shared.pickupLocation!)
+        self.showMarker(position: Global.shared.pickupLocation!)
         self.showDesMarker(position: Global.shared.destinationLocation!)
-        
         self.lblAddress.text = self.pickupAddress
         self.calulateDistance()
         self.getDistance()
@@ -67,12 +69,14 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
 //
 //            }
        if let vc = storyboard!.instantiateViewController(withIdentifier: "FindingDriverViewController") as? FindingDriverViewController{
-              
+        vc.pickLocation = self.pickupAddress
+        vc.destinationLocation = self.destinationAddress
+        vc.goodsDetails = self.goodsDetails
+        vc.notes = self.notes
+        vc.weight = self.weight
                   self.navigationController?.pushViewController(vc, animated: true)
                       
                   }
-        
-        
     }
     func showMarker(position : CLLocationCoordinate2D ){
               

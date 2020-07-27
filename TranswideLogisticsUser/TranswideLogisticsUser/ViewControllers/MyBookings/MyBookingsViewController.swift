@@ -25,7 +25,7 @@ class MyBookingsViewController: BaseViewController {
         super.viewDidLoad()
         self.btnCurrent.backgroundColor = UIColor.orange
         var params = [String:AnyObject]()
-        params = ["userId" : "5eb6a9447a7c2d186c8d217c"] as [String : AnyObject]
+        params = ["userId" : "5ec361363258de198dfbce0a"] as [String : AnyObject]
         self.getAllRides(params: params)
     }
     

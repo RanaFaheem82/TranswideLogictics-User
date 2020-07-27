@@ -145,6 +145,7 @@
 		18E0423B2442250400C79410 /* ServiceResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E042292442250300C79410 /* ServiceResponseType.swift */; };
 		18E0423C2442250400C79410 /* RequestMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E0422B2442250300C79410 /* RequestMessages.swift */; };
 		18E04248244228F700C79410 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E04247244228F700C79410 /* LoginService.swift */; };
+		18E0C47824A2820000123160 /* RideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E0C47724A2820000123160 /* RideViewModel.swift */; };
 		18E82C0224829E3300B9E63F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18E82C0124829E3300B9E63F /* GoogleService-Info.plist */; };
 		18E82C062482BB9200B9E63F /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E82C052482BB9200B9E63F /* CheckViewController.swift */; };
 		2CFEDADE977A5773C0AED81B /* Pods_TranswideLogisticsUserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */; };
@@ -334,6 +335,7 @@
 		18E042292442250300C79410 /* ServiceResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResponseType.swift; sourceTree = "<group>"; };
 		18E0422B2442250300C79410 /* RequestMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMessages.swift; sourceTree = "<group>"; };
 		18E04247244228F700C79410 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		18E0C47724A2820000123160 /* RideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewModel.swift; sourceTree = "<group>"; };
 		18E82C0124829E3300B9E63F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18E82C052482BB9200B9E63F /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		2048578E601D7AE20D7ECED3 /* Pods_TranswideLogisticsUserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranswideLogisticsUserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -672,6 +674,7 @@
 				1851463D2467D97A00A3C49C /* DriverViewModel.swift */,
 				1851463F2467E68B00A3C49C /* AllRidesViewModel.swift */,
 				185146412467E7D900A3C49C /* AllRidesListViewModel.swift */,
+				18E0C47724A2820000123160 /* RideViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -1327,6 +1330,7 @@
 				188B946A23F6CBFE00DD9198 /* AppConstants.swift in Sources */,
 				18528D1D23FD89DB0069BB6A /* MyBookingTableViewCell.swift in Sources */,
 				18528D1223FD42990069BB6A /* SignUpViewController.swift in Sources */,
+				18E0C47824A2820000123160 /* RideViewModel.swift in Sources */,
 				180E483124016913004B57BC /* KYEmbedMainControllerSegue.swift in Sources */,
 				188B946023F6CBFE00DD9198 /* BaseView.swift in Sources */,
 				188B946F23F6CBFE00DD9198 /* UserViewModel.swift in Sources */,
@@ -1562,6 +1566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TranswideLogisticsUser/TranswideLogisticsUser.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5MVY25HYQD;
 				INFOPLIST_FILE = TranswideLogisticsUser/Info.plist;
@@ -1572,6 +1577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rapidzz.TranswideUser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranswideLogisticsUser/TranswideLogisticsUser-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1584,6 +1590,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TranswideLogisticsUser/TranswideLogisticsUser.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5MVY25HYQD;
 				INFOPLIST_FILE = TranswideLogisticsUser/Info.plist;
@@ -1594,6 +1601,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rapidzz.TranswideUser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranswideLogisticsUser/TranswideLogisticsUser-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
