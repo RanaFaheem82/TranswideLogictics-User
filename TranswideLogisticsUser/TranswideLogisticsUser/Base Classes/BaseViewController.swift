@@ -133,6 +133,14 @@ public class BaseViewController : UIViewController,SWRevealViewControllerDelegat
         UserDefaults.standard.set(isloggedIn!, forKey: KEEP_LOGIN)
         UserDefaults.standard.synchronize()
     }
+    func saveUserInfo(_ userInfo:UserViewModel) {
+            Global.shared.user = userInfo
+            Global.shared.isLogedIn = true
+            UserDefaultsManager.shared.isUserLoggedIn = true
+            UserDefaultsManager.shared.loggedInUserInfo = userInfo
+      //   userinfo = UserDefaultsManager.shared.loggedInUserInfo
+        }
+     
   
   
     

@@ -162,6 +162,8 @@ extension SignUpViewController{
             GCD.async(.Main){
             self.stopActivity()
             if(success){
+                Global.shared.user = user
+                self.saveUserInfo(user!)
               let storyBoard = UIStoryboard(name: "Main", bundle: nil)
               if let vc = storyBoard.instantiateViewController(withIdentifier: "KYDrawerController") as? KYDrawerController{
                   self.navigationController?.pushViewController(vc, animated: true)

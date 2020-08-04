@@ -30,7 +30,7 @@ class PostRequestService : BaseService{
    
     //MARK:- Post Request API.
     
-    func postRequest(params:Parameters?,completion: @escaping (_ error: String, _ success: Bool)->Void){
+    func postRequest(params:Parameters?,completion: @escaping (_ error: String, _ success: Bool , _ reqId : String)->Void){
         
         let completeURL = BASE_URL + Request
             print("Params \(params!)")
@@ -46,16 +46,17 @@ class PostRequestService : BaseService{
                         let parsedResponse = ResponseHandler.handleResponse(json)
                         if parsedResponse.serviceResponseType == .Success {
                             print(json)
+                            let reqId = parsedResponse.swiftyJsonData!["requestId"].stringValue
     //                        self.saveUserInfo(userInfo)
-                            completion(parsedResponse.message,true)
+                            completion(parsedResponse.message,true , reqId)
                         }else {
-                            completion(parsedResponse.message,false)
+                            completion(parsedResponse.message,false , "")
                         }
                         
                     case .failure(let error):
                         let errorMessage:String = error.localizedDescription
                         print(errorMessage)
-                        completion(errorMessage, false)
+                        completion(errorMessage, false , "")
                     }
                 })
             

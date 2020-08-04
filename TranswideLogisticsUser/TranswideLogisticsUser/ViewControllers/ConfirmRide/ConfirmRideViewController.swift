@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import SwiftyJSON
+import FirebaseDatabase
 
 class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDelegate {
     func actionCallBackMoveBack() {
@@ -31,8 +32,10 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
     var weight : String = ""
     var notes : String = ""
     var goodsDetails : String = ""
+    var reqId = ""
       var marker = GMSMarker()
        var desmarker = GMSMarker()
+      var database : DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
@@ -52,6 +55,9 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
                container.setTitle(title: "Confirm Rider")
                container.setMenuButton(isBack: true)
            }
+        self.database = Database.database().reference()
+        self.database.child("rides").child(Global.shared.user!.id).setValue(["pickup" : self.pickupAddress,"destination" : self.destinationAddress , "status" : "pending" , "notes" : self.notes , "GoodsDetails" : self.goodsDetails, "weight" : self.weight])
+                      
        }
     
     func calulateDistance(){

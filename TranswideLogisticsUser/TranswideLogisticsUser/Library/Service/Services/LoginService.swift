@@ -133,7 +133,7 @@ class LoginService : BaseService{
                     let parsedResponse = ResponseHandler.handleResponse(json)
                     if parsedResponse.serviceResponseType == .Success {
                         print(json)
-                        let userInfo = UserViewModel(user:       parsedResponse.swiftyJsonData!)
+                        let userInfo = UserViewModel(user:       parsedResponse.swiftyJsonData!["data"])
                       //  self.saveUserInfo(userInfo)
                         completion(parsedResponse.message,true, userInfo)
                     }else {

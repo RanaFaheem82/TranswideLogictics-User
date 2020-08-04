@@ -46,7 +46,7 @@ class UserViewModel: NSObject, NSCoding {
     required convenience init(coder aDecoder: NSCoder) {
         self.init()
        
-        self.id = aDecoder.decodeObject(forKey: "id") as? String ?? ""
+        self.id = aDecoder.decodeObject(forKey: "userId") as? String ?? ""
         self.name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
         self.email = aDecoder.decodeObject(forKey: "email") as? String ?? ""
         self.token = aDecoder.decodeObject(forKey: "token") as? String ?? ""
@@ -60,7 +60,7 @@ class UserViewModel: NSObject, NSCoding {
         aCoder.encode(self.id, forKey: "userId")
         aCoder.encode(self.name, forKey: "name")
         aCoder.encode(self.email, forKey: "email")
-        aCoder.encode(self.token, forKey: "phoneNumber")
+        aCoder.encode(self.token, forKey: "token")
         aCoder.encode(self.profileImg, forKey: "profileImg")
           aCoder.encode(self.address, forKey: "address")
     }

@@ -12,7 +12,14 @@ import Firebase
 
 class FindingDriverViewController: BaseViewController ,GMSMapViewDelegate{
 
+    @IBOutlet weak var lblRating: UILabel!
+    @IBOutlet weak var lblVehicleName: UILabel!
+    @IBOutlet weak var lblVehicleNumber: UILabel!
+    @IBOutlet weak var lblDriverName: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var viewDriverDetails: UIView!
+    @IBOutlet weak var imgDriver: UIImageView!
+    @IBOutlet weak var lblVehicleColor: UILabel!
     
       var database : DatabaseReference!
     var pickLocation : String!
@@ -20,43 +27,24 @@ class FindingDriverViewController: BaseViewController ,GMSMapViewDelegate{
     var goodsDetails :  String = ""
     var notes : String = ""
     var weight : String = ""
+    var isDriverShowing = false
+    var driverId = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
        // self.test()
+        self.viewDriverDetails.isHidden = true
         self.nearbyDrivers(params: ["latitude" :  Global.shared.pickupLocation!.latitude,"longitude" : Global.shared.pickupLocation!.longitude])
         // Do any additional setup after loading the view.
     }
     
-    func test(){
-        let marker = GMSMarker()
-                   let markerImage = UIImage(named: "large")!.withRenderingMode(.alwaysTemplate)
-                   let markerView = UIImageView(image: markerImage)
-                    markerView.tintColor = UIColor.black
-                   markerView.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-                   marker.iconView = markerView
-        self.database = Database.database().reference()
-        let locationRef = self.database.child("rides").child("5ef3234e12d89b076a4174e4")
-        let refHandle = locationRef.observe(DataEventType.value, with: { (snapshot) in
-             self.stopActivity()
-            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-            print(postDict)
-            let status = postDict["status"]?.stringValue
-            if(status == "accepted"){
-                let location = CLLocationCoordinate2D(latitude: (postDict["lat"]?.doubleValue)!, longitude: (postDict["lng"]?.doubleValue)!)
-                       print("location: \(location)")
-                       marker.position = location
-                      
-                      // marker.snippet = data.name!
-                marker.map = self.mapView
-                  let camera = GMSCameraPosition.camera(withLatitude: (postDict["lat"]?.doubleValue)!, longitude: (postDict["lng"]?.doubleValue)!, zoom: 15.0)
-                self.mapView.camera = camera
-                //let cameraUpdate = GMSCameraUpdate.fit(GMSCoordinateBounds(coordinate: (postDict["lat"]?.doubleValue)!, coordinate: Global.shared.destinationLocation!))
-               // self.mapView.moveCamera(cameraUpdate)
-               // let currentZoom = self.mapView.camera.zoom
-                //self.mapView.animate(toZoom: currentZoom - 1.4)
-            }
-          })
+    @IBAction func actionCancel(_ sender: Any) {
+    }
+    
+    @IBAction func actionChat(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        vc.otherUserId = self.driverId
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 
@@ -102,7 +90,7 @@ extension FindingDriverViewController{
                 self.mapView.moveCamera(cameraUpdate)
                 let currentZoom = self.mapView.camera.zoom
                 self.mapView.animate(toZoom: currentZoom - 1.4)
-                let params : ParamsAny = ["userId" : "5ec361363258de198dfbce0a" , "token" : tokenList]
+                let params : ParamsAny = ["userId" : Global.shared.user!.id , "token" : tokenList!]
                 self.sendNotifications(params: params)
             }
             else{
@@ -127,21 +115,30 @@ extension FindingDriverViewController{
                 marker.iconView = markerView
                 self.startActivityWithMessage(msg: "Finding you nearby Driver")
                 self.database = Database.database().reference()
-                self.database.child("rides").child(ride!.id).setValue(["pickup" : self.pickLocation,"destination" : self.destinationLocation , "status" : "pending" , "notes" : self.notes , "GoodsDetails" : self.goodsDetails , "weight" : self.weight])
-                let locationRef = self.database.child("rides").child(ride!.id)
+                let locationRef = self.database.child("rides").child(Global.shared.user!.id)
                     let refHandle = locationRef.observe(DataEventType.value, with: { (snapshot) in
-                         self.stopActivity()
                         let postDict = snapshot.value as? [String : AnyObject] ?? [:]
                         print(postDict)
-                        let status = postDict["status"]?.stringValue
-                        if(status == "accepted"){
-                            let location = CLLocationCoordinate2D(latitude: (postDict["lat"]?.doubleValue)!, longitude: (postDict["lng"]?.doubleValue)!)
+                        print(postDict["status"] as? String)
+    
+                        if(postDict["status"] as? String == "accepted"){
+                            self.stopActivity()
+                            if(!self.isDriverShowing){
+                                self.lblDriverName.text = postDict["name"] as? String
+                                self.lblVehicleName.text = postDict["vehicleName"] as? String
+                                self.lblVehicleColor.text = postDict["vehicleColor"] as? String
+                                self.lblVehicleNumber.text = postDict["vehicleNumber"] as? String
+                                self.viewDriverDetails.isHidden = false
+                                self.driverId = (postDict["driverId"] as? String)!
+                                self.isDriverShowing = true
+                            }
+                            let location = CLLocationCoordinate2D(latitude: (postDict["lat"] as? Double)!, longitude: (postDict["lng"] as? Double)!)
                                    print("location: \(location)")
                                    marker.position = location
                                   
                                   // marker.snippet = data.name!
                             marker.map = self.mapView
-                              let camera = GMSCameraPosition.camera(withLatitude: (postDict["lat"]?.doubleValue)!, longitude: (postDict["lng"]?.doubleValue)!, zoom: 15.0)
+                              let camera = GMSCameraPosition.camera(withLatitude: (postDict["lat"] as? Double)!, longitude: (postDict["lng"] as? Double)!, zoom: 15.0)
                             self.mapView.camera = camera
                             //let cameraUpdate = GMSCameraUpdate.fit(GMSCoordinateBounds(coordinate: (postDict["lat"]?.doubleValue)!, coordinate: Global.shared.destinationLocation!))
                            // self.mapView.moveCamera(cameraUpdate)

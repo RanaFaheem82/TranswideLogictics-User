@@ -36,13 +36,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate {
          FirebaseApp.configure()
         //AIzaSyBF3BJ23HQQtRyDsoALfpsNb5YuZdd7U40
         GMSServices.provideAPIKey("AIzaSyBTfypSbx_zNMhWSBXMTA2BJBMQO7_9_T8")
-     GMSPlacesClient.provideAPIKey("AIzaSyBTfypSbx_zNMhWSBXMTA2BJBMQO7_9_T8")
+        GMSPlacesClient.provideAPIKey("AIzaSyBTfypSbx_zNMhWSBXMTA2BJBMQO7_9_T8")
         application.registerForRemoteNotifications()
         Messaging.messaging().delegate = self
-         self.getToken()
+        self.getToken()
         IQKeyboardManager.shared.enable = true
+        self.setInitialViewController()
         return true
     }
+    
+    func setInitialViewController()  {
+          let isLogin = UserDefaultsManager.shared.isUserLoggedIn
+          Global.shared.isLogedIn = isLogin
+          var vc: UIViewController!
+          
+          if(isLogin){
+              Global.shared.user = UserDefaultsManager.shared.loggedInUserInfo!
+              let storyBoard = UIStoryboard(name: StoryboardNames.Main, bundle: nil)
+              vc = storyBoard.instantiateViewController(withIdentifier: ControllerIdentifier.KYDrawerController) as! KYDrawerController
+          }else {
+              let storyBoard = UIStoryboard(name: StoryboardNames.Registration, bundle: nil)
+                         vc = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+          }
+          let navigationController = BaseNavigationController(rootViewController: vc)
+          navigationController.navigationBar.isHidden = true
+          window?.rootViewController = navigationController
+          window?.makeKeyAndVisible()
+      }
 
     // MARK: UISceneSession Lifecycle
 

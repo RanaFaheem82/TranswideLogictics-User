@@ -89,6 +89,19 @@ class MainContainerViewController: BaseViewController {
           controller.didMove(toParent: self)
       }
     
+       func logoutUser()  {
+           
+           Global.shared.user = nil
+           Global.shared.isLogedIn = false
+           UserDefaultsManager.shared.clearUserData()
+           let storyboard = UIStoryboard(name: StoryboardNames.Registration, bundle: nil)
+           let controller = storyboard.instantiateViewController(withIdentifier: ControllerIdentifier.LoginViewController) as! LoginViewController
+           if let container = self.navigationController?.parent as? KYDrawerController {
+               container.navigationController?.setViewControllers([controller], animated: true)
+               container.navigationController?.popToRootViewController(animated: true)
+           }
+       }
+    
     
     
     
@@ -118,16 +131,16 @@ class MainContainerViewController: BaseViewController {
 //
     
    
-    func logoutUser()  {
-        
-        UserDefaults.standard.set(nil, forKey: USER)
-        UserDefaults.standard.set(false, forKey: KEEP_LOGIN)
-        UserDefaults.standard.synchronize()
-//        let storyboard = UIStoryboard(name: StoryboardNames.Registration, bundle: nil)
-//        if let vc = storyboard.instantiateViewController(withIdentifier: ControllerIdentifier.LoginViewController) as? LoginViewController{
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
-    }
+//    func logoutUser()  {
+//        
+//        UserDefaults.standard.set(nil, forKey: USER)
+//        UserDefaults.standard.set(false, forKey: KEEP_LOGIN)
+//        UserDefaults.standard.synchronize()
+////        let storyboard = UIStoryboard(name: StoryboardNames.Registration, bundle: nil)
+////        if let vc = storyboard.instantiateViewController(withIdentifier: ControllerIdentifier.LoginViewController) as? LoginViewController{
+////            self.navigationController?.pushViewController(vc, animated: true)
+////        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -41,9 +41,12 @@ class SideMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
               if(indexPath.row == 0){
                   mainVC.showHomeController()
               }
-              else{
+              else if(indexPath.row == 1){
                   mainVC.showMyShipmentVCController()
               }
+              else{
+                mainVC.logoutUser()
+        }
              
               
     }

@@ -7,19 +7,51 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ChatViewController: BaseViewController {
     
-    let array : [String] = [""]
-
+     var chatList : [ChatViewModel] = [ChatViewModel]()
+       var userId : String = ""
+       var otherUserId : String = ""
+       var id : String = ""
+    @IBOutlet weak var txfMessage: UITextField!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.estimatedRowHeight = 80
+        Database.database().reference().child("chats").child(Global.shared.user!.id).child(self.otherUserId).observe(.childAdded, with: { (snap) in
+        
+        if snap.exists() {
+                    let ch = snap.value as! [String: Any]
+                    let mess = ch["message"] as? String
+                    let id = ch["id"] as? String
+                    self.chatList.append(ChatViewModel(message: mess!, sender: id!))
+                }
+               self.tableView.reloadData()
+                 let indexPath = IndexPath(row: self.chatList.count - 1, section: 0)
+                 self.tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom , animated: false)
+            })
+        
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func actionSendMessage(_ sender: Any) {
+        if(self.txfMessage.text == ""){
+              
+           }
+           else{
+               
+            let chat = ["message": self.txfMessage.text!, "id": Global.shared.user!.id] as [String: Any]
+               Database.database().reference().child("chats").child(Global.shared.user!.id).child(self.otherUserId).childByAutoId().setValue(chat)
+               
+               Database.database().reference().child("chats").child(self.otherUserId).child(Global.shared.user!.id).childByAutoId().setValue(chat)
+               
+               self.txfMessage.text?.removeAll()
+           }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -34,15 +66,23 @@ class ChatViewController: BaseViewController {
 
 //MARK :-
 extension ChatViewController : UITableViewDelegate,UITableViewDataSource{
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.array.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     return self.chatList.count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
-        
-        return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         if(self.chatList[indexPath.row].sender == Global.shared.user!.id){
+                   let cell = tableView.dequeueReusableCell(withIdentifier: "SenderTableViewCell", for: indexPath) as! SenderTableViewCell
+                   cell.lblMessage.text = self.chatList[indexPath.row].message
+                   return cell
+               }
+               else{
+                  let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverTableViewCell", for: indexPath) as! ReceiverTableViewCell
+                  cell.lblMessage.text = self.chatList[indexPath.row].message
+                  return cell
+               }
     }
-    
+
+ 
     
 }

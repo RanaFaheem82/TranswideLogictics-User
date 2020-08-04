@@ -22,6 +22,7 @@ class OtpViewController: BaseViewController {
     var signUpcheck = 0
     var isFromSignUp : Bool = false
     var userdefaults = UserDefaults()
+    var user : UserViewModel!
      weak var delegate : VerfiyNumberViewControllerDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +67,8 @@ class OtpViewController: BaseViewController {
                                    self.navigationController?.popViewController(animated: true)
             }
             else{
+                Global.shared.user = self.user
+                self.saveUserInfo(self.user)
                 self.showHomeVC()
             }
         }

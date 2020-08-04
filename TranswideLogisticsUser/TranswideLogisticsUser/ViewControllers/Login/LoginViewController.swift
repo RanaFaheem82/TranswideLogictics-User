@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
         self.showSignup()
     }
     @IBAction func actionLogin(_ sender: Any) {
-        self.getUserLogin(params: ["phoneNumber" : self.txtphone.text])
+        self.getUserLogin(params: ["phoneNumber" : self.txtphone.text!])
 //        if let vc = self.storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
 //            vc.phoneNumber = self.txtphone.text!
 //            self.navigationController?.pushViewController(vc, animated: true)
@@ -68,6 +68,7 @@ extension LoginViewController{
                                    self.userdefaults.synchronize()
                                    if let vc = self.storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
                                        vc.phoneNumber = self.txtphone.text!
+                                    vc.user = data
                                        self.navigationController?.pushViewController(vc, animated: true)
                                    }
                                }
