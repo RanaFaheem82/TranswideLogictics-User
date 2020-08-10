@@ -39,7 +39,7 @@ class SignUpViewController: BaseViewController ,VerfiyNumberViewControllerDelega
         
        if(checkValidation()){
               if(self.checkInternetConnection()){
-                           self.getUserRegister(params: ["name" : self.txtfirstname.text,"email" : self.txtEmail.text,"profileImage" : "abcdefg","phoneNumber" : self.txtPhone.text,"address" : self.txtAddress.text,"fcmToken" : "5353535"])
+                           self.getUserRegister(params: ["name" : self.txtfirstname.text,"email" : self.txtEmail.text,"profileImage" : "abcdefg","phoneNumber" : self.txtPhone.text,"address" : self.txtAddress.text,"fcmToken" :  Global.shared.FCMToken])
                         }
              
               

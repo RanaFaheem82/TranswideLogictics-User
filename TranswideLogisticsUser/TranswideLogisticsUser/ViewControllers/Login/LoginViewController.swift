@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
         self.showSignup()
     }
     @IBAction func actionLogin(_ sender: Any) {
-        self.getUserLogin(params: ["phoneNumber" : self.txtphone.text!])
+        self.getUserLogin(params: ["phoneNumber" : self.txtphone.text! , "fcmToken" :  Global.shared.FCMToken])
 //        if let vc = self.storyboard!.instantiateViewController(withIdentifier: "OtpViewController") as? OtpViewController{
 //            vc.phoneNumber = self.txtphone.text!
 //            self.navigationController?.pushViewController(vc, animated: true)

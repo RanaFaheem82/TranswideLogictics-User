@@ -181,12 +181,12 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                               didReceive response: UNNotificationResponse,
                               withCompletionHandler completionHandler: @escaping () -> Void) {
             let notificationData = response.notification.request.content.userInfo
-            let mainController = self.getMainContainer()
-            if let controller = mainController as? MainContainerViewController {
-                controller.showMyShipmentVCController()
-            }else {
-               
-            }
+//            let mainController = self.getMainContainer()
+//            if let controller = mainController as? MainContainerViewController {
+//                controller.showMyShipmentVCController()
+//            }else {
+//               
+//            }
    
     //background app open
     let userInfo = response.notification.request.content.userInfo

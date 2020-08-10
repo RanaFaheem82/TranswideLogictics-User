@@ -124,6 +124,7 @@ extension FindingDriverViewController{
                         if(postDict["status"] as? String == "accepted"){
                             self.stopActivity()
                             if(!self.isDriverShowing){
+                                self.mainContainer?.btnMenu.isHidden = true
                                 self.lblDriverName.text = postDict["name"] as? String
                                 self.lblVehicleName.text = postDict["vehicleName"] as? String
                                 self.lblVehicleColor.text = postDict["vehicleColor"] as? String
