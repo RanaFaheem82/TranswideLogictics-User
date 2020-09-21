@@ -41,8 +41,10 @@ class MyBookingTableViewCell: UITableViewCell {
         self.destinationLocation.text = ride.destinationAddress
       //  self.valueDate = ride
         self.valuePrice.text = ride.fare
-        self.valueWeight.text = ride.weight
+        self.valueWeight.text = ride.weight + "KG"
         self.valueStatus.text = ride.status
+        self.valueDate.text = ride.date
+        self.lblBookingid.text = ride.tripId
     }
     
 }

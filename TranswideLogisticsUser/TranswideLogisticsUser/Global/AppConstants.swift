@@ -66,7 +66,8 @@ let USER = "user"
 
 
 let Register = "user/signup"
-let BASE_URL = "http://fe63e9b5c74e.ngrok.io/"
+
+let BASE_URL = "http://b971505ca0a8.ngrok.io/"
 let BASE_URL_LIVE = "http://144.91.68.79:9779/api/"
 let NearbyDriver = "available/drivers"
 let BASE_URL_2 = "http://144.91.68.79:9779/api/"

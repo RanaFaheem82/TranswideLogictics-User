@@ -33,6 +33,7 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
     var notes : String = ""
     var goodsDetails : String = ""
     var reqId = ""
+    var type = ""
       var marker = GMSMarker()
        var desmarker = GMSMarker()
       var database : DatabaseReference!
@@ -56,7 +57,7 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
                container.setMenuButton(isBack: true)
            }
         self.database = Database.database().reference()
-        self.database.child("rides").child(Global.shared.user!.id).setValue(["pickup" : self.pickupAddress,"destination" : self.destinationAddress , "status" : "pending" , "notes" : self.notes , "GoodsDetails" : self.goodsDetails, "weight" : self.weight])
+        self.database.child("rides").child(Global.shared.user!.id).setValue(["pickup" : self.pickupAddress,"destination" : self.destinationAddress , "status" : "pending" , "notes" : self.notes , "GoodsDetails" : self.goodsDetails, "weight" : self.weight , "type" : self.type])
                       
        }
     
@@ -231,7 +232,7 @@ class ConfirmRideViewController: BaseViewController, TopBarDelegate,GMSMapViewDe
                 
                 self.estimattedDistance = (distance) / 1000
                 self.estimattedTime = (time) / 60
-                self.estimattedFare = (self.estimattedDistance * 100) + (self.estimattedTime * 50) + self.baseFare
+                self.estimattedFare = (self.estimattedDistance * 70) + (self.estimattedTime * 30) + self.baseFare
                 
         DispatchQueue.main.async {
             self.lblDistance.text = "\(self.estimattedDistance) KM"

@@ -269,6 +269,7 @@ extension BookNowViewController{
                     vc.weight = self.tfEnterWeight.text ?? ""
                     vc.goodsDetails = self.tfMaterialPicker.text ?? ""
                     vc.reqId = reqId
+                    vc.type = self.tfweightType.text ?? ""
                     if(self.lblSelectVehicle.text == "2AX-single"){
                         vc.baseFare = 300
                     }

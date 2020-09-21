@@ -38,6 +38,14 @@ class FindingDriverViewController: BaseViewController ,GMSMapViewDelegate{
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        mainContainer?.setTitle(title: "Finding Nearby Driver")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.mainContainer?.btnMenu.isHidden = false
+    }
+    
+    
     @IBAction func actionCancel(_ sender: Any) {
     }
     
@@ -120,11 +128,19 @@ extension FindingDriverViewController{
                         let postDict = snapshot.value as? [String : AnyObject] ?? [:]
                         print(postDict)
                         print(postDict["status"] as? String)
-    
+                        if(postDict["status"] as? String == "completed"){
+                        self.mainContainer?.btnMenu.isHidden = false
+                    self.database.child("rides").child(Global.shared.user!.id).removeAllObservers()
+                        self.mainContainer?.btnMenu.isHidden = false
+                        self.mainContainer?.showHomeController()
+                            
+                        }
+                        else{
                         if(postDict["status"] as? String == "accepted"){
+                            self.mainContainer?.setTitle(title: "Driver Details")
+                            self.mainContainer?.btnMenu.isHidden = true
                             self.stopActivity()
                             if(!self.isDriverShowing){
-                                self.mainContainer?.btnMenu.isHidden = true
                                 self.lblDriverName.text = postDict["name"] as? String
                                 self.lblVehicleName.text = postDict["vehicleName"] as? String
                                 self.lblVehicleColor.text = postDict["vehicleColor"] as? String
@@ -146,7 +162,7 @@ extension FindingDriverViewController{
                            // let currentZoom = self.mapView.camera.zoom
                             //self.mapView.animate(toZoom: currentZoom - 1.4)
                         }
-                        
+                        }
                       })
                       // Do any additional setup after{} loading the view.
                }

@@ -48,6 +48,7 @@ class LocationViewController: BaseViewController,GMSMapViewDelegate,CLLocationMa
            super.viewWillAppear(animated)
         self.mainContainer?.setTitle(title: "Home")
         self.mainContainer?.setMenuButton()
+        self.mainContainer?.btnMenu.isHidden = false
        }
     
     @IBAction func actionBooklater(_ sender: Any) {
@@ -195,7 +196,7 @@ extension LocationViewController{
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
     {
-        self.showAlertVIew(message: error as! String, title: "MESSAGE")
+//self.showAlertVIew(message: error as! String, title: "MESSAGE")
     }
     
     func showMarker(position : CLLocationCoordinate2D ){

@@ -25,8 +25,10 @@ class MyRidesViewModel {
     var driverName : String
     var vehicleName : String
     var vehicleRegNo: String
+    var tripId : String
     var user : UserViewModel?
     var driver : DriverViewModel?
+    var date : String
     
     init()
     {
@@ -43,6 +45,8 @@ class MyRidesViewModel {
         self.vehicleRegNo = ""
         self.user = UserViewModel()
         self.driver = DriverViewModel()
+        self.tripId = ""
+        self.date = ""
 
         
     }
@@ -61,6 +65,8 @@ class MyRidesViewModel {
         self.vehicleRegNo = data["vehicleRegNo"].stringValue
         self.user = UserViewModel(user: data["User"])
         self.driver = DriverViewModel(driver: ["Driver"])
+        self.tripId = data["tripId"].stringValue
+        self.date = data["date"].stringValue
     }
 }
 
